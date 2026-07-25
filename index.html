@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيروم فيتامين سي للتفتيح والنضارة الفائقة | SOFIMAL</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                        amberGold: {
+                            light: '#fffbe3',
+                            DEFAULT: '#f59e0b',
+                            dark: '#b45309'
+                        },
+                        darkSlate: '#0f172a'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-short': 'bounce 1s infinite',
+                        'tick-flip': 'pulse 0.5s ease-in-out'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .ba-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            user-select: none;
+        }
+
+        .ba-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #ffffff;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #ea580c;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ea580c 0%, #d97706 50%, #9a3412 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow-effect {
+            box-shadow: 0 10px 30px -10px rgba(234, 88, 12, 0.4);
+        }
+
+        @keyframes marqueeRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .animate-marquee-right {
+            display: flex;
+            width: max-content;
+            animation: marqueeRight 22s linear infinite;
+        }
+
+        .animate-marquee-right:hover {
+            animation-play-state: paused;
+        }
+
+        .timer-box {
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-20 lg:pb-0">
+
+    <!-- Top Announcement Bar with Live Timer -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-700 to-amber-700 text-white py-2 px-4 text-center text-xs sm:text-sm font-medium sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="bg-yellow-400 text-slate-900 text-[10px] sm:text-xs font-black px-2.5 py-0.5 rounded-full animate-pulse shadow">⚡ عرض لفترة محدودة</span>
+                <span class="font-bold">تخفيض 50% + التوصيل مجاني والدفع عند الاستلام!</span>
+            </div>
+            
+            <div class="flex items-center gap-1.5 font-mono dir-ltr">
+                <span class="text-amber-200 text-xs font-sans font-bold ml-1">ينتهي العرض خلال:</span>
+                <div class="flex items-center gap-1">
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-white/20 text-yellow-300 font-bold text-xs" id="top-hours">02</div>
+                    <span class="text-xs font-bold text-yellow-300">:</span>
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-white/20 text-yellow-300 font-bold text-xs" id="top-minutes">45</div>
+                    <span class="text-xs font-bold text-yellow-300">:</span>
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-white/20 text-yellow-300 font-bold text-xs" id="top-seconds">18</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Branding Bar -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-orange-100 py-3 px-4 sticky top-[37px] sm:top-[33px] z-40">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center text-white font-black text-lg shadow-sm">
+                    S
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-wide text-slate-900">SOFIMAL</span>
+                    <span class="text-xs text-brand-600 block -mt-1 font-semibold">BEAUTY STORE</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="#benefits" class="hover:text-brand-600 transition">الفوائد</a>
+                <a href="#before-after" class="hover:text-brand-600 transition">النتائج</a>
+                <a href="#ingredients" class="hover:text-brand-600 transition">المكونات</a>
+                <a href="#reviews" class="hover:text-brand-600 transition">التقييمات</a>
+                <a href="#faq" class="hover:text-brand-600 transition">الأسئلة الشائعة</a>
+            </div>
+
+            <a href="#order-section" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition transform active:scale-95 flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                اطلبي الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-8 lg:py-14 bg-gradient-to-b from-orange-50/60 via-white to-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column: Product Gallery -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="relative rounded-3xl overflow-hidden border border-orange-100 bg-white p-3 shadow-xl">
+                        <!-- Discount Badge -->
+                        <div class="absolute top-6 right-6 bg-gradient-to-r from-red-600 to-brand-600 text-white text-sm font-extrabold px-3 py-1.5 rounded-full shadow-lg z-10 flex items-center gap-1">
+                            <span>خصم 50%</span>
+                        </div>
+
+                        <!-- Main Big Image -->
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-orange-50/50 relative group">
+                            <img id="mainProductImage" 
+                                 src="public/images/serum-1.jpg"
+                                 alt="سيروم فيتامين سي للتفتيح" 
+                                 onerror="this.src='https://placehold.co/600x600/f97316/ffffff?text=سيروم+فيتامين+سي'"
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="grid grid-cols-4 gap-3 mt-3">
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn active border-2 border-brand-600 rounded-xl overflow-hidden aspect-square bg-slate-50 p-1 transition">
+                                <img id="thumb1" src="public/images/serum-1.jpg" onerror="this.src='https://placehold.co/150x150/f97316/ffffff?text=صورة+1'" class="w-full h-full object-cover rounded-lg" alt="صورة 1">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-slate-50 p-1 transition">
+                                <img id="thumb2" src="public/images/serum-2.jpg" onerror="this.src='https://placehold.co/150x150/ea580c/ffffff?text=صورة+2'" class="w-full h-full object-cover rounded-lg" alt="صورة 2">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-slate-50 p-1 transition">
+                                <img id="thumb3" src="public/images/serum-3.jpg" onerror="this.src='https://placehold.co/150x150/c2410c/ffffff?text=صورة+3'" class="w-full h-full object-cover rounded-lg" alt="صورة 3">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-slate-50 p-1 transition">
+                                <img id="thumb4" src="public/images/serum-4.jpg" onerror="this.src='https://placehold.co/150x150/9a3412/ffffff?text=صورة+4'" class="w-full h-full object-cover rounded-lg" alt="صورة 4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Trust Highlights Under Image -->
+                    <div class="grid grid-cols-3 gap-2 text-center pt-2">
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="block text-brand-600 font-bold text-lg">100%</span>
+                            <span class="text-[11px] text-slate-500 font-medium">مكونات طبيعية</span>
+                        </div>
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="block text-brand-600 font-bold text-lg">4.9/5</span>
+                            <span class="text-[11px] text-slate-500 font-medium">تقييم +1500 زبون</span>
+                        </div>
+                        <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="block text-brand-600 font-bold text-lg">0 درهم</span>
+                            <span class="text-[11px] text-slate-500 font-medium">توصيل مجاني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sales Details & Pitch -->
+                <div class="lg:col-span-6 space-y-5">
+                    
+                    <!-- Vitamin C Tag -->
+                    <div class="inline-flex items-center gap-2 bg-orange-100/80 border border-orange-200 text-brand-800 text-xs font-bold px-3 py-1.5 rounded-full">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-ping"></span>
+                        🍊 سر التفتيح الفوري والنضارة المشرقة
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
+                        سيروم فيتامين سي <span class="gradient-text">للتفتيح والتغذية</span>
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
+                        تركيبة متطورة تجمع بين قوة **Vitamin C المركز** و **حمض الهيالورونيك (Hyaluronic Acid)** و **الـ Glutathione**. يعمل على تفتيح البشرة، القضاء على البقع الداكنة والتصبغات، وتغذية الجلد عميقاً لبشرة صافية ومشرقة.
+                    </p>
+
+                    <!-- Prominent Hero Countdown Timer Widget -->
+                    <div class="bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 text-white p-4 sm:p-5 rounded-2xl border border-brand-500/30 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl"></div>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+                            <div>
+                                <span class="text-xs font-bold text-amber-300 flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-amber-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    سارعِ بالسفادة من العرض!
+                                </span>
+                                <h4 class="text-sm sm:text-base font-extrabold text-white mt-0.5">وينتهي التخفيض الاستثنائي خلال:</h4>
+                            </div>
+
+                            <div class="flex items-center gap-2 text-center dir-ltr">
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md">
+                                    <span class="block text-xl font-black text-amber-400 font-mono" id="hero-hours">02</span>
+                                    <span class="text-[10px] text-slate-300 font-bold block">ساعة</span>
+                                </div>
+                                <span class="text-lg font-bold text-amber-400">:</span>
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md">
+                                    <span class="block text-xl font-black text-amber-400 font-mono" id="hero-minutes">45</span>
+                                    <span class="text-[10px] text-slate-300 font-bold block">دقيقة</span>
+                                </div>
+                                <span class="text-lg font-bold text-amber-400">:</span>
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md bg-brand-600/30 border-brand-400/50">
+                                    <span class="block text-xl font-black text-amber-400 font-mono" id="hero-seconds">18</span>
+                                    <span class="text-[10px] text-slate-300 font-bold block">ثانية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Stars -->
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200/80 w-fit">
+                        <div class="flex text-amber-400 text-lg">
+                            ★★★★★
+                        </div>
+                        <span class="text-xs font-bold text-slate-800">4.9</span>
+                        <span class="text-xs text-slate-400">|</span>
+                        <span class="text-xs text-slate-500 font-medium">(أكثر من 1,520 تقييم موثق)</span>
+                    </div>
+
+                    <!-- Main Benefits Bullet Points -->
+                    <div class="space-y-2.5 py-1">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-slate-700 text-sm sm:text-base font-semibold">تفتيح سريع للبشرة وإزالة التصبغات والبقع الداكنة الآثار.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-slate-700 text-sm sm:text-base font-semibold">تحفيز الكولاجين الطبيعي لمقاومة التجاعيد وعلامات التقدم في السن (Anti-Aging).</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-slate-700 text-sm sm:text-base font-semibold">ترطيب عميق ومستمر بفضل Hyaluronic Acid النقي.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-slate-700 text-sm sm:text-base font-semibold">تغذية مركزة بـ Berry Glutathione لتوحيد لون البشرة وإعطائها نضارة فورية.</span>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Display -->
+                    <div class="bg-orange-50/80 border border-orange-200/80 p-4 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block font-medium">سعر العرض الخاص:</span>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-extrabold text-brand-700">189 درهم</span>
+                                <span class="text-lg text-slate-400 line-through font-semibold">399 درهم</span>
+                            </div>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-emerald-200">
+                            وفرتِ أكثر من 50% الآن
+                        </span>
+                    </div>
+
+                    <!-- Hero CTA Button -->
+                    <div class="space-y-3 pt-2">
+                        <a href="#order-section" class="w-full bg-gradient-to-r from-brand-600 via-brand-500 to-amber-600 hover:from-brand-700 hover:to-brand-800 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group glow-effect">
+                            <span>اطلبي الآن قبل انتهاء الكمية</span>
+                            <svg class="w-6 h-6 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+                        </a>
+
+                        <div class="flex items-center justify-center gap-6 text-xs font-semibold text-slate-500 pt-1">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                الدفع عند الاستلام
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                توصيل مجاني لجميع المدن
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                ضمان 14 يوم
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Features Banner Ticker Section (Moving Right) -->
+    <section class="bg-gradient-to-r from-brand-700 via-brand-600 to-amber-600 text-white py-3.5 overflow-hidden shadow-lg border-y border-orange-400/40 select-none">
+        <div class="flex animate-marquee-right space-x-6 space-x-reverse items-center font-bold text-xs sm:text-sm tracking-wide">
+            
+            <!-- First set of items -->
+            <div class="flex items-center gap-6 shrink-0">
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🍊</span> فيتامين سي خالص بتركيز 20%
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>✨</span> تفتيح البقع الداكنة والتصبغات
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>💧</span> ترطيب عميق بـ Hyaluronic Acid
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🌿</span> 100% مكونات طبيعية وآمنة
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🛡️</span> مقاومة علامات التجاعيد والتقدم بالسن
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🚚</span> توصيل مجاني وسريع لكافة مدن المغرب
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>💵</span> الدفع نقدًا عند الاستلام ومعاينة الطرد
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+            </div>
+
+            <!-- Duplicate set for continuous seamless loop -->
+            <div class="flex items-center gap-6 shrink-0">
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🍊</span> فيتامين سي خالص بتركيز 20%
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>✨</span> تفتيح البقع الداكنة والتصبغات
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>💧</span> ترطيب عميق بـ Hyaluronic Acid
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🌿</span> 100% مكونات طبيعية وآمنة
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🛡️</span> مقاومة علامات التجاعيد والتقدم بالسن
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>🚚</span> توصيل مجاني وسريع لكافة مدن المغرب
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span>💵</span> الدفع نقدًا عند الاستلام ومعاينة الطرد
+                </span>
+                <span class="text-amber-200/60 font-black">✦</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Before & After Comparison Slider Section -->
+    <section id="before-after" class="py-14 bg-gradient-to-b from-slate-50 via-orange-50/30 to-white overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <span class="bg-brand-100 text-brand-800 text-xs font-black px-3.5 py-1.5 rounded-full border border-brand-200 inline-flex items-center gap-1">
+                    ✨ نتائج حقيقية ومثبتة
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight">
+                    شوفي فرق النضارة بنفسك من أول أسبوعين
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base font-semibold">
+                    اسحبي الشريط لملاحظة الاختلاف قبل وبعد استعمال سيروم فيتامين سي
+                </p>
+            </div>
+
+            <!-- Before & After Interactive Slider Container -->
+            <div class="max-w-3xl mx-auto bg-white p-3 sm:p-5 rounded-3xl shadow-2xl border border-orange-100">
+                <div id="baContainer" class="ba-container relative aspect-[4/3] sm:aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner select-none touch-none border border-slate-200">
+                    
+                    <!-- Base Image: BEFORE (Full width) -->
+                    <img id="baBeforeImgBase" 
+                         src="public/images/fat.png" 
+                         alt="قبل الاستعمال" 
+                         onerror="this.src='https://placehold.co/800x500/94a3b8/ffffff?text=قبل+الاستعمال'"
+                         class="absolute inset-0 w-full h-full object-cover filter contrast-90 brightness-95">
+                    
+                    <!-- Before Badge -->
+                    <div class="absolute top-4 right-4 bg-slate-900/85 backdrop-blur-md text-white text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl shadow-lg z-10 flex items-center gap-1.5 border border-white/20">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        قبل الاستعمال (باهتة وجافة)
+                    </div>
+
+                    <!-- Overlay Div: AFTER (Clipped) -->
+                    <div id="baOverlay" class="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-white shadow-2xl" style="width: 50%;">
+                        <!-- After Image scaled to match the main container width -->
+                        <img id="baAfterImg" 
+                             src="public/images/glow.png" 
+                             alt="بعد الاستعمال" 
+                             onerror="this.src='https://placehold.co/800x500/ea580c/ffffff?text=بعد+الاستعمال+-+بشرة+نضرة'"
+                             class="absolute inset-y-0 left-0 max-w-none h-full object-cover">
+                        
+                        <!-- After Badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-md text-white text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl shadow-lg z-10 flex items-center gap-1.5 border border-white/30 whitespace-nowrap">
+                            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                            بعد الاستعمال - بشرة مشرقة ونضرة
+                        </div>
+                    </div>
+
+                    <!-- Draggable Slider Handle Line -->
+                    <div id="baHandle" class="absolute top-0 bottom-0 z-20 w-1 bg-white cursor-ew-resize shadow-[0_0_15px_rgba(0,0,0,0.5)]" style="left: 50%;">
+                        <div class="ba-handle-btn absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 w-11 h-11 rounded-full bg-gradient-to-r from-brand-600 to-amber-500 border-2 border-white shadow-2xl flex items-center justify-center text-white font-bold transition transform group-hover:scale-110">
+                            <!-- Left-Right Arrow Icon -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Invisible Interactive Range Slider Overlay -->
+                    <input type="range" min="0" max="100" value="50" id="baSliderInput" oninput="handleBaSliderInput(this.value)" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                </div>
+
+                <!-- Instructional Hint below slider -->
+                <div class="flex items-center justify-center gap-2 mt-4 text-xs font-bold text-slate-500">
+                    <svg class="w-4 h-4 text-brand-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+                    <span>حرّكي السلايدر يميناً ويساراً لمشاهدة الفرق المذهل</span>
+                </div>
+            </div>
+
+            <!-- Feature Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="bg-white p-4 rounded-2xl text-center border border-orange-100 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-brand-700 block">+98%</span>
+                    <span class="text-xs font-bold text-slate-700">نضارة وتألق فوري</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-orange-100 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-brand-700 block">+91%</span>
+                    <span class="text-xs font-bold text-slate-700">تفتيح البقع الداكنة</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-orange-100 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-brand-700 block">-85%</span>
+                    <span class="text-xs font-bold text-slate-700">تقليل آثار التجاعيد</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-orange-100 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-brand-700 block">99%</span>
+                    <span class="text-xs font-bold text-slate-700">رضا مستخدمات sofimal</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Short Reels/Videos Customer Experience Section -->
+    <section id="video-reviews" class="py-12 bg-gradient-to-b from-orange-50/60 via-amber-50/30 to-slate-50 border-y border-orange-100/80">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-orange-100 text-brand-800 text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-orange-200 inline-flex items-center gap-1.5">
+                    <span class="flex h-2 w-2 rounded-full bg-red-500 animate-ping"></span>
+                    🎬 تجارب حقيقية بالصوت والصورة
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mt-2">شوفي التجربة بنفسك</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">مقاطع حقيقية من استخدام العميلات اليومي لسيروم فيتامين سي</p>
+            </div>
+
+            <!-- Video Grid Container -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                
+                <!-- Video Card 1 -->
+                <div onclick="toggleVideoPlay(1)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-slate-900 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo1" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80">
+                        <source src="public/videos/video-1.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+
+                    <!-- Top Audio Status Badge -->
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon1" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <!-- Center Play Button Overlay -->
+                    <div id="playBtnOverlay1" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Customer Information Overlay -->
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@haya.alotaibi</span>
+                                <span class="text-[9px] text-amber-300 font-semibold block -mt-0.5">الرباط</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-200 line-clamp-2 leading-tight pt-1 font-medium">
+                            "أمي جربتها قبلي وهي اللي أقنعتني... النتيجة على بشرتها كانت واضحة جداً!"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div onclick="toggleVideoPlay(2)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-slate-900 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo2" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80">
+                        <source src="public/videos/video-2.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon2" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay2" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@reem.alharbi</span>
+                                <span class="text-[9px] text-amber-300 font-semibold block -mt-0.5">الدار البيضاء</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-200 line-clamp-2 leading-tight pt-1 font-medium">
+                            "خفيفة وما تلزقش، أحطها وأنام وأصحى وبشرتي طرية ومضيئة."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div onclick="toggleVideoPlay(3)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-slate-900 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo3" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://images.unsplash.com/photo-1608248597262-838d77a03009?auto=format&fit=crop&w=500&q=80">
+                        <source src="public/videos/video-3.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon3" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay3" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@nouf.alghamdi</span>
+                                <span class="text-[9px] text-amber-300 font-semibold block -mt-0.5">طنجة</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-200 line-clamp-2 leading-tight pt-1 font-medium">
+                            "استخدمتها كل ليلة وصارت بشرتي أهدأ وأنضر، هذا اللي كنت أدور عليه."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div onclick="toggleVideoPlay(4)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-slate-900 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo4" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80">
+                        <source src="public/videos/video-4.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon4" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay4" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@lamya.alqahtani</span>
+                                <span class="text-[9px] text-amber-300 font-semibold block -mt-0.5">مراكش</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-200 line-clamp-2 leading-tight pt-1 font-medium">
+                            "غيرت بشرتي بأسبوع! ترطيب عالي وصارت أنعم بشكل واضح."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Audio Hint -->
+            <div class="text-center mt-6">
+                <p class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-orange-200/80 px-4 py-2 rounded-full text-xs font-bold text-slate-700 shadow-sm">
+                    <svg class="w-4 h-4 text-brand-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <span>اضغطي على أي فيديو لتشغيل/إيقاف الفيديو والصوت</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Product Benefits Grid -->
+    <section id="benefits" class="py-12 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">لماذا سيروم فيتامين سي هو الاختيار الأمثل؟</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">4 فوائد مذهلة لتألق بشرتك</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/70 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-600 flex items-center justify-center text-2xl mb-4 font-bold">
+                        🍊
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 mb-2">تفتيح ونضارة فائقة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تركيبة Vitamin C المركزة تمنح بشرتك إشراقة طبيعية وتوحد لون البشرة وتزيل البهتان.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/70 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-600 flex items-center justify-center text-2xl mb-4 font-bold">
+                        💧
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 mb-2">ترطيب بـ Hyaluronic Acid</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        يحفظ الرطوبة داخل أعماق البشرة ويمنع جفافها ويمنحك ملمساً ناعماً وممتلئاً طوال اليوم.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/70 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-600 flex items-center justify-center text-2xl mb-4 font-bold">
+                        🛡️
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 mb-2">مضاد قوي للأكسدة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        يحمي الخلايا من العوامل البيئية والتلوث وأشعة الشمس الضارة لمقاومة التجاعيد والشيخوخة.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/70 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-brand-600 flex items-center justify-center text-2xl mb-4 font-bold">
+                        🌿
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 mb-2">تغذية بعناصر عضوية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        مدعم بـ Berry Glutathione وعناصر مهدئة ملائمة لجميع أنواع البشرة حتى الحساسة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Ingredients Section -->
+    <section id="ingredients" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl overflow-hidden relative">
+                <!-- Background decorative glow -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-3xl">
+                    <span class="bg-brand-500/20 text-brand-300 text-xs font-bold px-3 py-1 rounded-full border border-brand-500/30">المكونات الرئيسية</span>
+                    <h2 class="text-2xl sm:text-4xl font-black mt-3 mb-4 leading-tight">تركيبة الغلوتاثيون وفيتامين سي المركزة</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                        مزيج مدروس بعناية فائقة لضمان امتصاص سريع وعميق داخل أنسجة البشرة بدون أي أثر دهني.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-brand-400 font-extrabold text-xl block mb-1">Vitamin C Pure</span>
+                        <p class="text-xs text-slate-300 leading-relaxed">يحفز إنتاج الكولاجين ويفتح التصبغات ويعيد نضارة الوجه.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-brand-400 font-extrabold text-xl block mb-1">Hyaluronic Acid</span>
+                        <p class="text-xs text-slate-300 leading-relaxed">يعزز مرونة البشرة ويحبس الماء لترطيب يدوم 24 ساعة.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-brand-400 font-extrabold text-xl block mb-1">Berry Glutathione</span>
+                        <p class="text-xs text-slate-300 leading-relaxed">مضاد أكسدة قوي يوحد لون البشرة ويمنع تكون البقع الداكنة.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-brand-400 font-extrabold text-xl block mb-1">Organic Extracts</span>
+                        <p class="text-xs text-slate-300 leading-relaxed">مستخلصات طبيعية تلطف الجلد وتهدئ التهيج والتغلب على الشوائب.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order & Offers Section -->
+    <section id="order-section" class="py-12 bg-gradient-to-b from-orange-50 to-slate-100">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-orange-100 text-brand-700 text-xs font-black px-3 py-1 rounded-full border border-orange-200">الطلب السريع</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mt-2">اختر العرض المناسب واستفد من الخصم</h2>
+                <p class="text-slate-600 text-sm mt-1">التوصيل مجاني لجميع مدن المغرب والتسليم والدفع عند الاستلام</p>
+            </div>
+
+            <!-- Secondary Urgency Countdown Banner inside Checkout Section -->
+            <div class="max-w-xl mx-auto mb-8 bg-gradient-to-r from-amber-500 via-brand-600 to-brand-700 text-white rounded-2xl p-3.5 shadow-md border border-amber-300/40 text-center flex items-center justify-between px-6 gap-2">
+                <div class="flex items-center gap-2 text-right">
+                    <span class="text-2xl">⏳</span>
+                    <div>
+                        <span class="font-extrabold text-sm block leading-tight">ينتهي عرض الخصم المجاني قريباً!</span>
+                        <span class="text-[11px] text-amber-100 font-medium">اطلبي الآن واحفظي حقك في التوصيل المجاني</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1 font-mono text-base font-black dir-ltr bg-black/20 px-3 py-1.5 rounded-xl border border-white/20 text-amber-200">
+                    <span id="order-hours">02</span>:<span id="order-minutes">45</span>:<span id="order-seconds">18</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Offers Selection Column (Left on Large screens) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <h3 class="font-bold text-slate-800 text-base mb-2 flex items-center gap-2">
+                        <span>1. حدد باقة الشراء:</span>
+                    </h3>
+
+                    <!-- Option 1: 1 Box -->
+                    <div onclick="selectPackage(1, 189)" id="package-1" class="package-card cursor-pointer bg-white p-4 rounded-2xl border-2 border-slate-200 transition hover:border-brand-500 relative">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-1" class="w-5 h-5 text-brand-600 accent-brand-600">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 text-sm sm:text-base block">عبوة واحدة (تجربة)</span>
+                                    <span class="text-xs text-slate-500">تكفي لمدة شهر من الاستخدام</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-brand-700 text-lg block">189 درهم</span>
+                                <span class="text-xs text-slate-400 line-through">399 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: 2 Boxes (BEST SELLER) -->
+                    <div onclick="selectPackage(2, 299)" id="package-2" class="package-card cursor-pointer bg-gradient-to-r from-orange-50 to-white p-4 rounded-2xl border-2 border-brand-600 shadow-md transition relative ring-2 ring-brand-500/20">
+                        <div class="absolute -top-3 right-4 bg-gradient-to-r from-brand-600 to-amber-600 text-white text-[11px] font-extrabold px-3 py-0.5 rounded-full shadow">
+                            🔥 العرض الأكثر طلباً (وفر 80 درهم إضافي)
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-2" checked class="w-5 h-5 text-brand-600 accent-brand-600">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 text-sm sm:text-base block">عبوتين (سيروم فيتامين C)</span>
+                                    <span class="text-xs text-brand-600 font-bold">توصيل مجاني + خصم مضاعف</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-brand-700 text-xl block">299 درهم</span>
+                                <span class="text-xs text-slate-400 line-through">798 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 3: 3 Boxes (BEST VALUE) -->
+                    <div onclick="selectPackage(3, 399)" id="package-3" class="package-card cursor-pointer bg-white p-4 rounded-2xl border-2 border-slate-200 transition hover:border-brand-500 relative">
+                        <div class="absolute -top-3 right-4 bg-amber-500 text-white text-[11px] font-extrabold px-3 py-0.5 rounded-full shadow">
+                            👑 الباقة العائلية (اشتري 2 واحصلي على 1 مجاناً)
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-3" class="w-5 h-5 text-brand-600 accent-brand-600">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 text-sm sm:text-base block">3 عبوات (باقة التوفير الكامل)</span>
+                                    <span class="text-xs text-slate-500">العناية المتكاملة لمدة 3 أشهر</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-brand-700 text-lg block">399 درهم</span>
+                                <span class="text-xs text-slate-400 line-through">1197 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Box -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200 text-xs text-slate-600 space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-600 text-base">🚚</span>
+                            <span>التوصيل في المغرب خلال 24 إلى 48 ساعة فقط.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-600 text-base">💵</span>
+                            <span>الدفع نقدًا عند استلام الطلب ومعاينة المنتج.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-600 text-base">🔄</span>
+                            <span>ضمان الاسترجاع والتعديل خلال 14 يوم.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Order Form Column -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl">
+                    <h3 class="font-bold text-slate-800 text-base mb-4 flex items-center gap-2">
+                        <span>2. أدخلي معلومات الاستلام:</span>
+                    </h3>
+
+                    <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">الاسم الكامل *</label>
+                            <input type="text" id="fullName" required placeholder="مثال: فاطمة الزهراء" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">رقم الهاتف * (سنتصل بك لتأكيد الطلب)</label>
+                            <input type="tel" id="phoneNumber" required placeholder="0612345678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition text-right">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">المدينة *</label>
+                            <input type="text" id="cityName" required placeholder="مثال: الدار البيضاء، الرباط، طنجة..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">العنوان الكامل (الحي/الشارع)</label>
+                            <input type="text" id="address" placeholder="اسم الحي أو الشارع ورقم المنزل" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm transition">
+                        </div>
+
+                        <!-- Order Summary Card -->
+                        <div class="bg-orange-50/70 p-4 rounded-xl border border-orange-200/60 my-4 space-y-2">
+                            <div class="flex justify-between text-xs text-slate-600">
+                                <span>الباقة المختارة:</span>
+                                <span id="summaryPkgName" class="font-bold text-slate-800">عبوتين (العرض الأكثر طلباً)</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-600">
+                                <span>مصاريف الشحن والتوصيل:</span>
+                                <span class="font-bold text-emerald-600">مـجـانـاً (0 درهم)</span>
+                            </div>
+                            <div class="border-t border-orange-200 pt-2 flex justify-between items-center">
+                                <span class="font-extrabold text-sm text-slate-900">المبلغ الإجمالي عند الاستلام:</span>
+                                <span id="summaryTotalPrice" class="font-black text-2xl text-brand-700">299 درهم</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 hover:from-emerald-700 hover:to-emerald-800 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-98 flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <span>تأكيد الطلب الآن (الدفع عند الاستلام)</span>
+                        </button>
+
+                        <p class="text-center text-[11px] text-slate-500 font-medium">
+                            🔒 معلوماتك مخصصة لتأكيد الطلب فقط ولن نشاركها مع أي طرف آخر.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Testimonials Section -->
+    <section id="reviews" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">آراء وتجارب عميلاتنا</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">ماذا تقول النساء عن سيروم فيتامين سي للتفتيح؟</h2>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                                 alt="صورة سناء العبدلاوي" 
+                                 onerror="this.src='https://placehold.co/100x100/ea580c/ffffff?text=سناء'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-orange-200 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-slate-900 text-sm block">سناء العبدلاوي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-400 text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        "الصراحة هاد السيروم رائع بامتياز! التصبغات لي كانت فخدودي بدات كتختفي من أول أسبوعين، والوجه كيولي فيه واحد التوهج ونضارة كيبان صحي. شكرا صوفيمال."
+                    </p>
+                    <span class="text-[10px] text-slate-400 block pt-1">منذ يومين - الدار البيضاء</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" 
+                                 alt="صورة مريم الفاسي" 
+                                 onerror="this.src='https://placehold.co/100x100/ea580c/ffffff?text=مريم'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-orange-200 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-slate-900 text-sm block">مريم الفاسي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-400 text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        "خديت عرض العبوتين وصلني بسرعة. الملمس ديالو خفيف بزاف والبشرة كتمتصه بسرعة بدون أي تلزيق. آثار الحبوب القديمة تفتحات بشكل ملحوظ."
+                    </p>
+                    <span class="text-[10px] text-slate-400 block pt-1">منذ 4 أيام - مراكش</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" 
+                                 alt="صورة كوثر العلمي" 
+                                 onerror="this.src='https://placehold.co/100x100/ea580c/ffffff?text=كوثر'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-orange-200 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-slate-900 text-sm block">كوثر العلمي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amber-400 text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        "بشرتي كانت باهتة ومسمرة بالشمس، من بعد ما استعملت سيروم فيتامين سي رجع ليها التوهج والنضارة. منتج أصلي يستاهل كل درهم."
+                    </p>
+                    <span class="text-[10px] text-slate-400 block pt-1">منذ أسبوع - طنجة</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">الأسئلة الشائعة</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">كل ما تحتاجين معرفته</h2>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-slate-50 transition">
+                        <span>كيف أستخدم سيروم فيتامين سي للحصول على أفضل نتيجة؟</span>
+                        <span id="faqIcon-1" class="text-brand-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        ضعي بضع قطرات من السيروم على بشرة نظيفة وجافة صباحًا ومساءً. دلكي وجهك ورقبتك بلطف بحركات دائرية حتى يتم امتصاصه بالكامل، وينصح باستعمال واقي الشمس عند الخروج نهاراً.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-slate-50 transition">
+                        <span>متى تبدأ نتائج التفتيح بالظهور؟</span>
+                        <span id="faqIcon-2" class="text-brand-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        تلاحظين الترطيب والنضارة والانتعاش الفوري من أول استخدام. أما تفتيح التصبغات وتوحيد لون البشرة فيظهر بوضوح خلال 10 إلى 14 يوماً من الاستخدام المنتظم.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-slate-50 transition">
+                        <span>هل المنتج مناسب للبشرة الحساسة أو الدهنية؟</span>
+                        <span id="faqIcon-3" class="text-brand-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        نعم! التركيبة خفيفة ومطورة بمكونات مرطبة ومهدئة (Hyaluronic Acid & Organic Berry Extract) تجعلها آمنة ومناسبة لجميع أنواع البشرة.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-slate-50 transition">
+                        <span>كيف يتم التسليم والدفع؟</span>
+                        <span id="faqIcon-4" class="text-brand-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        التوصيل مجاني ومباشر لعنوانك في أي مدينة بالمغرب خلال 24-48 ساعة. لا تدفعين أي مبلغ حتى تستلمي الطلب بين يديك وتفحصينه بنفسك.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-white py-10 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center text-white font-black text-base">
+                    S
+                </div>
+                <span class="font-extrabold text-xl tracking-wide">sofimal Beauty</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+                متجر sofimal يوفر لك أفضل مستحضرات العناية والتجميل الأصلية المعتمدة لجمال صحي ونضارة تدوم.
+            </p>
+            <div class="text-[11px] text-slate-500 pt-4 border-t border-slate-800">
+                جميع الحقوق محفوظة © 2026 SOFIMAL BEAUTY STORE
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom CTA Bar -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-orange-200 p-3 z-50 shadow-2xl flex items-center justify-between gap-3">
+        <div>
+            <span class="text-[10px] text-slate-400 block font-bold">عرض محدود اليوم:</span>
+            <span class="text-lg font-black text-brand-700" id="mobileBarPrice">299 درهم</span>
+        </div>
+        <a href="#order-section" class="flex-1 bg-gradient-to-r from-brand-600 to-amber-600 text-white text-center font-extrabold py-3 px-4 rounded-xl shadow-md text-sm active:scale-95 transition">
+            اطلبي الآن (توصيل مجاني)
+        </a>
+    </div>
+
+    <!-- Order Success Modal Overlay -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl border border-orange-100 animate-bounce-short">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                ✓
+            </div>
+            <h3 class="text-2xl font-black text-slate-900">تم تسجيل طلبك بنجاح! 🎉</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                شكراً لثقتك في **sofimal Beauty**. سيتصل بك فريق خدمة العملاء خلال أقل من 24 ساعة لتأكيد عنوان الشحن وإرسال طردك.
+            </p>
+            <div class="bg-orange-50 p-3 rounded-xl border border-orange-100 text-xs text-brand-800 font-bold">
+                🚚 التوصيل مجاني والدفع نقدًا عند الاستلام.
+            </div>
+            <button onclick="closeSuccessModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-sm transition">
+                حسناً، إغلاق
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212771797067?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D9%81%D8%AA%D9%8A%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%8BD%20%D8%B3%D9%8A%D8%B1%D9%88%D9%85%20%D9%81%D9%8A%D8%AA%D8%A7%D9%85%D9%8A%D9%86%20%D8%B3%D9%8A%20%D9%84%D9%84%D8%AA%D9%81%D8%AA%D9%8A%D8%AD" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-20 left-4 lg:bottom-6 lg:left-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 group border-2 border-white" 
+       title="تواصل معنا عبر واتساب">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400"></span>
+        </span>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function initCountdownTimer(initialSeconds) {
+            // Check if there is an existing target timestamp stored in localStorage
+            let targetTime = localStorage.getItem('sofimal_timer_target');
+            const now = new Date().getTime();
+
+            if (!targetTime || now >= parseInt(targetTime, 10)) {
+                // Set target time 2 hours 45 mins from now
+                targetTime = now + (initialSeconds * 1000);
+                localStorage.setItem('sofimal_timer_target', targetTime);
+            } else {
+                targetTime = parseInt(targetTime, 10);
+            }
+
+            function updateDisplay() {
+                const currentTime = new Date().getTime();
+                let diffInSeconds = Math.floor((targetTime - currentTime) / 1000);
+
+                if (diffInSeconds <= 0) {
+                    // Reset timer when reached 0 to keep urgency active
+                    targetTime = currentTime + (initialSeconds * 1000);
+                    localStorage.setItem('sofimal_timer_target', targetTime);
+                    diffInSeconds = initialSeconds;
+                }
+
+                const hours = Math.floor(diffInSeconds / 3600);
+                const minutes = Math.floor((diffInSeconds % 3600) / 60);
+                const seconds = diffInSeconds % 60;
+
+                const formattedH = hours < 10 ? "0" + hours : hours.toString();
+                const formattedM = minutes < 10 ? "0" + minutes : minutes.toString();
+                const formattedS = seconds < 10 ? "0" + seconds : seconds.toString();
+
+                // 1. Top Bar Timer
+                const topH = document.getElementById('top-hours');
+                const topM = document.getElementById('top-minutes');
+                const topS = document.getElementById('top-seconds');
+
+                if (topH) topH.textContent = formattedH;
+                if (topM) topM.textContent = formattedM;
+                if (topS) topS.textContent = formattedS;
+
+                // 2. Hero Widget Timer
+                const heroH = document.getElementById('hero-hours');
+                const heroM = document.getElementById('hero-minutes');
+                const heroS = document.getElementById('hero-seconds');
+
+                if (heroH) heroH.textContent = formattedH;
+                if (heroM) heroM.textContent = formattedM;
+                if (heroS) heroS.textContent = formattedS;
+
+                // 3. Order Section Timer
+                const orderH = document.getElementById('order-hours');
+                const orderM = document.getElementById('order-minutes');
+                const orderS = document.getElementById('order-seconds');
+
+                if (orderH) orderH.textContent = formattedH;
+                if (orderM) orderM.textContent = formattedM;
+                if (orderS) orderS.textContent = formattedS;
+            }
+
+            updateDisplay();
+            setInterval(updateDisplay, 1000);
+        }
+
+        function handleBaSliderInput(val) {
+            const overlay = document.getElementById('baOverlay');
+            const handle = document.getElementById('baHandle');
+            if (overlay && handle) {
+                overlay.style.width = val + '%';
+                handle.style.left = val + '%';
+            }
+        }
+
+        function syncBaImageDimensions() {
+            const container = document.getElementById('baContainer');
+            const afterImg = document.getElementById('baAfterImg');
+            if (container && afterImg) {
+                afterImg.style.width = container.clientWidth + 'px';
+            }
+        }
+
+        function toggleVideoPlay(cardIndex) {
+            const video = document.getElementById(`cardVideo${cardIndex}`);
+            const playOverlay = document.getElementById(`playBtnOverlay${cardIndex}`);
+            const soundIcon = document.getElementById(`soundIcon${cardIndex}`);
+
+            if (!video) return;
+
+            for (let i = 1; i <= 4; i++) {
+                if (i !== cardIndex) {
+                    const otherVid = document.getElementById(`cardVideo${i}`);
+                    const otherOverlay = document.getElementById(`playBtnOverlay${i}`);
+                    const otherIcon = document.getElementById(`soundIcon${i}`);
+                    if (otherVid && !otherVid.paused) {
+                        otherVid.pause();
+                        if (otherOverlay) otherOverlay.classList.remove('hidden');
+                        if (otherIcon) {
+                            otherIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />`;
+                        }
+                    }
+                }
+            }
+
+            if (video.paused) {
+                video.muted = false;
+                video.play().then(() => {
+                    if (playOverlay) playOverlay.classList.add('hidden');
+                    if (soundIcon) {
+                        soundIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />`;
+                    }
+                }).catch(err => console.log('Video playback error:', err));
+            } else {
+                video.pause();
+                if (playOverlay) playOverlay.classList.remove('hidden');
+                if (soundIcon) {
+                    soundIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />`;
+                }
+            }
+        }
+
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhVBroKIR0LaodRAtVCucaySl9tqhJAxXP1UON3M1KJsFIyZpd9cpkLNd44hqQb_ITUQ/exec';
+
+        window.onload = function () {
+            // Start synchronized Countdown Timer for 2 Hours, 45 Mins and 18 Secs (9918 seconds)
+            initCountdownTimer(9918);
+            syncBaImageDimensions();
+            window.addEventListener('resize', syncBaImageDimensions);
+        };
+
+        function changeProductImage(button, imageSrc) {
+            document.getElementById('mainProductImage').src = imageSrc;
+            document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+                btn.classList.remove('border-brand-600');
+                btn.classList.add('border-transparent');
+            });
+            button.classList.remove('border-transparent');
+            button.classList.add('border-brand-600');
+        }
+
+        let selectedPackagePrice = 299;
+        let selectedPackageName = "عبوتين (سيروم فيتامين C - العرض الأكثر طلباً)";
+
+        function selectPackage(packageNum, price) {
+            selectedPackagePrice = price;
+            
+            document.querySelectorAll('input[name="pkg"]').forEach(radio => radio.checked = false);
+            document.querySelectorAll('.package-card').forEach(card => {
+                card.classList.remove('border-brand-600', 'ring-2', 'ring-brand-500/20', 'bg-orange-50/50');
+                card.classList.add('border-slate-200');
+            });
+
+            const activeRadio = document.getElementById(`radio-${packageNum}`);
+            const activeCard = document.getElementById(`package-${packageNum}`);
+            
+            if (activeRadio && activeCard) {
+                activeRadio.checked = true;
+                activeCard.classList.remove('border-slate-200');
+                activeCard.classList.add('border-brand-600', 'ring-2', 'ring-brand-500/20');
+            }
+
+            if (packageNum === 1) selectedPackageName = "عبوة واحدة (سيروم فيتامين C)";
+            if (packageNum === 2) selectedPackageName = "عبوتين (سيروم فيتامين C - الأكثر طلباً)";
+            if (packageNum === 3) selectedPackageName = "3 عبوات (سيروم فيتامين C - الباقة العائلية)";
+
+            document.getElementById('summaryPkgName').textContent = selectedPackageName;
+            document.getElementById('summaryTotalPrice').textContent = `${selectedPackagePrice} درهم`;
+            document.getElementById('mobileBarPrice').textContent = `${selectedPackagePrice} درهم`;
+        }
+
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faqAnswer-${id}`);
+            const icon = document.getElementById(`faqIcon-${id}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.textContent = '−';
+            } else {
+                answer.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phoneNumber').value.trim();
+            const city = document.getElementById('cityName').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (!name || !phone || !city) return;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin h-5 w-5 text-white inline-block mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>جاري إرسال الطلب...</span>
+            `;
+
+            const orderData = {
+                productName: "سيروم فيتامين سي للتفتيح",
+                fullName: name,
+                phoneNumber: phone,
+                cityName: city,
+                address: address || 'غير محدد',
+                packageName: selectedPackageName,
+                totalPrice: `${selectedPackagePrice} درهم`
+            };
+
+            try {
+                if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== '') {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(orderData)
+                    });
+                }
+            } catch (error) {
+                console.error("خطأ في الإرسال للجداول:", error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                document.getElementById('successModal').classList.remove('hidden');
+                document.getElementById('orderForm').reset();
+            }
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
