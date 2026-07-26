@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPREADAD - صفحات هبوط احترافية للدفع عند الاستلام</title>
+    <title>SPREADAD - صفحات هبوط احترافية للدفع عند الاستلام (COD)</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,7 +59,7 @@
             box-shadow: 0 0 35px -5px rgba(47, 94, 142, 0.45);
         }
         .glow-gold {
-            box-shadow: 0 0 30px -5px rgba(245, 179, 39, 0.4);
+            box-shadow: 0 0 35px -5px rgba(245, 179, 39, 0.35);
         }
         .glass-card {
             background: rgba(19, 33, 53, 0.75);
@@ -84,6 +84,22 @@
         }
         .gradient-gold-btn:hover {
             background: linear-gradient(135deg, #facc15 0%, #f5b327 100%);
+        }
+        /* FAQ Accordion Transitions */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease, padding 0.3s ease;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: #f5b327;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -122,11 +138,12 @@
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse font-semibold text-sm">
+            <nav class="hidden lg:flex items-center space-x-7 space-x-reverse font-semibold text-sm">
                 <a href="#features" class="text-gray-300 hover:text-gold-400 transition">المميزات</a>
                 <a href="#demos" class="text-gray-300 hover:text-gold-400 transition">النماذج الحية</a>
                 <a href="#calculator" class="text-gray-300 hover:text-gold-400 transition">حاسبة الأرباح</a>
                 <a href="#pricing" class="text-gray-300 hover:text-gold-400 transition">العروض والأسعار</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-gold-400 transition">آراء الزبناء</a>
                 <a href="#faq" class="text-gray-300 hover:text-gold-400 transition">الأسئلة الشائعة</a>
             </nav>
 
@@ -135,18 +152,19 @@
                 <a href="#order" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm gradient-gold-btn text-black transition-all shadow-lg shadow-gold-500/20 active:scale-95">
                     <i class="fa-solid fa-bolt ml-2 text-xs"></i> اطلب صفحتك الآن
                 </a>
-                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-gold-400 p-2 text-2xl transition">
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden text-gray-300 hover:text-gold-400 p-2 text-2xl transition">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden glass-card border-b border-brand-600/40 px-6 py-6 space-y-4 text-center">
+        <div id="mobileMenu" class="hidden lg:hidden glass-card border-b border-brand-600/40 px-6 py-6 space-y-4 text-center">
             <a href="#features" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">المميزات</a>
             <a href="#demos" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">النماذج الحية</a>
             <a href="#calculator" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">حاسبة الأرباح</a>
             <a href="#pricing" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">العروض والأسعار</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">آراء الزبناء</a>
             <a href="#faq" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">الأسئلة الشائعة</a>
             <a href="#order" onclick="toggleMobileMenu()" class="block w-full py-3 rounded-xl font-bold gradient-gold-btn text-black">اطلب صفحتك الآن</a>
         </div>
@@ -173,8 +191,8 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                    <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-black text-lg gradient-gold-btn text-black shadow-xl shadow-gold-500/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center">
-                        <i class="fa-solid fa-rocket ml-3"></i> باغي نبدا ونزيد مبيعاتي
+                    <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-black text-lg gradient-gold-btn text-black shadow-xl shadow-gold-500/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center">
+                        <i class="fa-solid fa-rocket ml-3"></i> شوف العروض والأسعار
                     </a>
                     <a href="#demos" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-lg glass-card hover:bg-brand-800/80 text-white border border-brand-500/30 transition-all flex items-center justify-center">
                         <i class="fa-solid fa-eye ml-3 text-gold-400"></i> شوف النماذج الحية
@@ -192,19 +210,56 @@
                     </div>
                     <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
                         <i class="fa-solid fa-file-excel text-gold-400 text-base"></i>
-                        <span>ربط مع Google Sheets / Sheets</span>
+                        <span>ربط مع Google Sheets</span>
                     </div>
                     <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
                         <i class="fa-solid fa-bullseye text-gold-400 text-base"></i>
-                        <span>ربط الـ Pixels بـ دقة 100%</span>
+                        <span>ربط الـ Pixels بدقة 100%</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Features Section -->
+    <section id="features" class="py-20 relative border-t border-brand-600/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-bold text-sm tracking-wider uppercase">علاش SPREADAD؟</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">علاياش كينجحوا صفحات الهبوط ديالنا فـ COD؟</h2>
+                <p class="text-gray-400 text-sm mt-3">كل تفصيل صغير فـ الصفحة مصمم ومبرمج باش يخلي الزائر يدخل المعلومات ديالو ويطلب بلا ما يتردد.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl glass-card-hover border border-brand-600/40">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">سرعة تحميل خارقة</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">الزائر ما كيتسناش. صفحاتنا كتفتح فـ أقل من ثانية واحدة (تحت 0.8s) حتا فـ 3G/4G، باش ما تضيع حتى شي زائر من الإعلانات ديالك.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl glass-card-hover border border-brand-600/40">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">كتابة إعلانية بـ الدارجة المغربية</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">كتابة محتوى (Copywriting) مؤثرة ومباشرة كتخاطب حاجة الزبون المغربي، كتجاوب على تخوفاته وتخليه يتيق ويطلب فوراً.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl glass-card-hover border border-brand-600/40">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">ربط مع Sheets والواتساب</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">الطلبات كتوصلك مباشرة لـ Google Sheets بدون ما تحتاج تدخل للمتجر، بالإضافة لإشعار سريع على WhatsApp أو Telegram لسرعة التأكيد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Demos Section -->
-    <section id="demos" class="py-24 relative">
+    <section id="demos" class="py-24 relative bg-brand-dark/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-gold-400 font-bold text-sm tracking-wider uppercase">معرض الأعمال والأنماط</span>
@@ -240,7 +295,7 @@
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-pink-400 font-bold">مجال التجميل والأناقة</span>
-                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوطسيروم فيتامين cل</h3>
+                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط سيروم فيتامين C</h3>
                         <p class="text-xs text-gray-400 mt-2">تصميم أنيق مع كتابة إعلانية عاطفية، استعراض قبل وبعد، وآراء الزبناء بالصور.</p>
                         <div class="mt-6 flex items-center justify-between gap-2">
                             <button onclick="openPreviewModal('https://www.spreadad.store/serum-vitamin-c', 'سيروم النضارة الفائقة')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
@@ -257,7 +312,7 @@
                         <div class="w-full max-w-[200px] bg-brand-dark border-4 border-brand-600 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
                             <div class="w-full h-36 bg-blue-500/20 rounded-2xl flex flex-col items-center justify-center text-center p-2">
                                 <span class="text-2xl mb-1">🎧</span>
-                                <span class="text-[10px] font-bold text-blue-300">سماعات electrozyad Pro</span>
+                                <span class="text-[10px] font-bold text-blue-300">كريم الريتنول SOFIMAL</span>
                                 <span class="text-[9px] bg-gold-500 text-black px-2 py-0.5 rounded font-bold mt-2">عازل للصوت 100%</span>
                             </div>
                             <div class="mt-2 space-y-1">
@@ -268,11 +323,11 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs text-blue-400 font-bold">مجال التجميل والأناقة</span>
+                        <span class="text-xs text-blue-400 font-bold">مجال التجميل والعناية</span>
                         <h3 class="text-lg font-bold text-white mt-1">كريم الريتنول SOFIMAL</h3>
-                        <p class="text-xs text-gray-400 mt-2">صفحة هبوط كريم الريتنول </p>
+                        <p class="text-xs text-gray-400 mt-2">صفحة هبوط لكريم الريتنول مصممة للرفع من نسبة التحويل مع نموذج طلب سريع.</p>
                         <div class="mt-6 flex items-center justify-between gap-2">
-                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-retinol', 'سماعات electrozyad Pro')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
+                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-retinol', 'كريم الريتنول SOFIMAL')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
                                 <i class="fa-solid fa-eye text-xs"></i> معاينة حية للموقع
                             </button>
                             <a href="#order" class="px-3 py-2 bg-brand-800 hover:bg-gold-500 hover:text-black rounded-xl text-xs font-bold transition">اطلب مثلها</a>
@@ -286,7 +341,7 @@
                         <div class="w-full max-w-[200px] bg-brand-dark border-4 border-brand-600 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
                             <div class="w-full h-36 bg-amber-500/20 rounded-2xl flex flex-col items-center justify-center text-center p-2">
                                 <span class="text-2xl mb-1">🍳</span>
-                                <span class="text-[10px] font-bold text-amber-300">قطاعة الخضار العجيبة</span>
+                                <span class="text-[10px] font-bold text-amber-300">كريم حب الشباب</span>
                                 <span class="text-[9px] bg-gold-500 text-black px-2 py-0.5 rounded font-bold mt-2">توفير الوقت والجهد</span>
                             </div>
                             <div class="mt-2 space-y-1">
@@ -297,17 +352,443 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs text-amber-400 font-bold">مجال التجميل والأناقة</span>
-                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط كريم حب شباب</h3>
-                        <p class="text-xs text-gray-400 mt-2">تصميم عملي بأسلوب "حل المشكلة"، عروض التعدد (2 قطع بسعر يخاطب ربات البيوت).</p>
+                        <span class="text-xs text-amber-400 font-bold">مجال العناية بالبشرة</span>
+                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط كريم حب الشباب</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم عملي بأسلوب "حل المشكلة"، عروض التعدد (2 قطع بسعر يخاطب الزبائن).</p>
                         <div class="mt-6 flex items-center justify-between gap-2">
-                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-acnee', 'قطاعة الخضار العجيبة')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
+                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-acnee', 'كريم حب الشباب')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
                                 <i class="fa-solid fa-eye text-xs"></i> معاينة حية للموقع
                             </button>
                             <a href="#order" class="px-3 py-2 bg-brand-800 hover:bg-gold-500 hover:text-black rounded-xl text-xs font-bold transition">اطلب مثلها</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-20 relative border-t border-brand-600/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-600/40 glow-blue">
+                <div class="text-center mb-8">
+                    <span class="px-3 py-1 bg-gold-500/20 text-gold-400 text-xs font-bold rounded-full border border-gold-500/30">
+                        📊 حاسبة زيادة الأرباح المتوقعة
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white mt-3">احسب شحال تقدر تزيد فـ أرباحك عند رفع نسبة التحويل</h2>
+                    <p class="text-xs sm:text-sm text-gray-300 mt-2">شوف الفرق بين متجر عادي (نسبة تحويل 1.5%) وصفحة هبوط SPREADAD (نسبة تحويل 4.5%+)</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-1">عدد الزوار من الإعلانات شهرياً:</label>
+                            <input type="number" id="calcVisitors" value="5000" min="500" step="500" oninput="calculateProfit()" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 mb-1">متوسط ربحك الصافي فـ كل مبيعة (درهم):</label>
+                            <input type="number" id="calcProfitPerOrder" value="120" min="10" step="10" oninput="calculateProfit()" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none">
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-dark/90 p-6 rounded-2xl border border-gold-500/30 space-y-4">
+                        <div class="flex justify-between items-center text-xs text-gray-400 border-b border-brand-600/40 pb-2">
+                            <span>المتجر العادي (1.5% CR):</span>
+                            <span id="oldOrders" class="font-bold text-white">75 طلب</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-gray-400 border-b border-brand-600/40 pb-2">
+                            <span>صفحة SPREADAD (4.5% CR):</span>
+                            <span id="newOrders" class="font-bold text-gold-400">225 طلب</span>
+                        </div>
+                        <div class="pt-2">
+                            <span class="block text-xs text-gray-400">الأرباح الإضافية الصافية شهرياً:</span>
+                            <span id="extraProfit" class="text-2xl sm:text-3xl font-black text-gold-400 gradient-text">+18,000 د.م</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 relative bg-brand-dark/80 border-t border-brand-600/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-snug">
+                    عروض وباقات الأسعار المصممة لتكبير أرباحك
+                </h2>
+                <p class="text-gray-300 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
+                    اختر الباقة المناسبة لحجم تجارتك. بدون مصاريف خفية، وبدون اشتراكات شهرية – تدفع مرة واحدة وصفحتك ملكك للأبد.
+                </p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch pt-6">
+                
+                <!-- Package 1: Starter -->
+                <div class="glass-card rounded-3xl p-8 border border-brand-600/40 flex flex-col justify-between relative hover:border-brand-500/60 transition">
+                    <div>
+                        <!-- Header Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1.5 rounded-xl bg-brand-800 text-brand-300 text-xs font-bold border border-brand-600/50 flex items-center gap-1.5">
+                                <i class="fa-solid fa-paper-plane text-brand-400"></i> باقة البداية
+                            </span>
+                        </div>
+
+                        <!-- Card Title -->
+                        <h3 class="text-2xl font-black text-white mb-2">صفحة هبوط واحدة</h3>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">
+                            مثالية لتجربة منتج جديد أو البدء في مجال الـ COD بحجم صغير.
+                        </p>
+
+                        <!-- Price Tag -->
+                        <div class="mb-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-black text-white">299</span>
+                                <span class="text-lg font-bold text-gold-400">درهم</span>
+                                <span class="text-sm text-gray-500 line-through mr-2">499 د.م</span>
+                            </div>
+                            <div class="mt-2 inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-bold bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-500/30">
+                                <i class="fa-solid fa-circle-check"></i> دفعة واحدة فقط - ملكية مدى الحياة
+                            </div>
+                        </div>
+
+                        <hr class="border-brand-600/30 my-6">
+
+                        <!-- Features Checklist -->
+                        <ul class="space-y-3.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>صفحة هبوط متجاوبة 100% للهاتف</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>ربط مباشر مع Google Sheets</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>ربط Meta & TikTok Pixel</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>سرعة تحميل أقل من ثانية</span>
+                            </li>
+                            <li class="flex items-center gap-2.5 text-gray-500">
+                                <i class="fa-solid fa-xmark text-gray-600 text-sm ml-0.5"></i>
+                                <span>كتابة النصوص الإعلانية (منك)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackageAndScroll('باقة الصفحة الواحدة - 299 درهم')" class="w-full py-3.5 rounded-xl bg-brand-800/90 hover:bg-brand-700 text-white font-bold text-sm transition flex items-center justify-center gap-2 border border-brand-600/40">
+                            <span>اختر هذه الباقة</span>
+                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 2: Professional (Featured) -->
+                <div class="glass-card rounded-3xl p-8 border-2 border-gold-500 flex flex-col justify-between relative glow-gold bg-gradient-to-b from-brand-card to-brand-dark transform lg:-translate-y-3">
+                    
+                    <!-- Top Ribbon Badge -->
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-500 to-amber-600 text-black px-4 py-1 rounded-full text-xs font-black shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-crown text-xs"></i>
+                        <span>الأكثر طلباً - التوفير الأكبر</span>
+                    </div>
+
+                    <div>
+                        <!-- Header Badge -->
+                        <div class="flex items-center justify-between mb-4 mt-2">
+                            <span class="px-3 py-1.5 rounded-xl bg-gold-500/20 text-gold-400 text-xs font-bold border border-gold-500/30 flex items-center gap-1.5">
+                                <i class="fa-solid fa-bolt text-gold-400"></i> باقة الاحتراف
+                            </span>
+                        </div>
+
+                        <!-- Card Title -->
+                        <h3 class="text-2xl font-black text-white mb-2">3 صفحات هبوط كاملة</h3>
+                        <p class="text-xs text-gray-300 mb-6 leading-relaxed">
+                            الحل الموصى به للمتاجر والمحترفين لزيادة نسبة التحويل واستغلال الإعلانات.
+                        </p>
+
+                        <!-- Price Tag -->
+                        <div class="mb-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-5xl font-black text-white">699</span>
+                                <span class="text-xl font-bold text-gold-400">درهم</span>
+                                <span class="text-sm text-gray-400 line-through mr-2">1199 د.م</span>
+                            </div>
+                            <div class="mt-2 inline-flex items-center gap-1.5 text-[11px] text-gold-300 font-bold bg-gold-500/10 px-2.5 py-1 rounded-md border border-gold-500/30">
+                                ⏱ ووفر 500 درهم على الطلب اليوم
+                            </div>
+                        </div>
+
+                        <hr class="border-gold-500/20 my-6">
+
+                        <!-- Features Checklist -->
+                        <ul class="space-y-3.5 text-xs text-gray-200">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>3 صفحات هبوط لـ 3 منتجات مختلفة</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>كتابة إعلانية احترافية (Copywriting) بـ الدارجة</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>ربط Google Sheets + إشعارات الواتساب/تليغرام</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>ربط متقدم Pixel Events (Purchase, Lead)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>تعديلات غير محدودة حتى الرضا التام</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-sm"></i>
+                                <span>دعم فني وتعديلات مجانية لمدة 30 يوم</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackageAndScroll('باقة الاحتراف - 699 درهم')" class="w-full py-4 rounded-xl gradient-gold-btn text-black font-black text-base shadow-xl shadow-gold-500/25 transition active:scale-98 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>اطلب باقة الاحتراف الآن</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 3: Unlimited/VIP -->
+                <div class="glass-card rounded-3xl p-8 border border-brand-600/40 flex flex-col justify-between relative hover:border-brand-500/60 transition">
+                    <div>
+                        <!-- Header Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1.5 rounded-xl bg-brand-800 text-brand-300 text-xs font-bold border border-brand-600/50 flex items-center gap-1.5">
+                                <i class="fa-solid fa-building text-brand-400"></i> الباقة المفتوحة
+                            </span>
+                        </div>
+
+                        <!-- Card Title -->
+                        <h3 class="text-2xl font-black text-white mb-2">7 صفحات هبوط + VIP</h3>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">
+                            مصممة للشركات، الوكالات، والموافقين الكبار أصحاب الحملات المكثفة.
+                        </p>
+
+                        <!-- Price Tag -->
+                        <div class="mb-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-black text-white">1,299</span>
+                                <span class="text-lg font-bold text-gold-400">درهم</span>
+                                <span class="text-sm text-gray-500 line-through mr-2">2100 د.م</span>
+                            </div>
+                            <div class="mt-2 inline-flex items-center gap-1.5 text-[11px] text-cyan-400 font-bold bg-cyan-950/60 px-2.5 py-1 rounded-md border border-cyan-500/30">
+                                <i class="fa-solid fa-shield-halved"></i> مع استضافة مجانية VIP ومتابعة
+                            </div>
+                        </div>
+
+                        <hr class="border-brand-600/30 my-6">
+
+                        <!-- Features Checklist -->
+                        <ul class="space-y-3.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>7 صفحات هبوط مخصصة ومصممة بعناية</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>كتابة محتوى وتسويق بصري لكل منتج</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>A/B Testing وتجربة نسختين لزيادة Margin</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>ربط وتجهيز السيرفر والاستضافة الخاصة</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-gold-400 text-sm"></i>
+                                <span>أولوية الخدمة والتسليم المباشر خلال 24 ساعة</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackageAndScroll('الباقة المفتوحة - 1,299 درهم')" class="w-full py-3.5 rounded-xl bg-brand-800/90 hover:bg-brand-700 text-white font-bold text-sm transition flex items-center justify-center gap-2 border border-brand-600/40">
+                            <span>اختر الباقة المفتوحة</span>
+                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Customer Reviews Section -->
+    <section id="testimonials" class="py-24 relative border-t border-brand-600/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-bold text-sm tracking-wider uppercase">آراء الزبناء والنتائج</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">شنو قالوا أصحاب المتاجر الإلكترونية عليا؟</h2>
+                <p class="text-gray-400 text-sm mt-3">قصص نجاح واقعية لباعة COD فـ المغرب استعملوا صفحات SPREADAD وضاعفوا نسبة التحويل</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-brand-600/40 relative flex flex-col justify-between">
+                    <div>
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed italic mb-6">
+                            "كنت كنسرب فلوس كثار فـ TikTok ads والـ Conversion Rate ما كيتعداش 1.8%. بعدما بدلت لصفحة هبوط من SPREADAD، نسبة التحويل طلعت لـ 5.2%! السرعة ديال التحميل والـ Copywriting بالدارجة جابوا الفرق."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-600/30">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-black font-black flex items-center justify-center text-sm shadow">
+                            ع.ش
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">عثمان الشرايبي</h4>
+                            <span class="text-[11px] text-gold-400 font-medium">بائع فـ مجال التجميل - الدار البيضاء</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-gold-500/30 relative flex flex-col justify-between glow-gold">
+                    <div>
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed italic mb-6">
+                            "أحسن استثمار درتو فـ تجارتي هاد العام. باقة الاحتراف صاوبوا ليا 3 صفحات مقادين، والربط مع Google Sheets تهنيت من ادخال الطلبات يدوياً. الدعم الفني ديالهم سريع ومحترف جداً."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-600/30">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-400 to-brand-600 text-white font-black flex items-center justify-center text-sm shadow">
+                            ي.ب
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">ياسين بنجلون</h4>
+                            <span class="text-[11px] text-gold-400 font-medium">متجر أدوات منزلية - مراكش</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-brand-600/40 relative flex flex-col justify-between">
+                    <div>
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed italic mb-6">
+                            "الصفحات متجاوبة 100% مع الهواتف الذكية ومكاينش هاديك العرقلة ديال Cart و Checkout المزعجة. الزبون كيدخل وكيطلب فـ 5 ثواني. المبيعات تزادوا كتر من 60%."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-600/30">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-emerald-400 to-teal-700 text-white font-black flex items-center justify-center text-sm shadow">
+                            م.س
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">مريم العلمي</h4>
+                            <span class="text-[11px] text-gold-400 font-medium">متجر منتجات العناية - طنجة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 relative bg-brand-dark/90 border-t border-brand-600/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-bold text-sm tracking-wider uppercase">الأسئلة الشائعة</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">عندك أسئلة فـ البال؟ ها الأجوبة عليها</h2>
+                <p class="text-gray-400 text-sm mt-3">كل ما تحتاج معرفته عن طريقة عملنا وكيفية تجهيز صفحتك</p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item glass-card rounded-2xl border border-brand-600/40 overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-right flex items-center justify-between font-bold text-white text-sm sm:text-base hover:text-gold-400 transition">
+                        <span>كيفاش كتوصلني الطلبات ديال الزبناء؟</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400 text-xs transition-transform duration-300 mr-2"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-brand-600/20 pt-3">
+                        كنربطوا صفحة الهبوط ديالك مباشرة بـ جدول Google Sheets خاص بك. كاع الطلبات (الاسم، الهاتف، العنوان، المنتج، والكمية) كتوصل فـ الحين وبدقة. ويمكن لينا نضيفوا إشعار إضافي على الواتساب أو تليغرام فور كل طلب.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item glass-card rounded-2xl border border-brand-600/40 overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-right flex items-center justify-between font-bold text-white text-sm sm:text-base hover:text-gold-400 transition">
+                        <span>شحال ديال الوقت كياخد تجهيز الصفحة؟</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400 text-xs transition-transform duration-300 mr-2"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-brand-600/20 pt-3">
+                        التسليم كيكون فـ ظرف 24 إلى 48 ساعة كأقصى تقدير من بعد استلام المعلومات والصور الخاصة بالمنتج ديالك.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item glass-card rounded-2xl border border-brand-600/40 overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-right flex items-center justify-between font-bold text-white text-sm sm:text-base hover:text-gold-400 transition">
+                        <span>واش كنحتاج نخلص دومين واستضافة شهرية؟</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400 text-xs transition-transform duration-300 mr-2"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-brand-600/20 pt-3">
+                        لا! ما كاين حتى اشتراك شهري. كتدفع مرة واحدة فقط والصفحة كتبقى ملكك مدى الحياة. يلا كان عندك استضافة والدومين ديالك كنربطوها فيه، ولا معندكش كنساعدوك تجهزها فـ دقائق.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item glass-card rounded-2xl border border-brand-600/40 overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-right flex items-center justify-between font-bold text-white text-sm sm:text-base hover:text-gold-400 transition">
+                        <span>هل الصفحات مجهزة لربط TikTok Pixel و Facebook Pixel؟</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400 text-xs transition-transform duration-300 mr-2"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-brand-600/20 pt-3">
+                        نعم 100%. كنربطوا الـ Pixels بـ الأحداث المهمة كاملة (PageValue, Lead, Purchase) باش تقدر تتبع الحملات الإعلانية ديالك وتدير Retargeting بـ احترافية بدقة عالية.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item glass-card rounded-2xl border border-brand-600/40 overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-right flex items-center justify-between font-bold text-white text-sm sm:text-base hover:text-gold-400 transition">
+                        <span>شنو كيطرا يلا بغيت نعدل شي حاجة فـ التصميم من بعد التسليم؟</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400 text-xs transition-transform duration-300 mr-2"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-brand-600/20 pt-3">
+                        عندك تعديلات مفتوحة ومجانية حتى تكون راضي 100% على الصفحة والتصميم والنصوص. هدفنا هو تسلم صفحة كتجيب المبيعات فعلياً.
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -360,7 +841,7 @@
     </div>
 
     <!-- Order Section -->
-    <section id="order" class="py-24 relative">
+    <section id="order" class="py-24 relative border-t border-brand-600/30">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-gold-500/50 shadow-2xl relative glow-gold">
                 <div class="text-center mb-8">
@@ -425,11 +906,15 @@
     <!-- Footer -->
     <footer class="border-t border-brand-600/30 py-10 bg-[#070d16] text-center text-xs text-gray-500">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center space-x-2 space-x-reverse mb-2">
+                <span class="text-lg font-black tracking-wider text-white font-tajawal">SPREAD<span class="text-gold-500">AD</span></span>
+            </div>
             <p class="font-bold text-gray-400">SPREADAD Store © 2026 - جميع الحقوق محفوظة</p>
-            <p class="text-[11px] text-gray-500">منصة المتخصصين في تطوير صفحات الهبوط عالية التحويل لحملات الدفع عند الاستلام.</p>
+            <p class="text-[11px] text-gray-500">منصة المتخصصين في تطوير صفحات الهبوط عالية التحويل لحملات الدفع عند الاستلام (COD).</p>
         </div>
     </footer>
 
+    <!-- JavaScript Section -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -445,8 +930,10 @@
                 btn.classList.add('glass-card', 'text-gray-300');
             });
 
-            event.target.classList.remove('glass-card', 'text-gray-300');
-            event.target.classList.add('gradient-gold-btn', 'text-black');
+            if (event && event.target) {
+                event.target.classList.remove('glass-card', 'text-gray-300');
+                event.target.classList.add('gradient-gold-btn', 'text-black');
+            }
 
             cards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
@@ -455,6 +942,43 @@
                     card.style.display = 'none';
                 }
             });
+        }
+
+        function calculateProfit() {
+            const visitors = parseFloat(document.getElementById('calcVisitors').value) || 0;
+            const profitPerOrder = parseFloat(document.getElementById('calcProfitPerOrder').value) || 0;
+
+            const oldOrders = Math.round(visitors * 0.015);
+            const newOrders = Math.round(visitors * 0.045);
+            const extraProfit = (newOrders - oldOrders) * profitPerOrder;
+
+            document.getElementById('oldOrders').innerText = oldOrders + ' طلب';
+            document.getElementById('newOrders').innerText = newOrders + ' طلب';
+            document.getElementById('extraProfit').innerText = '+' + extraProfit.toLocaleString() + ' د.م';
+        }
+
+        function selectPackageAndScroll(packageName) {
+            const selectEl = document.getElementById('orderPackageSelect');
+            if (selectEl) {
+                selectEl.value = packageName;
+            }
+            const orderSec = document.getElementById('order');
+            if (orderSec) {
+                orderSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+
+            // Open clicked if was closed
+            if (!isOpen) {
+                item.classList.add('active');
+            }
         }
 
         function handleOrderSubmit(e) {
@@ -503,6 +1027,11 @@
                 }, 200);
             }
         }
+
+        // Run calculator once on load
+        window.onload = function() {
+            calculateProfit();
+        };
     </script>
 </body>
 </html>
