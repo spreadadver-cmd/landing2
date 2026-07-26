@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كريم سكينورين الأصلي لعلاج حب الشباب وتفتيح التصبغات | Skinoren 20%</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            dir: 'rtl',
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0f172a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px rgba(20, 184, 166, 0.3)',
+                    },
+                    keyframes: {
+                        pulseSlow: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.03)', opacity: '0.92' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.4s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0d9488;
+            border-radius: 4px;
+        }
+
+        /* Image comparison slider */
+        .ba-container {
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+        }
+        .ba-after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+        
+        .badge-pulse {
+            box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7);
+            animation: pulse-ring 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+        @keyframes pulse-ring {
+            to {
+                box-shadow: 0 0 0 12px rgba(13, 148, 136, 0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-medical-200 selection:text-medical-900 pb-20 md:pb-0">
+
+    <!-- Top Countdown & Promotion Bar -->
+    <div id="top-bar" class="bg-medical-900 text-teal-100 py-2.5 px-4 text-xs md:text-sm font-medium sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-400 text-slate-900 animate-pulse">
+                    <i class="fa-solid fa-shield-halved ml-1"></i> منتج طبي أصلي 100%
+                </span>
+                <span>خصم خاص لفترة محدودة + توصيل سريع مجاني لكافة المدن!</span>
+            </div>
+            
+            <div class="flex items-center gap-3 dir-ltr">
+                <span class="text-xs opacity-80 dir-rtl">ينتهي العرض الخاص خلال:</span>
+                <div class="flex items-center gap-1 font-mono font-bold text-amber-300">
+                    <span id="timer-hours" class="bg-medical-800 px-2 py-0.5 rounded text-white min-w-[24px] inline-block text-center">03</span>:
+                    <span id="timer-minutes" class="bg-medical-800 px-2 py-0.5 rounded text-white min-w-[24px] inline-block text-center">15</span>:
+                    <span id="timer-seconds" class="bg-medical-800 px-2 py-0.5 rounded text-white min-w-[24px] inline-block text-center">42</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-[37px] sm:top-[33px] z-40 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-medical-700 to-medical-500 flex items-center justify-center text-white font-black text-xl shadow-md">
+                    <i class="fa-solid fa-prescription-bottle-medical"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider text-medical-900 block leading-none">SKINOREN <span class="text-medical-600 text-lg font-light">20%</span></span>
+                    <span class="text-[10px] text-gray-500 font-medium">كريم حمض الأزيليك المطور</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                <a href="#benefits" class="hover:text-medical-600 transition">دواعي الاستعمال</a>
+                <a href="#results" class="hover:text-medical-600 transition">النتائج قبل وبعد</a>
+                <a href="#usage" class="hover:text-medical-600 transition">طريقة الاستخدام</a>
+                <a href="#alternatives" class="hover:text-medical-600 transition">الأنواع والبدائل</a>
+                <a href="#faq" class="hover:text-medical-600 transition">الأسئلة الشائعة</a>
+            </div>
+
+            <a href="#order-form" class="bg-gradient-to-r from-medical-600 to-medical-500 text-white hover:from-medical-700 hover:to-medical-600 px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>اطلب الآن (الدفع عند الاستلام)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-8 md:py-12 relative overflow-hidden bg-gradient-to-b from-medical-50/50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                
+                <!-- Left/Product Image Gallery -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="relative rounded-3xl overflow-hidden bg-white shadow-xl border border-medical-200 group">
+                        <div class="absolute top-4 right-4 z-10 flex flex-col gap-2">
+                            <span class="bg-medical-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1">
+                                <i class="fa-solid fa-user-doctor"></i> موصى به طبياً
+                            </span>
+                            <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                                أزيليك أسيد 20%
+                            </span>
+                        </div>
+
+                        <!-- Main Image Display -->
+                        <div class="aspect-square relative overflow-hidden flex items-center justify-center bg-slate-50 p-6">
+                            <img id="main-product-img" 
+                                 src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" 
+                                 alt="كريم سكينورين 20%" 
+                                 class="w-full h-full object-cover object-center rounded-2xl transition-all duration-500 group-hover:scale-105">
+                        </div>
+
+                        <!-- Floating Micro Medical Badge -->
+                        <div class="absolute bottom-4 right-4 left-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-medical-100 flex items-center justify-between text-xs">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm">
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800">مضاد للبكتيريا والالتهابات</p>
+                                    <p class="text-slate-500">مناسب للبشرة الدهنية والمختلطة</p>
+                                </div>
+                            </div>
+                            <span class="text-medical-800 font-bold bg-medical-50 px-2.5 py-1 rounded-lg border border-medical-200">عبوة 30 جم</span>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Features Pills -->
+                    <div class="grid grid-cols-3 gap-2.5 text-center">
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-bacteria text-medical-600 text-lg mb-1 block"></i>
+                            <span class="text-xs font-bold text-slate-800 block">يقاوم الرؤوس السوداء</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-wand-magic-sparkles text-amber-500 text-lg mb-1 block"></i>
+                            <span class="text-xs font-bold text-slate-800 block">يفتح التصبغات والكلف</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-droplet-slash text-teal-600 text-lg mb-1 block"></i>
+                            <span class="text-xs font-bold text-slate-800 block">ينظم إفراز الدهون</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Product Info & Order Box -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-medical-100 text-medical-800 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                            <i class="fa-solid fa-certificate"></i> علاج متكامل للبشرة
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                            كريم سكينورين (Skinoren) لعلاج حب الشباب وتفتيح البقع الداكنة
+                        </h1>
+                        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+                            يُستخدم كريم سكينورين لتحسين مظهر البشرة من خلال تقليل حب الشباب وتفتيح البقع الداكنة، كما يعمل كمضاد للالتهابات ومضاد للبكتيريا. يحتوي على المادة الفعالة <strong class="text-medical-700">أزيليك أسيد بتركيز 20%</strong> التي تقاوم تكون الرؤوس السوداء والبيضاء وتقلل إفراز الدهون الزائدة.
+                        </p>
+                    </div>
+
+                    <!-- Key Benefits Bullet List -->
+                    <ul class="space-y-2.5 text-sm text-slate-800 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>علاج حب الشباب الخفيف إلى المتوسط:</strong> يقضي على البكتيريا المسببة للحبوب ويمنع انسداد المسام.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>تفتيح آثار الحبوب والتصبغات:</strong> يقلل إنتاج الميلانين لتفتيح البقع الداكنة والكلف والنمش.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>مُهدئ لاحمرار الروزاسيا:</strong> يخفف التهابات البشرة الدهنية والمختلطة.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Price Box & Offer Selector -->
+                    <div class="bg-white rounded-3xl p-5 border-2 border-medical-200 shadow-xl space-y-4">
+                        <div class="flex items-baseline justify-between border-b border-slate-100 pb-3">
+                            <div>
+                                <span class="text-xs text-slate-500 block">السعر الخاص بعد التخفيض:</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span id="display-price" class="text-3xl font-black text-medical-700">189 د.م</span>
+                                    <span id="display-old-price" class="text-sm text-slate-400 line-through">290 د.م</span>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 font-bold text-xs px-3 py-1.5 rounded-full border border-emerald-200">
+                                توفير 35% + شحن مجاني
+                            </span>
+                        </div>
+
+                        <!-- Bundle Options -->
+                        <div class="space-y-2.5">
+                            <label class="block text-xs font-bold text-slate-900">اختر العرض المناسب لك:</label>
+                            
+                            <!-- Option 1 -->
+                            <div onclick="selectBundle(1, 189, 290)" id="bundle-option-1" class="border-2 border-medical-500 bg-medical-50/50 p-3 rounded-2xl cursor-pointer transition flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="bundle" id="bundle-1" checked class="w-4 h-4 text-medical-600 focus:ring-medical-500">
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm">عبوة واحدة (30 جم كريم)</p>
+                                        <p class="text-xs text-slate-500">تكفي لمدة 4 إلى 6 أسابيع من الاستخدام</p>
+                                    </div>
+                                </div>
+                                <span class="font-black text-medical-900 text-sm">189 د.م</span>
+                            </div>
+
+                            <!-- Option 2 (Best Offer) -->
+                            <div onclick="selectBundle(2, 320, 580)" id="bundle-option-2" class="border-2 border-amber-400 bg-amber-50/40 p-3 rounded-2xl cursor-pointer transition flex items-center justify-between relative">
+                                <span class="absolute -top-2.5 right-4 bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">
+                                    🌟 العرض الأوفر (عبوتين لكورس كامل)
+                                </span>
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="bundle" id="bundle-2" class="w-4 h-4 text-medical-600 focus:ring-medical-500">
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm">عبوتين سكينورين (2x 30g)</p>
+                                        <p class="text-xs text-emerald-700 font-medium">160 د.م فقط للعبوة بدلاً من 189 د.م</p>
+                                    </div>
+                                </div>
+                                <span class="font-black text-amber-800 text-sm">320 د.م</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Order Form Anchor -->
+                        <div id="order-form" class="pt-2">
+                            <form onsubmit="handleOrderSubmit(event)" class="space-y-3">
+                                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+                                    <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-truck-ramp-box text-medical-600"></i>
+                                        بيانات طلب الشحن (الدفع نقدًا عند الاستلام):
+                                    </h3>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">الاسم الكامل *</label>
+                                        <input type="text" required id="customer-name" placeholder="أدخل اسمك الكامل" 
+                                               class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 text-sm outline-none bg-white">
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-slate-700 mb-1">رقم الهاتف *</label>
+                                            <input type="tel" required id="customer-phone" placeholder="06XXXXXXXX" pattern="[0-9]{10}"
+                                                   class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 text-sm text-right outline-none bg-white">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-slate-700 mb-1">المدينة *</label>
+                                            <select required id="customer-city" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 text-sm outline-none bg-white">
+                                                <option value="" disabled selected>اختر المدينة</option>
+                                                <option value="Casablanca">الدار البيضاء</option>
+                                                <option value="Rabat">الرباط</option>
+                                                <option value="Fes">فاس</option>
+                                                <option value="Marrakech">مراكش</option>
+                                                <option value="Tangier">طنجة</option>
+                                                <option value="Agadir">أكادير</option>
+                                                <option value="Meknes">مكناس</option>
+                                                <option value="Oujda">وجدة</option>
+                                                <option value="Other">مدينة أخرى...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">العنوان التفصيلي</label>
+                                        <input type="text" id="customer-address" placeholder="اسم الحي / الشارع / رقم المنزل" 
+                                               class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 text-sm outline-none bg-white">
+                                    </div>
+                                </div>
+
+                                <button type="submit" 
+                                        class="w-full bg-gradient-to-r from-medical-700 via-medical-600 to-medical-700 hover:from-medical-800 hover:to-medical-700 text-white font-black text-base py-3.5 px-6 rounded-2xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 badge-pulse">
+                                    <i class="fa-solid fa-check-circle text-xl"></i>
+                                    <span>تأكيد الطلب الآن - الشحن مجاني</span>
+                                </button>
+                                
+                                <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+                                    معاينة المنتج قبل الدفع | منتج أصلي ومختبر طبياً
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Trust Stats -->
+    <section class="bg-medical-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-3 border-r border-medical-800 last:border-0">
+                <span class="text-2xl sm:text-3xl font-black text-amber-300 block mb-1">20%</span>
+                <span class="text-xs text-medical-200">تركيز حمض الأزيليك الفعال</span>
+            </div>
+            <div class="p-3 border-r border-medical-800 last:border-0">
+                <span class="text-2xl sm:text-3xl font-black text-amber-300 block mb-1">4 - 6 أسابيع</span>
+                <span class="text-xs text-medical-200">بداية ظهور نتائج ملحوظة</span>
+            </div>
+            <div class="p-3 border-r border-medical-800 last:border-0">
+                <span class="text-2xl sm:text-3xl font-black text-amber-300 block mb-1">30 جم</span>
+                <span class="text-xs text-medical-200">سعة العبوة الأصلية</span>
+            </div>
+            <div class="p-3">
+                <span class="text-2xl sm:text-3xl font-black text-amber-300 block mb-1">100%</span>
+                <span class="text-xs text-medical-200">تركيبة آمنة ومضادة للبكتيريا</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Indications Section (دواعي استعمال سكينورين) -->
+    <section id="benefits" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-medical-100 text-medical-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">استخدامات متعددة</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900">دواعي استعمال كريم سكينورين</h2>
+                <p class="text-slate-600 text-sm mt-2">حل متكامل وفعال لمشاكل البشرة الدهنية والمختلطة والتصبغات الجلدية</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-2 hover:shadow-md transition">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-medical-100 text-medical-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-face-frown"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">علاج حب الشباب</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">علاج حالات حب الشباب الخفيف إلى المتوسط وتقليل الجراثيم المسببة للحبوب.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-2 hover:shadow-md transition">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">تفتيح آثار الحبوب</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">التخلص من البقع الداكنة والتأثيرات الناتجة عن التئام الحبوب القديمة.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-2 hover:shadow-md transition">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">تقليل الالتهابات</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">تهدئة تهيج المسامات الانسدادية والحد من انتشار البكتيريا في البشرة.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-2 hover:shadow-md transition">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">علاج الكلف والنمش</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">تفتيح حالات التصبغات السطحية وتوحيد لون البشرة بشكل تدريجي آمن.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-2 hover:shadow-md transition">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">احمرار الروزاسيا</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">تقليل الاحمرار الوجني وتهدئة البشرة المصابة بالوردية تحت الإشراف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Before / After Section -->
+    <section id="results" class="py-12 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">تأثير ملموس</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900">شاهد فرق البشرة بعد استخدام سكينورين</h2>
+                <p class="text-slate-600 text-sm mt-2">اسحب الشريط للتعرف على التحسن في تفتيح التصبغات وحب الشباب خلال 6 أسابيع</p>
+            </div>
+
+            <div class="ba-container rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[16/9] sm:aspect-[21/9] max-w-3xl mx-auto relative bg-gray-200" id="ba-slider">
+                <!-- Before Image -->
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80" 
+                     alt="قبل - حب الشباب وتصبغات" 
+                     class="absolute inset-0 w-full h-full object-cover filter contrast-125 saturate-150">
+                <div class="absolute top-4 right-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">قبل (حب الشباب وتصبغات داكنة)</div>
+
+                <!-- After Image Layer -->
+                <div class="ba-after" id="ba-after-layer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80" 
+                         alt="بعد - بشرة صافية وموحدة" 
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-medical-700/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">بعد 6 أسابيع (بشرة متوازنة ومشرقة)</div>
+                </div>
+
+                <!-- Drag Handle -->
+                <div class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-20 shadow-xl" id="ba-handle" style="left: 50%;">
+                    <div class="w-9 h-9 rounded-full bg-white shadow-2xl text-medical-700 flex items-center justify-center text-sm absolute top-1/2 -translate-y-1/2 -translate-x-1/2 border-2 border-medical-300">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Steps Section (طريقة الجرعة والاستخدام) -->
+    <section id="usage" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-medical-100 text-medical-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">دليل مصور للجرعات</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900">طريقة استخدام كريم سكينورين بالصور Step-by-Step</h2>
+                <p class="text-slate-600 text-sm mt-2">اتبعي هذه الخطوات المصورة بانتظام مرتين يومياً (صباحاً ومساءً) للحصول على أسرع وأفضل نتائج</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 Photo Card -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" 
+                             alt="تنظيف وتجفيف الوجه" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 w-9 h-9 bg-medical-700 text-white rounded-xl flex items-center justify-center font-black text-sm shadow-lg">1</span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">الخطوة الأولى</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">غسل وتجفيف البشرة</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                اغسلي وجهك بغسول لطيف خالٍ من الصابون، ثم جففي البشرة بلطف بفرك خفيف باستخدام منشفة قطنية ناعمة ونظيفة.
+                            </p>
+                        </div>
+                        <div class="pt-2 text-[11px] font-semibold text-medical-700 flex items-center gap-1.5 border-t border-slate-200/60">
+                            <i class="fa-solid fa-droplet text-medical-600"></i> بشرة جافة تماماً قبل التطبيق
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 Photo Card -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" 
+                             alt="أخذ كمية بحجم البسلة" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 w-9 h-9 bg-medical-700 text-white rounded-xl flex items-center justify-center font-black text-sm shadow-lg">2</span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">الخطوة الثانية</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">تحديد الجرعة المناسبة</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                خذي كمية صغيرة بحجم حبة البسلة (حوالي 0.5 جم) على أطراف الأصابع لتغطية كامل الوجه أو المناطق المصابة بحب الشباب وتصبغات.
+                            </p>
+                        </div>
+                        <div class="pt-2 text-[11px] font-semibold text-amber-700 flex items-center gap-1.5 border-t border-slate-200/60">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> تجنبي الإفراط لتفادي التهيج
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 Photo Card -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1512290900673-05973e86c0ff?auto=format&fit=crop&w=600&q=80" 
+                             alt="توزيع وتدليك الكريم" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 w-9 h-9 bg-medical-700 text-white rounded-xl flex items-center justify-center font-black text-sm shadow-lg">3</span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">الخطوة الثالثة</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">التوزيع والتدليك اللطيف</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                وزعي طبقة رقيقة جداً بحركات دائرية خفيفة على مكان الحبوب والبقع حتى يمتص الكريم بالكامل بواسطة البشرة.
+                            </p>
+                        </div>
+                        <div class="pt-2 text-[11px] font-semibold text-emerald-700 flex items-center gap-1.5 border-t border-slate-200/60">
+                            <i class="fa-solid fa-eye-slash text-emerald-600"></i> ابتعدي عن العينين والشفاه
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 Photo Card -->
+                <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col group">
+                    <div class="relative h-48 overflow-hidden bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" 
+                             alt="الترطيب والحماية من الشمس" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 w-9 h-9 bg-medical-700 text-white rounded-xl flex items-center justify-center font-black text-sm shadow-lg">4</span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">الخطوة الرابعة</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-base mb-1">الترطيب والوقاية النهارية</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                ضعي مرطباً طبياً خفيفاً بعد امتصاص الكريم لتهدئة الجلد، ولا تنسي استخدام واقٍ من الشمس (SPF 50+) عند الخروج نهاراً.
+                            </p>
+                        </div>
+                        <div class="pt-2 text-[11px] font-semibold text-teal-700 flex items-center gap-1.5 border-t border-slate-200/60">
+                            <i class="fa-solid fa-sun text-amber-500"></i> واقي الشمس ضروري لمنع التصبغ
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Caution Note Box -->
+            <div class="mt-8 bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start gap-3">
+                <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xl mt-0.5 shrink-0"></i>
+                <div class="text-xs text-amber-900 space-y-1">
+                    <p class="font-bold">نصيحة طبية لتفادي التهيج:</p>
+                    <p>يُفضل البدء باستخدامه بكمية صغيرة مرتين يومياً. يلاحظ التحسن عادة خلال 4 إلى 6 أسابيع من الاستخدام المنتظم، وقد يتطلب الأمر حتى 12 أسبوعاً في حالات التصبغات العميقة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Customer Reviews & Photos -->
+    <section id="reviews" class="py-14 bg-medical-50/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">تجارب حقيقية</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900">ماذا يقول عملاؤنا بعد تجربة سكينورين؟</h2>
+                <p class="text-slate-600 text-sm mt-2">تقييمات موثقة بالصور من عميلاتنا اللواتي حصلن على المنتج</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-md hover:shadow-lg transition space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="صورة العميل" class="w-12 h-12 rounded-full object-cover border-2 border-medical-200 p-0.5">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">سناء. م <i class="fa-solid fa-circle-check text-medical-500 ml-1 text-xs" title="مشتري مؤكد"></i></h4>
+                                <span class="text-[10px] text-slate-500">الدار البيضاء • قبل 3 أيام</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        "بصراحة الكريم سحر! كنت كنعاني من الحبوب وآثارهم في وجهي مدة طويلة. استعملت سكينورين شهرين والنتيجة خيالية، وجهي صفا بزاف. التوصيل كان سريع والمنتج وصلني مغلف وأصلي 100%."
+                    </p>
+                    <!-- Attached Photos -->
+                    <div class="flex gap-2 mt-3 pt-3 border-t border-slate-100">
+                        <div class="relative w-1/2 aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&q=80" alt="المنتج المستلم" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                            <div class="absolute inset-0 bg-black/20 flex items-end p-2"><span class="text-white text-[9px] font-bold">صورة المنتج</span></div>
+                        </div>
+                        <div class="relative w-1/2 aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=300&q=80" alt="نتيجة الاستخدام" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                            <div class="absolute inset-0 bg-black/20 flex items-end p-2"><span class="text-white text-[9px] font-bold">النتيجة بعد شهر</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-md hover:shadow-lg transition space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="صورة العميل" class="w-12 h-12 rounded-full object-cover border-2 border-medical-200 p-0.5">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">ليلى. ب <i class="fa-solid fa-circle-check text-medical-500 ml-1 text-xs" title="مشتري مؤكد"></i></h4>
+                                <span class="text-[10px] text-slate-500">الرباط • قبل أسبوع</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        "أحسن حل للتصبغات والكلف. استعملته مع واقي الشمس والنتيجة بانت في الأسابيع الأولى. شكرا لكم على المصداقية، خديت عرض العبوتين وصلوني مزيانين وتاريخ الصلاحية جديد."
+                    </p>
+                    <!-- Attached Photos -->
+                    <div class="flex gap-2 mt-3 pt-3 border-t border-slate-100">
+                        <div class="relative w-full h-24 rounded-xl overflow-hidden cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=400&q=80" alt="المنتج عند الاستلام" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                            <div class="absolute inset-0 bg-black/20 flex items-end p-2"><span class="text-white text-[9px] font-bold">عند استلام الطلبية</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-md hover:shadow-lg transition space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="صورة العميل" class="w-12 h-12 rounded-full object-cover border-2 border-medical-200 p-0.5">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">مريم. ع <i class="fa-solid fa-circle-check text-medical-500 ml-1 text-xs" title="مشتري مؤكد"></i></h4>
+                                <span class="text-[10px] text-slate-500">مراكش • قبل أسبوعين</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        "بشرتي دهنية ووافقني بزاف. نقص ليا الإفرازات ديال الدهون والرؤوس السوداء غبرو. في الأيام الأولى حسيت بشوية الوخز ولكن عادي مع الترطيب، أنصح به بشدة لكل بنت تعاني من الحبوب."
+                    </p>
+                    <!-- Attached Photos -->
+                    <div class="flex gap-2 mt-3 pt-3 border-t border-slate-100">
+                        <div class="relative w-1/3 aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=200&q=80" alt="المنتج" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        </div>
+                        <div class="relative w-2/3 aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=300&q=80" alt="بشرة صافية" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                            <div class="absolute inset-0 bg-black/20 flex items-end p-2"><span class="text-white text-[9px] font-bold">بعد شهرين من الاستعمال</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Side Effects & Precautions Section -->
+    <section class="py-12 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Side Effects -->
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex items-center gap-2 text-rose-600 font-extrabold text-lg border-b border-slate-100 pb-3">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h3>الآثار الجانبية المحتملة</h3>
+                </div>
+                <ul class="space-y-2.5 text-xs text-slate-700">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-dot text-rose-500 mt-1"></i>
+                        <span><strong>إحساس بالحرقان أو الوخز:</strong> قد يحدث مؤقتاً بعد التطبيق المباشر.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-dot text-rose-500 mt-1"></i>
+                        <span><strong>احمرار أو تقشير خفيف:</strong> تفاعل طبيعي للبشرة في الأيام الأولى.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-dot text-rose-500 mt-1"></i>
+                        <span><strong>جفاف موضعي وحكة:</strong> يمكن التغلب عليها باستخدام مرطب طبي.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1"></i>
+                        <span><strong>حالات نادرة جداً:</strong> تغير في لون الجلد أو تحسس شديد (يجب التوقف واستشارة الطبيب فوراً).</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contraindications -->
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex items-center gap-2 text-medical-800 font-extrabold text-lg border-b border-slate-100 pb-3">
+                    <i class="fa-solid fa-ban"></i>
+                    <h3>موانع وتحذيرات الاستخدام</h3>
+                </div>
+                <ul class="space-y-2.5 text-xs text-slate-700">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-red-500 font-bold mt-0.5"></i>
+                        <span><strong>الحساسية:</strong> يمنع للذين يعانون من حساسية حمض الأزيليك أو مكونات الكريم.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-red-500 font-bold mt-0.5"></i>
+                        <span><strong>الجروح والتشققات:</strong> لا يُوضع على المناطق المتشققة أو الجروح المفتوحة.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-red-500 font-bold mt-0.5"></i>
+                        <span><strong>الأطفال:</strong> لا يُستخدم للأطفال إلا تحت إشراف طبي متخصص.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-red-500 font-bold mt-0.5"></i>
+                        <span><strong>المناطق الحساسة:</strong> يجب تجنب ملامسة العينين، الفم، أو داخل الأنف.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Available Formulations & Pharmacy Alternatives (الأنواع والبدائل) -->
+    <section id="alternatives" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+            
+            <!-- Formulations -->
+            <div>
+                <div class="text-center max-w-xl mx-auto mb-6">
+                    <h2 class="text-2xl font-black text-slate-900">أنواع وتركيزات سكينورين المتوفرة</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-medical-50/60 p-5 rounded-2xl border border-medical-200 space-y-2">
+                        <span class="bg-medical-700 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">الكريم التقليدي</span>
+                        <h3 class="font-bold text-slate-900 text-base">كريم سكينورين 20% (30 جم)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            يحتوي على حمض الأزيليك بتركيز 20%، مناسب للبشرة المختلطة والجافة ويوفر ترطيباً متوازناً.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+                        <span class="bg-teal-700 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">التركيبة الخفيفة</span>
+                        <h3 class="font-bold text-slate-900 text-base">جل سكينورين (Skinoren Gel)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            يحتوي على نفس المادة الفعالة لكن بقوام جل خفيف سريع الامتصاص، ويُفضل لصاحبات البشرة شديدة الدهنية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pharmacy Alternatives -->
+            <div class="border-t border-slate-100 pt-8">
+                <div class="text-center max-w-xl mx-auto mb-6">
+                    <span class="text-xs font-bold text-slate-500">خيارات متوفرة في الصيدليات</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">بدائل كريم سكينورين الشائعة</h3>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold text-slate-800">
+                        <i class="fa-solid fa-capsules text-medical-600 ml-1"></i> كريم أكرتين (Acretin)
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold text-slate-800">
+                        <i class="fa-solid fa-capsules text-medical-600 ml-1"></i> كريم ديفرين (Differin)
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold text-slate-800">
+                        <i class="fa-solid fa-capsules text-medical-600 ml-1"></i> كريم أزادرم (Azaderm)
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold text-slate-800">
+                        <i class="fa-solid fa-capsules text-medical-600 ml-1"></i> إيزيس يونيتون 4 (ISIS Unitone 4)
+                    </span>
+                    <span class="bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold text-slate-800">
+                        <i class="fa-solid fa-capsules text-medical-600 ml-1"></i> كريم ميلوكين (Melquin)
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Storage & FAQ Section -->
+    <section id="faq" class="py-12 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="bg-medical-100 text-medical-800 text-xs font-bold px-3 py-1 rounded-full">إجابات الطاقم الطبي</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">الأسئلة الشائعة حول سكينورين</h2>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 text-right font-bold text-slate-900 flex items-center justify-between text-sm sm:text-base focus:outline-none">
+                        <span>ما هي المكونات الفعالة لـ سكينورين؟</span>
+                        <i class="fa-solid fa-chevron-down text-medical-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="pb-4">
+                            يحتوي كريم سكينورين على المادة الفعالة <strong>أزيليك أسيد (Azelaic Acid) بتركيز 20%</strong>، وهي مادة طبيعية مضادة للبكتيريا والالتهابات وتثبط إنتاج صبغة الميلانين.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 text-right font-bold text-slate-900 flex items-center justify-between text-sm sm:text-base focus:outline-none">
+                        <span>متى تظهر نتائج كريم سكينورين؟</span>
+                        <i class="fa-solid fa-chevron-down text-medical-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="pb-4">
+                            تبدأ النتائج في الظهور عادة بعد <strong>4 إلى 6 أسابيع</strong> من الاستخدام المنتظم. وفي بعض حالات التصبغات العميقة أو الكلف قد يحتاج الأمر إلى 12 أسبوعاً للحصول على أفضل نتيجة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 text-right font-bold text-slate-900 flex items-center justify-between text-sm sm:text-base focus:outline-none">
+                        <span>كيف يتم حفظ وتخزين سكينورين؟</span>
+                        <i class="fa-solid fa-chevron-down text-medical-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="pb-4">
+                            يُحفظ الكريم في درجة حرارة لا تتجاوز 25 درجة مئوية، بعيداً عن الضوء المباشر والرطوبة وفي مكان آمن بعيداً عن متناول الأطفال.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-5 py-4 text-right font-bold text-slate-900 flex items-center justify-between text-sm sm:text-base focus:outline-none">
+                        <span>هل سكينورين مناسب للتصبغات والكلف؟</span>
+                        <i class="fa-solid fa-chevron-down text-medical-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="pb-4">
+                            نعم، يساعد حمض الأزيليك في تقليل إنتاج الميلانين، مما يجعله فعالاً جداً في تفتيح البقع الداكنة والكلف والنمش عند استخدامه مرتين يومياً بانتظام مع واقٍ من الشمس.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Fixed Bottom Sticky CTA -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 z-40 shadow-2xl flex items-center justify-between gap-3">
+        <div>
+            <span class="text-[10px] text-slate-500 block">السعر المخفض:</span>
+            <span id="mobile-price" class="text-lg font-black text-medical-700">189 د.م</span>
+        </div>
+        <a href="#order-form" class="flex-1 bg-gradient-to-r from-medical-700 to-medical-600 text-white text-center font-bold text-sm py-3 px-4 rounded-xl shadow-md active:scale-95 transition">
+            <i class="fa-solid fa-cart-shopping ml-1"></i> اطلب الآن (الدفع عند الاستلام)
+        </a>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-center space-y-4 relative shadow-2xl border border-slate-200 animate-slide-up">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900">تم تسجيل طلبك بنجاح! 🎉</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                سيقوم مسؤول الشحن بالتواصل معك عبر الهاتف لتأكيد العنوان وإرسال العبوة إلى مدينتك.
+            </p>
+
+            <div class="bg-slate-50 p-4 rounded-2xl text-right text-xs space-y-2 border border-slate-200">
+                <div class="flex justify-between text-slate-700">
+                    <span>رقم الطلب المرجعي:</span>
+                    <strong id="order-ref" class="font-mono text-slate-900">#SKN-9021</strong>
+                </div>
+                <div class="flex justify-between text-slate-700">
+                    <span>اسم العميل:</span>
+                    <strong id="summary-name" class="text-slate-900">-</strong>
+                </div>
+                <div class="flex justify-between text-slate-700">
+                    <span>طريقة الدفع:</span>
+                    <strong class="text-emerald-700">الدفع عند الاستلام (COD)</strong>
+                </div>
+                <div class="flex justify-between text-slate-700 border-t border-slate-200 pt-2 font-bold text-sm">
+                    <span>المبلغ الإجمالي:</span>
+                    <strong id="summary-total" class="text-medical-700">189 د.م</strong>
+                </div>
+            </div>
+
+            <button onclick="closeSuccessModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl shadow-md transition text-sm">
+                متابعة التصفح
+            </button>
+        </div>
+    </div>
+
+    <!-- Live Toast -->
+    <div id="live-toast" class="fixed bottom-20 md:bottom-6 right-4 z-30 bg-white rounded-2xl p-3.5 shadow-2xl border border-slate-200 flex items-center gap-3 transform translate-y-32 opacity-0 transition-all duration-500 max-w-xs">
+        <div class="w-10 h-10 rounded-full bg-medical-100 text-medical-700 flex items-center justify-center font-bold shrink-0">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="text-xs">
+            <p class="font-bold text-slate-800" id="toast-text">فاطمة من الدار البيضاء</p>
+            <p class="text-slate-500">طلبت للتو <span class="text-emerald-600 font-bold">عرض العبوتين</span> 🔥</p>
+            <span class="text-[10px] text-slate-400">منذ ثانيتين</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 text-center">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-medical-600 text-white flex items-center justify-center font-black text-sm">S</div>
+                <span class="text-lg font-black text-white">SKINOREN CREAM 20%</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+                منتج طبي معتمد بحمض الأزيليك لشد نضارة البشرة وتقليل آثار الحبوب والتصبغات.
+            </p>
+            <p class="text-[11px] text-slate-500">جميع الحقوق محفوظة © 2026 Skinoren Health Inc.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        let selectedPrice = 189;
+
+        function selectBundle(bundleNum, price, oldPrice) {
+            selectedPrice = price;
+            document.getElementById('display-price').innerText = price + ' د.م';
+            document.getElementById('display-old-price').innerText = oldPrice + ' د.م';
+            document.getElementById('mobile-price').innerText = price + ' د.م';
+
+            document.getElementById('bundle-1').checked = (bundleNum === 1);
+            document.getElementById('bundle-2').checked = (bundleNum === 2);
+
+            const card1 = document.getElementById('bundle-option-1');
+            const card2 = document.getElementById('bundle-option-2');
+
+            if (bundleNum === 1) {
+                card1.classList.add('border-medical-500', 'bg-medical-50/50');
+                card2.classList.remove('border-medical-500');
+            } else {
+                card2.classList.add('border-amber-500');
+                card1.classList.remove('border-medical-500', 'bg-medical-50/50');
+            }
+        }
+
+        // Before After Drag Logic
+        const baContainer = document.getElementById('ba-slider');
+        const baAfterLayer = document.getElementById('ba-after-layer');
+        const baHandle = document.getElementById('ba-handle');
+        let isDragging = false;
+
+        function updateSliderPosition(x) {
+            const rect = baContainer.getBoundingClientRect();
+            let position = ((x - rect.left) / rect.width) * 100;
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            baAfterLayer.style.width = `${position}%`;
+            baHandle.style.left = `${position}%`;
+        }
+
+        if (baContainer) {
+            baContainer.addEventListener('mousedown', (e) => { isDragging = true; updateSliderPosition(e.clientX); });
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => { if (isDragging) updateSliderPosition(e.clientX); });
+
+            baContainer.addEventListener('touchstart', (e) => { isDragging = true; updateSliderPosition(e.touches[0].clientX); });
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => { if (isDragging) updateSliderPosition(e.touches[0].clientX); });
+        }
+
+        // FAQ Toggle
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+
+            if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                answer.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0px');
+                document.querySelectorAll('.fa-chevron-down').forEach(i => i.style.transform = 'rotate(0deg)');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Countdown Timer
+        let totalSeconds = 3 * 3600 + 15 * 60 + 42;
+        setInterval(() => {
+            if (totalSeconds <= 0) totalSeconds = 4 * 3600;
+            totalSeconds--;
+
+            const hrs = Math.floor(totalSeconds / 3600);
+            const mins = Math.floor((totalSeconds % 3600) / 60);
+            const secs = totalSeconds % 60;
+
+            document.getElementById('timer-hours').innerText = String(hrs).padStart(2, '0');
+            document.getElementById('timer-minutes').innerText = String(mins).padStart(2, '0');
+            document.getElementById('timer-seconds').innerText = String(secs).padStart(2, '0');
+        }, 1000);
+
+        // Order Handler
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('customer-name').value;
+            const ref = '#SKN-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('summary-name').innerText = name;
+            document.getElementById('summary-total').innerText = selectedPrice + ' د.م';
+            document.getElementById('order-ref').innerText = ref;
+
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Live Order Toast Simulation
+        const buyers = [
+            { name: "خديجة من طنجة", bundle: "عرض العبوتين (كورس كامل)" },
+            { name: "أمين من الرباط", bundle: "عبوة واحدة" },
+            { name: "سارة من مراكش", bundle: "عرض العبوتين (كورس كامل)" },
+            { name: "حمزة من فاس", bundle: "عبوة واحدة" }
+        ];
+
+        let buyerIdx = 0;
+        function showLiveToast() {
+            const toast = document.getElementById('live-toast');
+            const toastText = document.getElementById('toast-text');
+            const buyer = buyers[buyerIdx];
+
+            toastText.innerHTML = `${buyer.name}`;
+            toast.querySelector('p:nth-child(2)').innerHTML = `طلبت للتو <span class="text-emerald-600 font-bold">${buyer.bundle}</span> 🔥`;
+
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+
+            buyerIdx = (buyerIdx + 1) % buyers.length;
+        }
+
+        setTimeout(() => {
+            showLiveToast();
+            setInterval(showLiveToast, 11000);
+        }, 3000);
+    </script>
+</body>
+</html>
