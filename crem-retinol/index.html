@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كريم ريتينول لمقاومة التجاعيد وتجديد البشرة | SOFIMAL</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FAF7F2',
+                            100: '#F4EFE6',
+                            200: '#E8DEC9',
+                            300: '#D9C8A9',
+                            400: '#C7AD85',
+                            500: '#B09063',
+                            600: '#947247',
+                            700: '#755633',
+                            800: '#583F24',
+                            900: '#3D2A18',
+                            950: '#23170D',
+                        },
+                        brand: {
+                            50: '#FAF7F2',
+                            100: '#F4EFE6',
+                            200: '#E8DEC9',
+                            300: '#D9C8A9',
+                            400: '#C7AD85',
+                            500: '#B09063',
+                            600: '#947247',
+                            700: '#755633',
+                            800: '#583F24',
+                            900: '#3D2A18',
+                            950: '#23170D',
+                        },
+                        amberGold: {
+                            light: '#FAF3E0',
+                            DEFAULT: '#D4AF37',
+                            dark: '#997A15'
+                        },
+                        darkSlate: '#1A1410'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-short': 'bounce 1s infinite',
+                        'tick-flip': 'pulse 0.5s ease-in-out',
+                        'marquee-seamless': 'marqueeSeamless 25s linear infinite'
+                    },
+                    keyframes: {
+                        marqueeSeamless: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FAF7F2;
+        }
+
+        .ba-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            user-select: none;
+        }
+
+        .ba-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #ffffff;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #947247;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #755633 0%, #B09063 50%, #583F24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow-effect {
+            box-shadow: 0 10px 30px -10px rgba(148, 114, 71, 0.4);
+        }
+
+        /* Continuous Endless Seamless Marquee Styling */
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            user-select: none;
+        }
+
+        .marquee-content {
+            display: flex;
+            flex-shrink: 0;
+            min-width: 100%;
+            align-items: center;
+            justify-content: space-around;
+            gap: 1.5rem;
+            animation: marqueeLoop 28s linear infinite;
+        }
+
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        @keyframes marqueeLoop {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .timer-box {
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-cream-950 antialiased pb-20 lg:pb-0 relative">
+
+    <!-- Top Announcement Bar with Live Timer in Warm Cream-Bronze -->
+    <div class="bg-gradient-to-r from-cream-950 via-cream-900 to-cream-800 text-cream-50 py-2 px-4 text-center text-xs sm:text-sm font-medium sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="bg-amberGold-light text-cream-900 text-[10px] sm:text-xs font-black px-2.5 py-0.5 rounded-full animate-pulse shadow">⚡ عرض لفترة محدودة</span>
+                <span class="font-bold">تخفيض 50% + التوصيل مجاني والدفع عند الاستلام!</span>
+            </div>
+            
+            <div class="flex items-center gap-1.5 font-mono dir-ltr">
+                <span class="text-cream-200 text-xs font-sans font-bold ml-1">ينتهي العرض خلال:</span>
+                <div class="flex items-center gap-1">
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-cream-300/30 text-amberGold font-bold text-xs" id="top-hours">02</div>
+                    <span class="text-xs font-bold text-amberGold">:</span>
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-cream-300/30 text-amberGold font-bold text-xs" id="top-minutes">45</div>
+                    <span class="text-xs font-bold text-amberGold">:</span>
+                    <div class="bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded border border-cream-300/30 text-amberGold font-bold text-xs" id="top-seconds">18</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Branding Bar -->
+    <header class="bg-cream-50/90 backdrop-blur-md border-b border-cream-200 py-3 px-4 sticky top-[37px] sm:top-[33px] z-40">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cream-700 to-cream-500 flex items-center justify-center text-white font-black text-lg shadow-sm">
+                    S
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-wide text-cream-950">SOFIMAL</span>
+                    <span class="text-xs text-cream-600 block -mt-1 font-semibold">BEAUTY STORE</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-cream-800">
+                <a href="#benefits" class="hover:text-cream-600 transition">الفوائد</a>
+                <a href="#before-after" class="hover:text-cream-600 transition">النتائج</a>
+                <a href="#ingredients" class="hover:text-cream-600 transition">المكونات</a>
+                <a href="#quiz-section" class="hover:text-cream-600 transition">اختبار البشرة</a>
+                <a href="#routine-section" class="hover:text-cream-600 transition">طريقة الاستعمال</a>
+                <a href="#reviews" class="hover:text-cream-600 transition">التقييمات</a>
+                <a href="#faq" class="hover:text-cream-600 transition">الأسئلة الشائعة</a>
+            </div>
+
+            <a href="#order-section" class="bg-cream-600 hover:bg-cream-700 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition transform active:scale-95 flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                اطلبي الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-8 lg:py-14 bg-gradient-to-b from-cream-100/70 via-cream-50 to-amberGold-light/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column: Product Gallery -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="relative rounded-3xl overflow-hidden border border-cream-200 bg-white p-3 shadow-xl">
+                        <!-- Discount Badge -->
+                        <div class="absolute top-6 right-6 bg-gradient-to-r from-cream-800 to-cream-600 text-white text-sm font-extrabold px-3 py-1.5 rounded-full shadow-lg z-10 flex items-center gap-1">
+                            <span>خصم 50%</span>
+                        </div>
+
+                        <!-- Main Big Image -->
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-cream-50 relative group">
+                            <img id="mainProductImage" 
+                                 src="https://res.cloudinary.com/zms0vqob/image/upload/v1785023503/2-1_ujgr0t.jpg"
+                                 alt="كريم ريتينول للتجديد ومحاربة التجاعيد" 
+                                 onerror="this.src='https://placehold.co/600x600/b09063/ffffff?text=كريم+ريتينول'"
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="grid grid-cols-4 gap-3 mt-3">
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn active border-2 border-cream-600 rounded-xl overflow-hidden aspect-square bg-cream-50 p-1 transition">
+                                <img id="thumb1" src="https://res.cloudinary.com/zms0vqob/image/upload/v1785023503/2-1_ujgr0t.jpg" onerror="this.src='https://placehold.co/150x150/b09063/ffffff?text=صورة+1'" class="w-full h-full object-cover rounded-lg" alt="صورة 1">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-cream-50 p-1 transition">
+                                <img id="thumb2" src="https://res.cloudinary.com/zms0vqob/image/upload/v1785018765/serum-2_vptnc6.jpg" onerror="this.src='https://placehold.co/150x150/947247/ffffff?text=صورة+2'" class="w-full h-full object-cover rounded-lg" alt="صورة 2">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-cream-50 p-1 transition">
+                                <img id="thumb3" src="https://res.cloudinary.com/zms0vqob/image/upload/v1785018765/serum-3_elqozr.jpg" onerror="this.src='https://placehold.co/150x150/755633/ffffff?text=صورة+3'" class="w-full h-full object-cover rounded-lg" alt="صورة 3">
+                            </button>
+                            <button onclick="changeProductImage(this, this.querySelector('img').src)" class="thumbnail-btn border-2 border-transparent rounded-xl overflow-hidden aspect-square bg-cream-50 p-1 transition">
+                                <img id="thumb4" src="https://res.cloudinary.com/zms0vqob/image/upload/v1785018765/serum-4_undzw6.jpg" onerror="this.src='https://placehold.co/150x150/583f24/ffffff?text=صورة+4'" class="w-full h-full object-cover rounded-lg" alt="صورة 4">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Trust Highlights Under Image -->
+                    <div class="grid grid-cols-3 gap-2 text-center pt-2">
+                        <div class="bg-white p-2.5 rounded-xl border border-cream-200/60 shadow-sm">
+                            <span class="block text-cream-600 font-bold text-lg">100%</span>
+                            <span class="text-[11px] text-cream-800 font-medium">مكونات طبيعية</span>
+                        </div>
+                        <div class="bg-white p-2.5 rounded-xl border border-cream-200/60 shadow-sm">
+                            <span class="block text-cream-600 font-bold text-lg">4.9/5</span>
+                            <span class="text-[11px] text-cream-800 font-medium">تقييم +1500 زبون</span>
+                        </div>
+                        <div class="bg-white p-2.5 rounded-xl border border-cream-200/60 shadow-sm">
+                            <span class="block text-cream-600 font-bold text-lg">0 درهم</span>
+                            <span class="text-[11px] text-cream-800 font-medium">توصيل مجاني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sales Details & Pitch -->
+                <div class="lg:col-span-6 space-y-5">
+                    
+                    <!-- Retinol Tag -->
+                    <div class="inline-flex items-center gap-2 bg-cream-200/80 border border-cream-300 text-cream-900 text-xs font-bold px-3 py-1.5 rounded-full">
+                        <span class="flex h-2 w-2 rounded-full bg-cream-600 animate-ping"></span>
+                        ✨ سر تجديد البشرة الشابة ومحاربة التجاعيد
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-cream-950 leading-tight">
+                        كريم ريتينول <span class="gradient-text">للتجديد ومحاربة التجاعيد</span>
+                    </h1>
+
+                    <p class="text-cream-800 text-base sm:text-lg leading-relaxed font-normal">
+                        تركيبة متطورة تجمع بين قوة **الريتينول المركز (Retinol)** و **حمض الهيالورونيك (Hyaluronic Acid)** و **الببتيدات المغذية**. تعمل على تحفيز تجديد الخلايا، شد البشرة، القضاء على التجاعيد والخطوط الدقيقة، وتغذية الجلد عميقاً لبشرة مشدودة وأكثر شباباً.
+                    </p>
+
+                    <!-- Prominent Hero Countdown Timer Widget -->
+                    <div class="bg-gradient-to-r from-cream-950 via-cream-900 to-cream-950 text-white p-4 sm:p-5 rounded-2xl border border-cream-500/30 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-cream-500/10 rounded-full blur-2xl"></div>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+                            <div>
+                                <span class="text-xs font-bold text-amberGold flex items-center gap-1">
+                                    <svg class="w-4 h-4 text-amberGold animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    سارعِ بالسفادة من العرض!
+                                </span>
+                                <h4 class="text-sm sm:text-base font-extrabold text-white mt-0.5">وينتهي التخفيض الاستثنائي خلال:</h4>
+                            </div>
+
+                            <div class="flex items-center gap-2 text-center dir-ltr">
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md">
+                                    <span class="block text-xl font-black text-amberGold font-mono" id="hero-hours">02</span>
+                                    <span class="text-[10px] text-cream-200 font-bold block">ساعة</span>
+                                </div>
+                                <span class="text-lg font-bold text-amberGold">:</span>
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md">
+                                    <span class="block text-xl font-black text-amberGold font-mono" id="hero-minutes">45</span>
+                                    <span class="text-[10px] text-cream-200 font-bold block">دقيقة</span>
+                                </div>
+                                <span class="text-lg font-bold text-amberGold">:</span>
+                                <div class="bg-white/10 border border-white/20 rounded-xl p-2 min-w-[55px] backdrop-blur-md bg-cream-600/30 border-cream-400/50">
+                                    <span class="block text-xl font-black text-amberGold font-mono" id="hero-seconds">18</span>
+                                    <span class="text-[10px] text-cream-200 font-bold block">ثانية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Stars -->
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-cream-200/80 w-fit">
+                        <div class="flex text-amberGold text-lg">
+                            ★★★★★
+                        </div>
+                        <span class="text-xs font-bold text-cream-950">4.9</span>
+                        <span class="text-xs text-cream-300">|</span>
+                        <span class="text-xs text-cream-700 font-medium">(أكثر من 1,520 تقييم موثق)</span>
+                    </div>
+
+                    <!-- Main Benefits Bullet Points -->
+                    <div class="space-y-2.5 py-1">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-cream-200 text-cream-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-cream-900 text-sm sm:text-base font-semibold">تحفيز تجديد خلايا البشرة والتخلص من التجاعيد والخطوط الدقيقة.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-cream-200 text-cream-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-cream-900 text-sm sm:text-base font-semibold">تحفيز إنتاج الكولاجين الطبيعي لشد الوجه ومقاومة علامات التقدم في السن (Anti-Aging).</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-cream-200 text-cream-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-cream-900 text-sm sm:text-base font-semibold">ترطيب عميق ومستمر بفضل Hyaluronic Acid النقي.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-cream-200 text-cream-700 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                ✓
+                            </div>
+                            <span class="text-cream-900 text-sm sm:text-base font-semibold">تغذية مركزة للبشرة لتوحيد لونها وإعطائها مرونة ونضارة فائقة.</span>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Display -->
+                    <div class="bg-cream-100/80 border border-cream-200 p-4 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-cream-700 block font-medium">سعر العرض الخاص:</span>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-extrabold text-cream-700">189 درهم</span>
+                                <span class="text-lg text-cream-400 line-through font-semibold">399 درهم</span>
+                            </div>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-emerald-200">
+                            وفرتِ أكثر من 50% الآن
+                        </span>
+                    </div>
+
+                    <!-- Hero CTA Button -->
+                    <div class="space-y-3 pt-2">
+                        <a href="#order-section" class="w-full bg-gradient-to-r from-cream-700 via-cream-600 to-cream-800 hover:from-cream-800 hover:to-cream-900 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group glow-effect">
+                            <span>اطلبي الآن قبل انتهاء الكمية</span>
+                            <svg class="w-6 h-6 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+                        </a>
+
+                        <div class="flex items-center justify-center gap-6 text-xs font-semibold text-cream-700 pt-1">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                الدفع عند الاستلام
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                توصيل مجاني لجميع المدن
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                ضمان 14 يوم
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Features Banner Ticker Section in Warm Cream-Gold -->
+    <section class="bg-gradient-to-r from-cream-800 via-cream-700 to-cream-800 text-cream-50 py-3.5 overflow-hidden shadow-lg border-y border-cream-600/40 select-none">
+        <div class="marquee-wrapper">
+            
+            <!-- Marquee Container 1 -->
+            <div class="marquee-content font-bold text-xs sm:text-sm tracking-wide">
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>✨</span> ريتينول خالص بتركيز متطور
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🌸</span> التخلص من التجاعيد والخطوط الدقيقة
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>💧</span> ترطيب عميق بـ Hyaluronic Acid
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🌿</span> 100% مكونات طبيعية وآمنة
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🛡️</span> تجديد خلايا البشرة وشد الوجه
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🚚</span> توصيل مجاني وسريع لكافة مدن المغرب
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>💵</span> الدفع نقدًا عند الاستلام ومعاينة الطرد
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+            </div>
+
+            <!-- Marquee Container 2 -->
+            <div class="marquee-content font-bold text-xs sm:text-sm tracking-wide" aria-hidden="true">
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>✨</span> ريتينول خالص بتركيز متطور
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🌸</span> التخلص من التجاعيد والخطوط الدقيقة
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>💧</span> ترطيب عميق بـ Hyaluronic Acid
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🌿</span> 100% مكونات طبيعية وآمنة
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🛡️</span> تجديد خلايا البشرة وشد الوجه
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>🚚</span> توصيل مجاني وسريع لكافة مدن المغرب
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full border border-white/20 shrink-0">
+                    <span>💵</span> الدفع نقدًا عند الاستلام ومعاينة الطرد
+                </span>
+                <span class="text-amberGold font-black shrink-0">✦</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Before & After Comparison Slider Section -->
+    <section id="before-after" class="py-14 bg-gradient-to-b from-cream-50 via-cream-100/40 to-white overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <span class="bg-cream-200 text-cream-900 text-xs font-black px-3.5 py-1.5 rounded-full border border-cream-300 inline-flex items-center gap-1">
+                    ✨ نتائج حقيقية ومثبتة
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-cream-950 leading-tight">
+                    شوفي فرق تجديد البشرة بنفسك من أول أسبوعين
+                </h2>
+                <p class="text-cream-700 text-sm sm:text-base font-semibold">
+                    اسحبي الشريط لملاحظة الاختلاف قبل وبعد استعمال كريم ريتينول
+                </p>
+            </div>
+
+            <!-- Before & After Interactive Slider Container -->
+            <div class="max-w-3xl mx-auto bg-white p-3 sm:p-5 rounded-3xl shadow-2xl border border-cream-200">
+                <div id="baContainer" class="ba-container relative aspect-[4/3] sm:aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner select-none touch-none border border-cream-200">
+                    
+                    <!-- Base Image: BEFORE (Full width) -->
+                    <img id="baBeforeImgBase" 
+                         src="https://res.cloudinary.com/zms0vqob/image/upload/v1785018765/fat_oxpc1j.png" 
+                         alt="قبل الاستعمال" 
+                         onerror="this.src='https://placehold.co/800x500/d9c8a9/ffffff?text=قبل+الاستعمال'"
+                         class="absolute inset-0 w-full h-full object-cover filter contrast-90 brightness-95">
+                    
+                    <!-- Before Badge -->
+                    <div class="absolute top-4 right-4 bg-cream-950/85 backdrop-blur-md text-white text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl shadow-lg z-10 flex items-center gap-1.5 border border-white/20">
+                        <span class="w-2 h-2 rounded-full bg-amberGold"></span>
+                        قبل الاستعمال (تجاعيد وجفاف)
+                    </div>
+
+                    <!-- Overlay Div: AFTER (Clipped) -->
+                    <div id="baOverlay" class="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-white shadow-2xl" style="width: 50%;">
+                        <!-- After Image scaled to match the main container width -->
+                        <img id="baAfterImg" 
+                             src="https://res.cloudinary.com/zms0vqob/image/upload/v1785018765/glow_zw8usb.png" 
+                             alt="بعد الاستعمال" 
+                             onerror="this.src='https://placehold.co/800x500/947247/ffffff?text=بعد+الاستعمال+-+بشرة+مشدودة'"
+                             class="absolute inset-y-0 left-0 max-w-none h-full object-cover">
+                        
+                        <!-- After Badge -->
+                        <div class="absolute top-4 left-4 bg-emerald-700/90 backdrop-blur-md text-white text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl shadow-lg z-10 flex items-center gap-1.5 border border-white/30 whitespace-nowrap">
+                            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                            بعد الاستعمال - بشرة مشدودة وخالية من التجاعيد
+                        </div>
+                    </div>
+
+                    <!-- Draggable Slider Handle Line -->
+                    <div id="baHandle" class="absolute top-0 bottom-0 z-20 w-1 bg-white cursor-ew-resize shadow-[0_0_15px_rgba(0,0,0,0.5)]" style="left: 50%;">
+                        <div class="ba-handle-btn absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 w-11 h-11 rounded-full bg-gradient-to-r from-cream-700 to-cream-500 border-2 border-white shadow-2xl flex items-center justify-center text-white font-bold transition transform group-hover:scale-110">
+                            <!-- Left-Right Arrow Icon -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Invisible Interactive Range Slider Overlay -->
+                    <input type="range" min="0" max="100" value="50" id="baSliderInput" oninput="handleBaSliderInput(this.value)" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                </div>
+
+                <!-- Instructional Hint below slider -->
+                <div class="flex items-center justify-center gap-2 mt-4 text-xs font-bold text-cream-700">
+                    <svg class="w-4 h-4 text-cream-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+                    <span>حرّكي السلايدر يميناً ويساراً لمشاهدة الفرق المذهل</span>
+                </div>
+            </div>
+
+            <!-- Feature Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="bg-white p-4 rounded-2xl text-center border border-cream-200 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-cream-700 block">+98%</span>
+                    <span class="text-xs font-bold text-cream-900">تجديد للبشرة وشد فوري</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-cream-200 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-cream-700 block">+91%</span>
+                    <span class="text-xs font-bold text-cream-900">توحيد لون البشرة</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-cream-200 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-cream-700 block">-85%</span>
+                    <span class="text-xs font-bold text-cream-900">تقليل التجاعيد والخطوط</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl text-center border border-cream-200 shadow-sm">
+                    <span class="text-2xl sm:text-3xl font-black text-cream-700 block">99%</span>
+                    <span class="text-xs font-bold text-cream-900">رضا مستخدمات sofimal</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Skin Type Compatibility Quiz -->
+    <section id="quiz-section" class="py-12 bg-white border-t border-cream-100">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-cream-100/80 via-amberGold-light/50 to-cream-200/40 p-6 sm:p-10 rounded-3xl border border-cream-200 shadow-lg">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="bg-cream-600 text-white text-xs font-extrabold px-3.5 py-1 rounded-full shadow-sm">
+                        اختبار تفاعلي 💡
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-2">هل كريم ريتينول ملائم لنوع بشرتك؟</h2>
+                    <p class="text-cream-700 text-xs sm:text-sm mt-1 font-semibold">اختاري نوع بشرتكِ لتكتشفي كيف سيعالج الكريم مشاكلها الخاصة:</p>
+                </div>
+
+                <!-- Quiz Buttons -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                    <button onclick="selectSkinQuiz('sensitive')" id="quiz-btn-sensitive" class="quiz-btn bg-white p-4 rounded-2xl border-2 border-cream-600 font-bold text-cream-950 hover:border-cream-700 transition shadow-sm text-center">
+                        <span class="text-2xl block mb-1">🌸</span>
+                        <span class="text-xs sm:text-sm">بشرة حساسة</span>
+                    </button>
+                    <button onclick="selectSkinQuiz('oily')" id="quiz-btn-oily" class="quiz-btn bg-white p-4 rounded-2xl border-2 border-cream-200 font-bold text-cream-950 hover:border-cream-600 transition shadow-sm text-center">
+                        <span class="text-2xl block mb-1">✨</span>
+                        <span class="text-xs sm:text-sm">بشرة دهنية / حب الشباب</span>
+                    </button>
+                    <button onclick="selectSkinQuiz('dry')" id="quiz-btn-dry" class="quiz-btn bg-white p-4 rounded-2xl border-2 border-cream-200 font-bold text-cream-950 hover:border-cream-600 transition shadow-sm text-center">
+                        <span class="text-2xl block mb-1">💧</span>
+                        <span class="text-xs sm:text-sm">بشرة جافة ومشدودة</span>
+                    </button>
+                    <button onclick="selectSkinQuiz('combo')" id="quiz-btn-combo" class="quiz-btn bg-white p-4 rounded-2xl border-2 border-cream-200 font-bold text-cream-950 hover:border-cream-600 transition shadow-sm text-center">
+                        <span class="text-2xl block mb-1">🎭</span>
+                        <span class="text-xs sm:text-sm">بشرة مختلطة / تجاعيد</span>
+                    </button>
+                </div>
+
+                <!-- Quiz Dynamic Result Box -->
+                <div id="quiz-result-box" class="bg-white p-5 sm:p-6 rounded-2xl border border-cream-200 shadow-md">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl font-black shrink-0">
+                            ✓
+                        </div>
+                        <div class="space-y-1">
+                            <h4 id="quiz-title" class="font-black text-cream-950 text-base sm:text-lg">كريم ريتينول مثالي وآمن جداً للبشرة الحساسة</h4>
+                            <p id="quiz-desc" class="text-xs sm:text-sm text-cream-700 leading-relaxed">
+                                بفضل تركيزه المتوازن ودمجه بـ **Hyaluronic Acid** و **المكونات المهدئة**، يجدد خلايا البشرة بلطف ويخفف الخطوط بدون إحداث تهيج أو أحمرار.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Short Reels/Videos Customer Experience Section -->
+    <section id="video-reviews" class="py-12 bg-gradient-to-b from-cream-100/50 via-amberGold-light/30 to-cream-50 border-y border-cream-200/80">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-cream-200 text-cream-900 text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-cream-300 inline-flex items-center gap-1.5">
+                    <span class="flex h-2 w-2 rounded-full bg-cream-700 animate-ping"></span>
+                    🎬 تجارب حقيقية بالصوت والصورة
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-cream-950 mt-2">شوفي التجربة بنفسك</h2>
+                <p class="text-cream-700 text-sm sm:text-base mt-1">مقاطع حقيقية من استخدام العميلات اليومي لكريم ريتينول</p>
+            </div>
+
+            <!-- Video Grid Container -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                
+                <!-- Video Card 1 -->
+                <div onclick="toggleVideoPlay(1)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-cream-950 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo1" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://res.cloudinary.com/zms0vqob/image/upload/v1785019688/img-1_pcphke.png">
+                        <source src="https://res.cloudinary.com/zms0vqob/video/upload/v1785018745/video-1_j3fu1r.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon1" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay1" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-cream-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@haya.alotaibi</span>
+                                <span class="text-[9px] text-amberGold font-semibold block -mt-0.5">الرباط</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-cream-100 line-clamp-2 leading-tight pt-1 font-medium">
+                            "أمي جربتها قبلي وهي اللي أقنعتني... النتيجة على بشرتها ومسح التجاعيد كانت واضحة جداً!"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div onclick="toggleVideoPlay(2)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-cream-950 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo2" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://res.cloudinary.com/zms0vqob/image/upload/v1785019688/img-2_pzafww.png">
+                        <source src="https://res.cloudinary.com/zms0vqob/video/upload/v1785018745/video-2_ne9mej.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon2" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay2" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-cream-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@reem.alharbi</span>
+                                <span class="text-[9px] text-amberGold font-semibold block -mt-0.5">الدار البيضاء</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-cream-100 line-clamp-2 leading-tight pt-1 font-medium">
+                            "خفيفة وما تلزقش، أحط الكريم وأنام وأصحى وبشرتي مشدودة وطرية."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div onclick="toggleVideoPlay(3)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-cream-950 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo3" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://res.cloudinary.com/zms0vqob/image/upload/v1785019688/img-3_knffh4.png">
+                        <source src="https://res.cloudinary.com/zms0vqob/video/upload/v1785018745/video-3_ebgfpw.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon3" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay3" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-cream-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@nouf.alghamdi</span>
+                                <span class="text-[9px] text-amberGold font-semibold block -mt-0.5">طنجة</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-cream-100 line-clamp-2 leading-tight pt-1 font-medium">
+                            "استخدمتها كل ليلة وصارت بشرتي أهدأ وأنضر، هذا اللي كنت أدور عليه."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div onclick="toggleVideoPlay(4)" class="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-cream-950 group cursor-pointer border-2 border-white/60">
+                    <video id="cardVideo4" 
+                           class="w-full h-full object-cover" 
+                           loop playsinline muted 
+                           poster="https://res.cloudinary.com/zms0vqob/image/upload/v1785019688/img-4_eovmiz.png">
+                        <source src="https://res.cloudinary.com/zms0vqob/video/upload/v1785018745/video-4_jtqwak.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute top-3 left-3 bg-black/50 backdrop-blur-md p-2 rounded-full text-white z-10 hover:bg-black/70 transition">
+                        <svg id="soundIcon4" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                    </div>
+
+                    <div id="playBtnOverlay4" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
+                        <div class="w-12 h-12 rounded-full bg-cream-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+                            <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3.5 sm:p-4 text-white z-10 space-y-1">
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=100&q=80" alt="صورة المستخدم" class="w-7 h-7 rounded-full border border-white/80 object-cover">
+                            <div>
+                                <span class="font-bold text-xs block text-white dir-ltr">@lamya.alqahtani</span>
+                                <span class="text-[9px] text-amberGold font-semibold block -mt-0.5">مراكش</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-cream-100 line-clamp-2 leading-tight pt-1 font-medium">
+                            "غيرت بشرتي بأسبوع! تجديد عالي للجلد وصارت أنعم بشكل واضح."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Audio Hint -->
+            <div class="text-center mt-6">
+                <p class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-cream-200 px-4 py-2 rounded-full text-xs font-bold text-cream-800 shadow-sm">
+                    <svg class="w-4 h-4 text-cream-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <span>اضغطي على أي فيديو لتشغيل/إيقاف الفيديو والصوت</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Product Benefits Grid -->
+    <section id="benefits" class="py-12 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-cream-600 font-bold text-sm tracking-widest uppercase">لماذا كريم ريتينول هو الاختيار الأمثل؟</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-1">4 فوائد مذهلة لتألق بشرتك</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200/80 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cream-100 text-cream-700 flex items-center justify-center text-2xl mb-4 font-bold">
+                        ✨
+                    </div>
+                    <h3 class="font-extrabold text-lg text-cream-950 mb-2">تجديد ومحاربة التجاعيد</h3>
+                    <p class="text-cream-700 text-sm leading-relaxed">
+                        تركيبة Retinol المركزة تمنح بشرتك إشراقة شبابية وتخفف الخطوط الدقيقة وتجدد خلايا الجلد.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200/80 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cream-100 text-cream-700 flex items-center justify-center text-2xl mb-4 font-bold">
+                        💧
+                    </div>
+                    <h3 class="font-extrabold text-lg text-cream-950 mb-2">ترطيب بـ Hyaluronic Acid</h3>
+                    <p class="text-cream-700 text-sm leading-relaxed">
+                        يحفظ الرطوبة داخل أعماق البشرة ويمنع جفافها ويمنحك ملمساً ناعماً وممتلئاً طوال اليوم.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200/80 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cream-100 text-cream-700 flex items-center justify-center text-2xl mb-4 font-bold">
+                        🛡️
+                    </div>
+                    <h3 class="font-extrabold text-lg text-cream-950 mb-2">شد الوجه وتحفيز الكولاجين</h3>
+                    <p class="text-cream-700 text-sm leading-relaxed">
+                        يحفز إنتاج الكولاجين الطبيعي لمقاومة الترهلات والشيخوخة المبكرة واستعادة شباب البشرة.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200/80 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cream-100 text-cream-700 flex items-center justify-center text-2xl mb-4 font-bold">
+                        🌿
+                    </div>
+                    <h3 class="font-extrabold text-lg text-cream-950 mb-2">تغذية بعناصر عضوية</h3>
+                    <p class="text-cream-700 text-sm leading-relaxed">
+                        مدعم بالببتيدات وعناصر مهدئة ملائمة لجميع أنواع البشرة حتى الحساسة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Daily Skincare Routine Guide -->
+    <section id="routine-section" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-amberGold-light text-cream-900 text-xs font-black px-3.5 py-1.5 rounded-full border border-cream-200">
+                    روتينك الفعّال 🗓️
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-2">طريقة الاستخدام لنتائج مبهرة</h2>
+                <p class="text-cream-700 text-sm">3 خطوات بسيطة لا تتجاوز دقيقة واحدة يومياً</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                <!-- Step 1 -->
+                <div class="bg-cream-50 p-6 rounded-3xl border border-cream-200 relative">
+                    <div class="w-10 h-10 rounded-xl bg-cream-600 text-white font-black text-lg flex items-center justify-center mb-4">
+                        1
+                    </div>
+                    <h3 class="font-extrabold text-cream-950 text-base mb-2">تنظيف البشرة</h3>
+                    <p class="text-cream-700 text-xs leading-relaxed">
+                        اغسلي وجهكِ بماء دافئ وغسولك المفضل، ثم جففيه برفق بمنشفة ناعمة.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-cream-100/80 p-6 rounded-3xl border border-cream-300 relative">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-cream-700 to-cream-500 text-white font-black text-lg flex items-center justify-center mb-4">
+                        2
+                    </div>
+                    <h3 class="font-extrabold text-cream-950 text-base mb-2">تطبيق كريم ريتينول</h3>
+                    <p class="text-cream-700 text-xs leading-relaxed">
+                        ضعي كمية مناسبة من الكريم على الوجه والرقبة، ودلكي بحركات دائرية خفيفة حتى الامتصاص الكامل.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-cream-50 p-6 rounded-3xl border border-cream-200 relative">
+                    <div class="w-10 h-10 rounded-xl bg-cream-600 text-white font-black text-lg flex items-center justify-center mb-4">
+                        3
+                    </div>
+                    <h3 class="font-extrabold text-cream-950 text-base mb-2">الترطيب والحماية</h3>
+                    <p class="text-cream-700 text-xs leading-relaxed">
+                        ضعي كريمك المرطب أو واقي الشمس (نهاراً) للحفاظ على النضارة والنعومة طوال اليوم.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Ingredients Section -->
+    <section id="ingredients" class="py-12 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-cream-950 via-cream-900 to-cream-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl overflow-hidden relative">
+                <!-- Background decorative glow -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-cream-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-3xl">
+                    <span class="bg-cream-500/20 text-cream-200 text-xs font-bold px-3 py-1 rounded-full border border-cream-500/30">المكونات الرئيسية</span>
+                    <h2 class="text-2xl sm:text-4xl font-black mt-3 mb-4 leading-tight">تركيبة الريتينول وحمض الهيالورونيك المركزة</h2>
+                    <p class="text-cream-200 text-sm sm:text-base leading-relaxed mb-8">
+                        مزيج مدروس بعناية فائقة لضمان امتصاص سريع وعميق داخل أنسجة البشرة بدون أي أثر دهني.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-amberGold font-extrabold text-xl block mb-1">Retinol Complex</span>
+                        <p class="text-xs text-cream-200 leading-relaxed">يحفز إنتاج الكولاجين ويجدد خلايا الجلد ويشد التجاعيد.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-amberGold font-extrabold text-xl block mb-1">Hyaluronic Acid</span>
+                        <p class="text-xs text-cream-200 leading-relaxed">يعزز مرونة البشرة ويحبس الماء لترطيب يدوم 24 ساعة.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-amberGold font-extrabold text-xl block mb-1">Peptides & Collagen</span>
+                        <p class="text-xs text-cream-200 leading-relaxed">مكونات مغذية تدعم مرونة البشرة وتمنع الترهل.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                        <span class="text-amberGold font-extrabold text-xl block mb-1">Niacinamide & Organic</span>
+                        <p class="text-xs text-cream-200 leading-relaxed">مستخلصات طبيعية تلطف الجلد وتضيق المسام وتمنع حب الشباب.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Certification & Dermatologist Approval Badges -->
+    <section class="py-10 bg-white border-y border-cream-200/60">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 rounded-2xl bg-cream-50 border border-cream-200 space-y-1">
+                    <span class="text-3xl block">🔬</span>
+                    <h4 class="font-extrabold text-xs sm:text-sm text-cream-950">مفحوص جلدياً</h4>
+                    <p class="text-[11px] text-cream-700">Dermatologically Tested</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream-50 border border-cream-200 space-y-1">
+                    <span class="text-3xl block">🌿</span>
+                    <h4 class="font-extrabold text-xs sm:text-sm text-cream-950">خالٍ من البارابين</h4>
+                    <p class="text-[11px] text-cream-700">Paraben & Sulfate Free</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream-50 border border-cream-200 space-y-1">
+                    <span class="text-3xl block">🐰</span>
+                    <h4 class="font-extrabold text-xs sm:text-sm text-cream-950">غير مجرب على الحيوانات</h4>
+                    <p class="text-[11px] text-cream-700">100% Cruelty Free</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream-50 border border-cream-200 space-y-1">
+                    <span class="text-3xl block">🏆</span>
+                    <h4 class="font-extrabold text-xs sm:text-sm text-cream-950">جودة معتمدة ISO</h4>
+                    <p class="text-[11px] text-cream-700">Certified Quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Savings & Cost Comparison Calculator -->
+    <section class="py-12 bg-cream-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-cream-200 shadow-xl space-y-6">
+                <div class="text-center max-w-xl mx-auto">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">قارني ووفري 💰</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-cream-950 mt-2">كم توفرين عند اختيار كريم SOFIMAL؟</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-cream-100/70 border border-cream-200 space-y-2">
+                        <span class="text-xs font-bold text-cream-700 uppercase">جلسات العناية والتجميل بالمراكز</span>
+                        <div class="text-2xl font-black text-cream-900">1200 - 2500 درهم</div>
+                        <p class="text-xs text-cream-700">تكلفة العناية الشهرية بالبشرة والتنظيف في مراكز التجميل.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-gradient-to-r from-cream-700 to-cream-600 text-white space-y-2 relative overflow-hidden shadow-md">
+                        <span class="text-xs font-bold text-cream-200 uppercase block">كريم SOFIMAL ريتينول</span>
+                        <div class="text-3xl font-black text-white">189 درهم فقط</div>
+                        <p class="text-xs text-cream-100">تكفي لمدة شهر كامل مع توصيل مجاني وضمان نتائج مبهرة.</p>
+                        <span class="absolute top-3 left-3 bg-white text-cream-800 text-[10px] font-black px-2 py-0.5 rounded-full">توفير 85%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order & Offers Section -->
+    <section id="order-section" class="py-12 bg-gradient-to-b from-cream-100/60 to-cream-50">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-cream-200 text-cream-800 text-xs font-black px-3 py-1 rounded-full border border-cream-300">الطلب السريع</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-cream-950 mt-2">اختر العرض المناسب واستفد من الخصم</h2>
+                <p class="text-cream-700 text-sm mt-1">التوصيل مجاني لجميع مدن المغرب والتسليم والدفع عند الاستلام</p>
+            </div>
+
+            <!-- Secondary Urgency Countdown Banner inside Checkout Section -->
+            <div class="max-w-xl mx-auto mb-8 bg-gradient-to-r from-cream-800 via-cream-700 to-cream-800 text-white rounded-2xl p-3.5 shadow-md border border-cream-600/40 text-center flex items-center justify-between px-6 gap-2">
+                <div class="flex items-center gap-2 text-right">
+                    <span class="text-2xl">⏳</span>
+                    <div>
+                        <span class="font-extrabold text-sm block leading-tight">ينتهي عرض الخصم المجاني قريباً!</span>
+                        <span class="text-[11px] text-cream-200 font-medium">اطلبي الآن واحفظي حقك في التوصيل المجاني</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1 font-mono text-base font-black dir-ltr bg-black/20 px-3 py-1.5 rounded-xl border border-white/20 text-amberGold">
+                    <span id="order-hours">02</span>:<span id="order-minutes">45</span>:<span id="order-seconds">18</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Offers Selection Column (Left on Large screens) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <h3 class="font-bold text-cream-900 text-base mb-2 flex items-center gap-2">
+                        <span>1. حدد باقة الشراء:</span>
+                    </h3>
+
+                    <!-- Option 1: 1 Box -->
+                    <div onclick="selectPackage(1, 189)" id="package-1" class="package-card cursor-pointer bg-white p-4 rounded-2xl border-2 border-cream-200 transition hover:border-cream-500 relative">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-1" class="w-5 h-5 text-cream-600 accent-cream-600">
+                                <div>
+                                    <span class="font-extrabold text-cream-950 text-sm sm:text-base block">عبوة واحدة (تجربة)</span>
+                                    <span class="text-xs text-cream-700">تكفي لمدة شهر من الاستخدام</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-cream-700 text-lg block">189 درهم</span>
+                                <span class="text-xs text-cream-400 line-through">399 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: 2 Boxes (BEST SELLER) -->
+                    <div onclick="selectPackage(2, 299)" id="package-2" class="package-card cursor-pointer bg-gradient-to-r from-cream-100 to-white p-4 rounded-2xl border-2 border-cream-600 shadow-md transition relative ring-2 ring-cream-500/20">
+                        <div class="absolute -top-3 right-4 bg-gradient-to-r from-cream-700 to-cream-600 text-white text-[11px] font-extrabold px-3 py-0.5 rounded-full shadow">
+                            🔥 العرض الأكثر طلباً (وفر 80 درهم إضافي)
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-2" checked class="w-5 h-5 text-cream-600 accent-cream-600">
+                                <div>
+                                    <span class="font-extrabold text-cream-950 text-sm sm:text-base block">عبوتين (كريم ريتينول)</span>
+                                    <span class="text-xs text-cream-700 font-bold">توصيل مجاني + خصم مضاعف</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-cream-700 text-xl block">299 درهم</span>
+                                <span class="text-xs text-cream-400 line-through">798 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 3: 3 Boxes (BEST VALUE) -->
+                    <div onclick="selectPackage(3, 399)" id="package-3" class="package-card cursor-pointer bg-white p-4 rounded-2xl border-2 border-cream-200 transition hover:border-cream-500 relative">
+                        <div class="absolute -top-3 right-4 bg-cream-700 text-white text-[11px] font-extrabold px-3 py-0.5 rounded-full shadow">
+                            👑 الباقة العائلية (اشتري 2 واحصلي على 1 مجاناً)
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="pkg" id="radio-3" class="w-5 h-5 text-cream-600 accent-cream-600">
+                                <div>
+                                    <span class="font-extrabold text-cream-950 text-sm sm:text-base block">3 عبوات (باقة التوفير الكامل)</span>
+                                    <span class="text-xs text-cream-700">العناية المتكاملة لمدة 3 أشهر</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="font-extrabold text-cream-700 text-lg block">399 درهم</span>
+                                <span class="text-xs text-cream-400 line-through">1197 درهم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Golden Guarantee Certificate -->
+                    <div class="bg-gradient-to-r from-amberGold-light via-cream-100 to-amberGold-light p-4 rounded-2xl border border-cream-300 shadow-sm space-y-2 relative">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🏅</span>
+                            <div>
+                                <h4 class="font-black text-cream-950 text-sm">ضمان الجودة الذهبي لمدة 14 يوم</h4>
+                                <p class="text-xs text-cream-800 leading-relaxed">
+                                    نضمن لك جودة المنتج وأصالته 100%. إن لم تعجبك النتائج يمكنك طلب الاستبدال أو الاسترجاع بكل سهولة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Box -->
+                    <div class="bg-white p-4 rounded-2xl border border-cream-200 text-xs text-cream-700 space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-700 text-base">🚚</span>
+                            <span>التوصيل في المغرب خلال 24 إلى 48 ساعة فقط.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-700 text-base">💵</span>
+                            <span>الدفع نقدًا عند استلام الطلب ومعاينة المنتج.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-700 text-base">🔄</span>
+                            <span>ضمان الاسترجاع والتعديل خلال 14 يوم.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Order Form Column -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-cream-200 shadow-xl">
+                    <h3 class="font-bold text-cream-900 text-base mb-4 flex items-center gap-2">
+                        <span>2. أدخلي معلومات الاستلام:</span>
+                    </h3>
+
+                    <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-cream-900 mb-1.5">الاسم الكامل *</label>
+                            <input type="text" id="fullName" required placeholder="مثال: فاطمة الزهراء" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-cream-500 focus:border-cream-500 outline-none text-sm transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-cream-900 mb-1.5">رقم الهاتف * (سنتصل بك لتأكيد الطلب)</label>
+                            <input type="tel" id="phoneNumber" required placeholder="0612345678" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-cream-500 focus:border-cream-500 outline-none text-sm transition text-right">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-cream-900 mb-1.5">المدينة *</label>
+                            <input type="text" id="cityName" required placeholder="مثال: الدار البيضاء، الرباط، طنجة..." class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-cream-500 focus:border-cream-500 outline-none text-sm transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-cream-900 mb-1.5">العنوان الكامل (الحي/الشارع)</label>
+                            <input type="text" id="address" placeholder="اسم الحي أو الشارع ورقم المنزل" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-cream-500 focus:border-cream-500 outline-none text-sm transition">
+                        </div>
+
+                        <!-- Order Summary Card -->
+                        <div class="bg-cream-100/70 p-4 rounded-xl border border-cream-200 my-4 space-y-2">
+                            <div class="flex justify-between text-xs text-cream-800">
+                                <span>الباقة المختارة:</span>
+                                <span id="summaryPkgName" class="font-bold text-cream-950">عبوتين (العرض الأكثر طلباً)</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-cream-800">
+                                <span>مصاريف الشحن والتوصيل:</span>
+                                <span class="font-bold text-emerald-700">مـجـانـاً (0 درهم)</span>
+                            </div>
+                            <div class="border-t border-cream-200 pt-2 flex justify-between items-center">
+                                <span class="font-extrabold text-sm text-cream-950">المبلغ الإجمالي عند الاستلام:</span>
+                                <span id="summaryTotalPrice" class="font-black text-2xl text-cream-700">299 درهم</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 hover:from-emerald-800 hover:to-emerald-900 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-98 flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <span>تأكيد الطلب الآن (الدفع عند الاستلام)</span>
+                        </button>
+
+                        <p class="text-center text-[11px] text-cream-700 font-medium">
+                            🔒 معلوماتك مخصصة لتأكيد الطلب فقط ولن نشاركها مع أي طرف آخر.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Photo UGC Showcase Gallery -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-cream-200 text-cream-900 text-xs font-bold px-3 py-1 rounded-full border border-cream-300">صور العميلات الحقيقية 📷</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-2">عميلاتنا مع كريم SOFIMAL ريتينول</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-cream-200 shadow-sm group relative">
+                    <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024452/11_q0mzty.png" alt="صورة زبونة" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-end p-3 text-white text-xs font-bold">
+                        طنجة - نتائج أسبوعين
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-cream-200 shadow-sm group relative">
+                    <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024452/33_xh7wqx.png" alt="صورة زبونة" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-end p-3 text-white text-xs font-bold">
+                        الدار البيضاء
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-cream-200 shadow-sm group relative">
+                    <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024453/44_ywdhwd.png" alt="صورة زبونة" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-end p-3 text-white text-xs font-bold">
+                        الرباط - شد التجاعيد
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-cream-200 shadow-sm group relative">
+                    <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024453/22_bubqdn.png" alt="صورة زبونة" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-end p-3 text-white text-xs font-bold">
+                        فاس - نضارة فائقة
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Testimonials Section -->
+    <section id="reviews" class="py-12 bg-cream-50 border-t border-cream-200/60">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-cream-600 font-bold text-sm tracking-widest uppercase">آراء وتجارب عميلاتنا</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-1">ماذا تقول النساء عن كريم ريتينول لمقاومة التجاعيد؟</h2>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024781/d35c5ed39984941b9ea221829e8250b2_pws1ih.jpg" 
+                                 alt="صورة سناء العبدلاوي" 
+                                 onerror="this.src='https://placehold.co/100x100/947247/ffffff?text=سناء'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-cream-300 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-cream-950 text-sm block">سناء العبدلاوي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amberGold text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-cream-800 text-xs sm:text-sm leading-relaxed">
+                        "الصراحة هاد الكريم رائع بامتياز! الخطوط الدقيقة لي كانت حولين عيني وبشرتي بدات كتختفي من أول أسبوعين، والوجه كيولي مشدود وفيه واحد التوهج ونضارة كيبان صحي. شكرا صوفيمال."
+                    </p>
+                    <span class="text-[10px] text-cream-400 block pt-1">منذ يومين - الدار البيضاء</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://res.cloudinary.com/zms0vqob/image/upload/v1785024781/images_5_elgziy.jpg" 
+                                 alt="صورة مريم الفاسي" 
+                                 onerror="this.src='https://placehold.co/100x100/947247/ffffff?text=مريم'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-cream-300 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-cream-950 text-sm block">مريم الفاسي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amberGold text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-cream-800 text-xs sm:text-sm leading-relaxed">
+                        "خديت عرض العبوتين وصلني بسرعة. الملمس ديالو خفيف بزاف والبشرة كتمتصه بسرعة بدون أي تلزيق. التجاعيد الخفيفة ومظهر الجبهة تحسن بشكل ملحوظ."
+                    </p>
+                    <span class="text-[10px] text-cream-400 block pt-1">منذ 4 أيام - مراكش</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-cream-200 shadow-sm relative space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" 
+                                 alt="صورة كوثر العلمي" 
+                                 onerror="this.src='https://placehold.co/100x100/947247/ffffff?text=كوثر'"
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-cream-300 shadow-sm shrink-0">
+                            <div>
+                                <span class="font-extrabold text-cream-950 text-sm block">كوثر العلمي</span>
+                                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">مشتري موثق ✔</span>
+                            </div>
+                        </div>
+                        <span class="text-amberGold text-sm">★★★★★</span>
+                    </div>
+                    <p class="text-cream-800 text-xs sm:text-sm leading-relaxed">
+                        "بشرتي كانت باهتة ومترهلة شوية، من بعد ما استعملت كريم ريتينول رجع ليها الشد والتوهج والنضارة. منتج أصلي يستاهل كل درهم."
+                    </p>
+                    <span class="text-[10px] text-cream-400 block pt-1">منذ أسبوع - طنجة</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 bg-white border-t border-cream-200/60">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-cream-600 font-bold text-sm tracking-widest uppercase">الأسئلة الشائعة</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-cream-950 mt-1">كل ما تحتاجين معرفته</h2>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="bg-cream-50 rounded-2xl border border-cream-200 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-right p-4 sm:p-5 font-bold text-cream-950 flex justify-between items-center text-sm sm:text-base hover:bg-cream-100/60 transition">
+                        <span>كيف أستخدم كريم ريتينول للحصول على أفضل نتيجة؟</span>
+                        <span id="faqIcon-1" class="text-cream-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-800 leading-relaxed border-t border-cream-200 pt-3">
+                        ضعي كمية مناسبة من الكريم على بشرة نظيفة وجافة مسائاً (أو صباحاً مع استعمال واقي الشمس). دلكي وجهك ورقبتك بلطف بحركات دائرية حتى يتم امتصاصه بالكامل.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-cream-50 rounded-2xl border border-cream-200 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-cream-100/60 transition">
+                        <span>متى تبدأ نتائج تجديد البشرة وتقليل التجاعيد بالظهور؟</span>
+                        <span id="faqIcon-2" class="text-cream-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-800 leading-relaxed border-t border-cream-200 pt-3">
+                        تلاحظين الترطيب والنضارة والانتعاش الفوري من أول استخدام. أما شد البشرة وتقليل مظهر التجاعيد والخطوط فيظهر بوضوح خلال 10 إلى 14 يوماً من الاستخدام المنتظم.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-cream-50 rounded-2xl border border-cream-200 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-cream-100/60 transition">
+                        <span>هل المنتج مناسب للبشرة الحساسة أو الدهنية؟</span>
+                        <span id="faqIcon-3" class="text-cream-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-800 leading-relaxed border-t border-cream-200 pt-3">
+                        نعم! التركيبة متوازنة ومطورة بمكونات مرطبة ومهدئة (Hyaluronic Acid & Botanical Extracts) تجعلها آمنة ومناسبة لجميع أنواع البشرة.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-cream-50 rounded-2xl border border-cream-200 overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full text-right p-4 sm:p-5 font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:bg-cream-100/60 transition">
+                        <span>كيف يتم التسليم والدفع؟</span>
+                        <span id="faqIcon-4" class="text-cream-600 text-xl font-black">+</span>
+                    </button>
+                    <div id="faqAnswer-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-cream-800 leading-relaxed border-t border-cream-200 pt-3">
+                        التوصيل مجاني ومباشر لعنوانك في أي مدينة بالمغرب خلال 24-48 ساعة. لا تدفعين أي مبلغ حتى تستلمي الطلب بين يديك وتفحصينه بنفسك.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Live Sales Notification Popup Widget -->
+    <div id="sales-popup" class="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 bg-white border border-cream-200 shadow-2xl rounded-2xl p-3.5 max-w-xs z-40 transform translate-y-10 opacity-0 transition-all duration-500 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-cream-100 text-cream-700 flex items-center justify-center font-bold shrink-0 text-lg">
+            🛍️
+        </div>
+        <div class="text-xs space-y-0.5">
+            <span id="popup-name" class="font-extrabold text-cream-950 block">زينب ب. من الدار البيضاء</span>
+            <span id="popup-msg" class="text-cream-700 block">طلبت للتو باقة كريم ريتينول 🔥</span>
+            <span class="text-[10px] text-emerald-700 font-bold block">منذ 3 دقائق • توصيل مجاني</span>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-cream-950 text-white py-10 border-t border-cream-900">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-cream-600 flex items-center justify-center text-white font-black text-base">
+                    S
+                </div>
+                <span class="font-extrabold text-xl tracking-wide text-white">SOFIMAL</span>
+            </div>
+            <p class="text-cream-300 text-xs sm:text-sm max-w-md mx-auto">
+                متجركِ الأول للعناية بالبشرة والجمال بالمغرب. جميع الحقوق محفوظة © 2026 SOFIMAL
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        // 1. Countdown Timer Logic
+        let totalSeconds = (2 * 3600) + (45 * 60) + 18;
+
+        function updateCountdown() {
+            if (totalSeconds <= 0) {
+                totalSeconds = 3 * 3600; // Reset loop
+            }
+            totalSeconds--;
+
+            const hrs = Math.floor(totalSeconds / 3600);
+            const mins = Math.floor((totalSeconds % 3600) / 60);
+            const secs = totalSeconds % 60;
+
+            const format = (val) => String(val).padStart(2, '0');
+
+            // Top Bar Timer
+            document.getElementById('top-hours').textContent = format(hrs);
+            document.getElementById('top-minutes').textContent = format(mins);
+            document.getElementById('top-seconds').textContent = format(secs);
+
+            // Hero Timer
+            document.getElementById('hero-hours').textContent = format(hrs);
+            document.getElementById('hero-minutes').textContent = format(mins);
+            document.getElementById('hero-seconds').textContent = format(secs);
+
+            // Order Section Timer
+            document.getElementById('order-hours').textContent = format(hrs);
+            document.getElementById('order-minutes').textContent = format(mins);
+            document.getElementById('order-seconds').textContent = format(secs);
+        }
+        setInterval(updateCountdown, 1000);
+
+        // 2. Product Gallery Change Image Function
+        function changeProductImage(btnElement, newSrc) {
+            document.getElementById('mainProductImage').src = newSrc;
+            document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+                btn.classList.remove('border-cream-600');
+                btn.classList.add('border-transparent');
+            });
+            btnElement.classList.remove('border-transparent');
+            btnElement.classList.add('border-cream-600');
+        }
+
+        // 3. Before & After Slider Logic
+        function handleBaSliderInput(val) {
+            const overlay = document.getElementById('baOverlay');
+            const handle = document.getElementById('baHandle');
+            overlay.style.width = val + '%';
+            handle.style.left = val + '%';
+        }
+
+        // 4. Skin Type Quiz Selection logic
+        const skinQuizData = {
+            sensitive: {
+                title: "كريم ريتينول مثالي وآمن جداً للبشرة الحساسة",
+                desc: "بفضل تركيزه المتوازن ودمجه بـ Hyaluronic Acid والمكونات المهدئة، يجدد خلايا البشرة بلطف ويخفف الخطوط بدون إحداث تهيج أو أحمرار."
+            },
+            oily: {
+                title: "مثالي للبشرة الدهنية والمعرضة لحب الشباب",
+                desc: "تركيبته الخفيفة وغير الدهنية تساعد على تنظيم الإفرازات، انكماش المسام الواسعة، وتقليل آثار البقع والتجاعيد بدون سد المسام."
+            },
+            dry: {
+                title: "علاج مكثف وجبار للبشرة الجافة والمشدودة",
+                desc: "يمنح بشرتك ترطيباً عميقاً يدوم 24 ساعة بفضل حمض الهيالورونيك، ويستعيد لها المرونة والنعومة المخملية المفقودة."
+            },
+            combo: {
+                title: "التوازن الكامل للبشرة المختلطة والتجاعيد",
+                desc: "يوحد لون الوجه بفاعلية، ويشد التجاعيد حول العينين والجبهة مع الحفاظ على التوازن الطبيعي للمناطق الجافة والدهنية."
+            }
+        };
+
+        function selectSkinQuiz(type) {
+            document.querySelectorAll('.quiz-btn').forEach(btn => {
+                btn.classList.remove('border-cream-600');
+                btn.classList.add('border-cream-200');
+            });
+
+            const activeBtn = document.getElementById(`quiz-btn-${type}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-cream-200');
+                activeBtn.classList.add('border-cream-600');
+            }
+
+            const data = skinQuizData[type];
+            if (data) {
+                document.getElementById('quiz-title').textContent = data.title;
+                document.getElementById('quiz-desc').textContent = data.desc;
+            }
+        }
+
+        // 5. Video Play / Pause Toggle
+        function toggleVideoPlay(id) {
+            const video = document.getElementById(`cardVideo${id}`);
+            const overlay = document.getElementById(`playBtnOverlay${id}`);
+            
+            // Pause all other videos
+            for(let i = 1; i <= 4; i++) {
+                if(i !== id) {
+                    const otherVid = document.getElementById(`cardVideo${i}`);
+                    const otherOverlay = document.getElementById(`playBtnOverlay${i}`);
+                    if(otherVid && !otherVid.paused) {
+                        otherVid.pause();
+                        otherVid.muted = true;
+                        if(otherOverlay) otherOverlay.classList.remove('hidden');
+                    }
+                }
+            }
+
+            if (video.paused) {
+                video.play();
+                video.muted = false;
+                overlay.classList.add('hidden');
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        }
+
+        // 6. Checkout Package Selection Logic
+        function selectPackage(pkgNum, price) {
+            document.querySelectorAll('.package-card').forEach(card => {
+                card.classList.remove('border-cream-600', 'ring-2', 'ring-cream-500/20', 'bg-gradient-to-r', 'from-cream-100', 'to-white');
+                card.classList.add('border-cream-200', 'bg-white');
+            });
+
+            const selectedCard = document.getElementById(`package-${pkgNum}`);
+            const selectedRadio = document.getElementById(`radio-${pkgNum}`);
+
+            if (selectedCard) {
+                selectedCard.classList.remove('border-cream-200', 'bg-white');
+                selectedCard.classList.add('border-cream-600', 'ring-2', 'ring-cream-500/20', 'bg-gradient-to-r', 'from-cream-100', 'to-white');
+            }
+            if (selectedRadio) {
+                selectedRadio.checked = true;
+            }
+
+            // Update Summary
+            const summaryPrice = document.getElementById('summaryTotalPrice');
+            const summaryName = document.getElementById('summaryPkgName');
+
+            if (pkgNum === 1) {
+                summaryName.textContent = "عبوة واحدة (تجربة)";
+                summaryPrice.textContent = price + " درهم";
+            } else if (pkgNum === 2) {
+                summaryName.textContent = "عبوتين (العرض الأكثر طلباً - وفر 80 درهم)";
+                summaryPrice.textContent = price + " درهم";
+            } else if (pkgNum === 3) {
+                summaryName.textContent = "3 عبوات (اشتري 2 واحصلي على 1 مجاناً)";
+                summaryPrice.textContent = price + " درهم";
+            }
+        }
+
+        // 7. FAQ Accordion Toggle Logic
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faqAnswer-${id}`);
+            const icon = document.getElementById(`faqIcon-${id}`);
+
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.textContent = "−";
+            } else {
+                answer.classList.add('hidden');
+                icon.textContent = "+";
+            }
+        }
+
+        // 8. Live Sales Popup Simulation
+        const popupNames = [
+            "زينب ب. من الدار البيضاء",
+            "مريم ع. من الرباط",
+            "فاطمة الزهراء من طنجة",
+            "سلمى ك. من مراكش",
+            "أمينة ح. من فاس",
+            "كوثر م. من أكادير"
+        ];
+
+        function triggerSalesPopup() {
+            const popup = document.getElementById('sales-popup');
+            const nameEl = document.getElementById('popup-name');
+            
+            const randomName = popupNames[Math.floor(Math.random() * popupNames.length)];
+            nameEl.textContent = randomName;
+
+            popup.classList.remove('translate-y-10', 'opacity-0');
+            popup.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                popup.classList.remove('translate-y-0', 'opacity-100');
+                popup.classList.add('translate-y-10', 'opacity-0');
+            }, 4500);
+        }
+
+        // Initial Sales popup timer
+        setTimeout(() => {
+            triggerSalesPopup();
+            setInterval(triggerSalesPopup, 14000);
+        }, 3000);
+
+        // 9. Order Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const city = document.getElementById('cityName').value;
+
+            if(!name || !phone || !city) {
+                alert('المرجو ملء جميع الحقول المطلوبة.');
+                return;
+            }
+
+            alert(`شكراً لكِ يا ${name}! تم تسجيل طلبكِ بنجاح. سيتصل بكِ فريق العمل قريباً لتأكيد عنوان الشحن في مدينة ${city}.`);
+        }
+    </script>
+</body>
+</html>
