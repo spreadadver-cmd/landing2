@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كريم سكينورين الأصلي لعلاج حب الشباب وتفتيح التصبغات | Skinoren 20%</title>
+    <title>كريم سكينورين الأصلي لعلاج حب الشباب وتفتيح التصبغات | متجر sofimal</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,7 +115,7 @@
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center">
             <div class="flex items-center gap-2">
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-400 text-slate-900 animate-pulse">
-                    <i class="fa-solid fa-shield-halved ml-1"></i> منتج طبي أصلي 100%
+                    <i class="fa-solid fa-shield-halved ml-1"></i> متجر sofimal الرسمي | منتج أصلي 100%
                 </span>
                 <span>خصم خاص لفترة محدودة + توصيل سريع مجاني لكافة المدن!</span>
             </div>
@@ -139,8 +139,8 @@
                     <i class="fa-solid fa-prescription-bottle-medical"></i>
                 </div>
                 <div>
-                    <span class="text-2xl font-black tracking-wider text-medical-900 block leading-none">SKINOREN <span class="text-medical-600 text-lg font-light">20%</span></span>
-                    <span class="text-[10px] text-gray-500 font-medium">كريم حمض الأزيليك المطور</span>
+                    <span class="text-2xl font-black tracking-wider text-medical-900 block leading-none">SOFIMAL <span class="text-medical-600 text-sm font-light">| Skinoren 20%</span></span>
+                    <span class="text-[10px] text-gray-500 font-medium">العناية بالبشرة والحلول الطبية</span>
                 </div>
             </div>
 
@@ -152,10 +152,12 @@
                 <a href="#faq" class="hover:text-medical-600 transition">الأسئلة الشائعة</a>
             </div>
 
-            <a href="#order-form" class="bg-gradient-to-r from-medical-600 to-medical-500 text-white hover:from-medical-700 hover:to-medical-600 px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
-                <i class="fa-solid fa-truck-fast"></i>
-                <span>اطلب الآن (الدفع عند الاستلام)</span>
-            </a>
+            <div class="flex items-center gap-2">
+                <a href="#order-form" class="bg-gradient-to-r from-medical-600 to-medical-500 text-white hover:from-medical-700 hover:to-medical-600 px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>اطلب الآن (الدفع عند الاستلام)</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -338,10 +340,10 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" 
+                                <button type="submit" id="submit-btn" 
                                         class="w-full bg-gradient-to-r from-medical-700 via-medical-600 to-medical-700 hover:from-medical-800 hover:to-medical-700 text-white font-black text-base py-3.5 px-6 rounded-2xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 badge-pulse">
-                                    <i class="fa-solid fa-check-circle text-xl"></i>
-                                    <span>تأكيد الطلب الآن - الشحن مجاني</span>
+                                    <i class="fa-solid fa-check-circle text-xl" id="submit-icon"></i>
+                                    <span id="submit-text">تأكيد الطلب الآن - الشحن مجاني</span>
                                 </button>
                                 
                                 <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
@@ -904,8 +906,8 @@
                 </div>
             </div>
 
-            <button onclick="closeSuccessModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl shadow-md transition text-sm">
-                متابعة التصفح
+            <button onclick="closeSuccessModal()" type="button" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-2xl transition text-sm">
+                موافق
             </button>
         </div>
     </div>
@@ -922,22 +924,65 @@
         </div>
     </div>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212600000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%83%D8%B1%D9%8A%D9%85%20%D8%B3%D9%83%D9%8A%D9%86%D9%88%D8%B1%D9%8A%D9%86%20%D9%85%D9%86%20%D9%85%D8%AA%D8%AC%D8%B1%20sofimal" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="تواصل معنا عبر واتساب"
+       class="fixed bottom-20 md:bottom-6 left-4 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip Label -->
+        <span class="absolute left-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg pointer-events-none">
+            تواصل معنا عبر واتساب
+        </span>
+        <!-- Active Notification Badge -->
+        <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white animate-ping"></span>
+        <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white"></span>
+    </a>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 text-center">
         <div class="max-w-6xl mx-auto px-4 space-y-3">
             <div class="flex items-center justify-center gap-2">
                 <div class="w-7 h-7 rounded-lg bg-medical-600 text-white flex items-center justify-center font-black text-sm">S</div>
-                <span class="text-lg font-black text-white">SKINOREN CREAM 20%</span>
+                <span class="text-lg font-black text-white">SOFIMAL BEAUTY</span>
             </div>
             <p class="text-xs text-slate-400 max-w-md mx-auto">
-                منتج طبي معتمد بحمض الأزيليك لشد نضارة البشرة وتقليل آثار الحبوب والتصبغات.
+                متجر sofimal المعتمد لمنتجات العناية بالبشرة والحلول الطبية الأصلية 100%.
             </p>
-            <p class="text-[11px] text-slate-500">جميع الحقوق محفوظة © 2026 Skinoren Health Inc.</p>
+            <p class="text-[11px] text-slate-500">جميع الحقوق محفوظة © 2026 sofimal. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- JavaScript Logic -->
     <script>
+        // =========================================================================
+        // 🟢 رابط GOOGLE SHEETS WEB APP (ضع الرابط الخاص بك هنا مباشرة)
+        // =========================================================================
+        // 1. افتح Google Sheet > Extensions > Apps Script
+        // 2. انشر السكريبت كـ Web App واجعل الوصول "Anyone"
+        // 3. ضع الرابط بين القوسين أسطره كالتالي:
+        const GSHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzqAj-_j8l6MVFzMwQKMZYr_CfqnI1QCebm0W09VrpFEdWF37QQWZjA0QyHbs77tYdJVg/exec";
+
+        /*
+        كود Google Apps Script لاستقبال الطلبات في جدول Google Sheet:
+        -------------------------------------------------------------
+        function doPost(e) {
+          try {
+            var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+            var data = JSON.parse(e.postData.contents);
+            if (sheet.getLastRow() === 0) {
+              sheet.appendRow(["رقم الطلب", "التاريخ والوقت", "اسم العميل", "رقم الهاتف", "المدينة", "العنوان", "العرض المختار", "المبلغ الإجمالي", "الحالة"]);
+            }
+            sheet.appendRow([data.orderRef, data.date, data.name, data.phone, data.city, data.address, data.bundle, data.totalPrice, "جديد"]);
+            return ContentService.createTextOutput(JSON.stringify({"result":"success"})).setMimeType(ContentService.MimeType.JSON);
+          } catch(err) {
+            return ContentService.createTextOutput(JSON.stringify({"result":"error", "error": err.toString()})).setMimeType(ContentService.MimeType.JSON);
+          }
+        }
+        -------------------------------------------------------------
+        */
+
         let selectedPrice = 189;
 
         function selectBundle(bundleNum, price, oldPrice) {
@@ -1018,11 +1063,58 @@
             document.getElementById('timer-seconds').innerText = String(secs).padStart(2, '0');
         }, 1000);
 
-        // Order Handler
-        function handleOrderSubmit(e) {
+        // Order Handler with Google Sheets integration
+        async function handleOrderSubmit(e) {
             e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitIcon = document.getElementById('submit-icon');
+
             const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const city = document.getElementById('customer-city').value;
+            const address = document.getElementById('customer-address').value || 'غير محدد';
+            const isBundle2 = document.getElementById('bundle-2').checked;
+            const bundleName = isBundle2 ? 'عرض العبوتين (320 د.م)' : 'عبوة واحدة (189 د.م)';
             const ref = '#SKN-' + Math.floor(1000 + Math.random() * 9000);
+            const orderDate = new Date().toLocaleString('ar-MA');
+
+            // UI Loading state
+            submitBtn.disabled = true;
+            submitText.innerText = 'جاري تسجيل الطلب...';
+            submitIcon.className = 'fa-solid fa-circle-notch fa-spin text-xl';
+
+            // Send data to Google Sheets
+            if (GSHEET_WEBAPP_URL && GSHEET_WEBAPP_URL !== '' && GSHEET_WEBAPP_URL !== 'ضع_رابط_جوجل_شيت_هنا') {
+                try {
+                    const payload = {
+                        orderRef: ref,
+                        date: orderDate,
+                        name: name,
+                        phone: phone,
+                        city: city,
+                        address: address,
+                        bundle: bundleName,
+                        totalPrice: selectedPrice + ' د.م',
+                        status: 'جديد'
+                    };
+
+                    await fetch(GSHEET_WEBAPP_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (err) {
+                    console.error('خطأ أثناء إرسال البيانات إلى Google Sheets:', err);
+                }
+            }
+
+            // Restore UI State & Open Success Modal
+            submitBtn.disabled = false;
+            submitText.innerText = 'تأكيد الطلب الآن - الشحن مجاني';
+            submitIcon.className = 'fa-solid fa-check-circle text-xl';
 
             document.getElementById('summary-name').innerText = name;
             document.getElementById('summary-total').innerText = selectedPrice + ' د.م';
