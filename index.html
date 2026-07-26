@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COD Landing Pages - صفحات هبوط احترافية للدفع عند الاستلام</title>
+    <title>SPREADAD - صفحات هبوط احترافية للدفع عند الاستلام</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cairo & Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/png" href="https://res.cloudinary.com/zms0vqob/image/upload/v1785102842/Untitled_design_1_oyumsw.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -21,14 +20,23 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            green: '#10b981',
-                            accent: '#f59e0b',
-                            dark: '#0f172a'
+                            50: '#eef6ff',
+                            100: '#d9e8ff',
+                            400: '#4a82ba',
+                            500: '#3b71a8',
+                            600: '#2f5e8e',
+                            700: '#1f4165',
+                            800: '#162e48',
+                            900: '#0f1f32',
+                            dark: '#0a121e',
+                            card: '#132135'
+                        },
+                        gold: {
+                            300: '#fef08a',
+                            400: '#facc15',
+                            500: '#f5b327',
+                            600: '#d97706',
+                            700: '#b45309'
                         }
                     },
                     fontFamily: {
@@ -42,364 +50,154 @@
     <style>
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #0b0f19;
+            background-color: #0a121e;
             color: #f3f4f6;
+            background-image: radial-gradient(rgba(47, 94, 142, 0.12) 1px, transparent 0);
+            background-size: 24px 24px;
         }
-        .glow-effect {
-            box-shadow: 0 0 35px -5px rgba(79, 70, 229, 0.4);
+        .glow-blue {
+            box-shadow: 0 0 35px -5px rgba(47, 94, 142, 0.45);
         }
-        .glow-green {
-            box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.4);
+        .glow-gold {
+            box-shadow: 0 0 30px -5px rgba(245, 179, 39, 0.4);
         }
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(19, 33, 53, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(245, 179, 39, 0.15);
+        }
+        .glass-card-hover {
+            transition: all 0.3s ease;
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(245, 179, 39, 0.45);
+            box-shadow: 0 10px 30px -10px rgba(245, 179, 39, 0.25);
+            transform: translateY(-2px);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #34d399 100%);
+            background: linear-gradient(135deg, #facc15 0%, #f5b327 45%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .gradient-gold-btn {
+            background: linear-gradient(135deg, #f5b327 0%, #d97706 100%);
+        }
+        .gradient-gold-btn:hover {
+            background: linear-gradient(135deg, #facc15 0%, #f5b327 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a121e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2f5e8e;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f5b327;
+        }
     </style>
 </head>
-<body class="bg-[#0b0f19] text-gray-100 antialiased selection:bg-brand-600 selection:text-white">
+<body class="bg-[#0a121e] text-gray-100 antialiased selection:bg-gold-500 selection:text-black">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800/80">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-brand-600/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white font-black text-xl shadow-lg">
-                    ⚡
+            
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center space-x-3 space-x-reverse group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 p-2 flex items-center justify-center border border-gold-500/40 shadow-lg shadow-brand-600/30 group-hover:border-gold-400 transition">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold-500 fill-current">
+                        <path d="M 20 78 C 45 85, 75 60, 78 30 C 50 20, 25 45, 20 78 Z" fill="#F5B327" />
+                        <path d="M 38 92 C 65 95, 88 70, 92 45 C 65 35, 45 60, 38 92 Z" fill="#F5B327" opacity="0.9" />
+                    </svg>
                 </div>
                 <div>
-                    <span class="text-xl font-black tracking-wider text-white">COD<span class="text-emerald-400">PAGES</span></span>
+                    <span class="text-2xl font-black tracking-wider text-white font-tajawal">SPREAD<span class="text-gold-500">AD</span></span>
                     <span class="block text-[10px] text-gray-400 font-medium tracking-widest uppercase">تخصص صفحات الهبوط COD</span>
                 </div>
-            </div>
+            </a>
 
+            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 space-x-reverse font-semibold text-sm">
-                <a href="#features" class="text-gray-300 hover:text-emerald-400 transition">المميزات</a>
-                <a href="#demos" class="text-gray-300 hover:text-emerald-400 transition">النماذج الحية</a>
-                <a href="#calculator" class="text-gray-300 hover:text-emerald-400 transition">حاسبة الأرباح</a>
-                <a href="#pricing" class="text-gray-300 hover:text-emerald-400 transition">العروض والأسعار</a>
-                <a href="#faq" class="text-gray-300 hover:text-emerald-400 transition">الأسئلة الشائعة</a>
+                <a href="#features" class="text-gray-300 hover:text-gold-400 transition">المميزات</a>
+                <a href="#demos" class="text-gray-300 hover:text-gold-400 transition">النماذج الحية</a>
+                <a href="#calculator" class="text-gray-300 hover:text-gold-400 transition">حاسبة الأرباح</a>
+                <a href="#pricing" class="text-gray-300 hover:text-gold-400 transition">العروض والأسعار</a>
+                <a href="#faq" class="text-gray-300 hover:text-gold-400 transition">الأسئلة الشائعة</a>
             </nav>
 
+            <!-- CTA & Mobile Menu Trigger -->
             <div class="flex items-center space-x-4 space-x-reverse">
-                <a href="#order" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white transition-all shadow-lg hover:shadow-emerald-500/25 active:scale-95">
+                <a href="#order" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm gradient-gold-btn text-black transition-all shadow-lg shadow-gold-500/20 active:scale-95">
                     <i class="fa-solid fa-bolt ml-2 text-xs"></i> اطلب صفحتك الآن
                 </a>
-                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 p-2 text-2xl">
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-gold-400 p-2 text-2xl transition">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden glass-card border-b border-gray-800 px-6 py-6 space-y-4 text-center">
-            <a href="#features" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2">المميزات</a>
-            <a href="#demos" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2">النماذج الحية</a>
-            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2">حاسبة الأرباح</a>
-            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2">العروض والأسعار</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2">الأسئلة الشائعة</a>
-            <a href="#order" onclick="toggleMobileMenu()" class="block w-full py-3 rounded-xl font-bold bg-emerald-500 text-white">اطلب صفحتك الآن</a>
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-b border-brand-600/40 px-6 py-6 space-y-4 text-center">
+            <a href="#features" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">المميزات</a>
+            <a href="#demos" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">النماذج الحية</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">حاسبة الأرباح</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">العروض والأسعار</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-gray-200 font-semibold py-2 hover:text-gold-400">الأسئلة الشائعة</a>
+            <a href="#order" onclick="toggleMobileMenu()" class="block w-full py-3 rounded-xl font-bold gradient-gold-btn text-black">اطلب صفحتك الآن</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <!-- Background Glows -->
-        <div class="absolute top-1/4 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/3 left-10 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-600/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 left-10 w-80 h-80 bg-gold-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-4xl mx-auto">
-                <!-- Badge -->
-                <div class="inline-flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-sm font-bold mb-8 animate-pulse">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+                <div class="inline-flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-full glass-card border-gold-500/40 text-gold-400 text-sm font-bold mb-8 animate-pulse">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-400 inline-block shadow-sm shadow-gold-400"></span>
                     <span>الحل النهائي لمشكلة ضياع زوار إعلانات التجارة الإلكترونية (COD)</span>
                 </div>
 
-                <!-- Main Title -->
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
                     ضوبل مبيعاتك وطلع نسبة التحويل بصفحات هبوط <span class="gradient-text">صاروخية للـ COD</span>
                 </h1>
 
-                <!-- Subtitle -->
                 <p class="text-lg sm:text-xl text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto mb-10">
                     كتحط فلوس الإعلانات فـ TikTok و Facebook والزوار كيدخلوا ومتيشريوش؟ السبب هو بطء المتاجر العادية وتخربيق المراحل! صاوب معنا صفحة هبوط خفيفة، سريعة، ومصممة خصيصاً للشراء المباشر بـ الدفع عند الاستلام.
                 </p>
 
-                <!-- CTA Actions -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                    <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-black text-lg bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center">
+                    <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-black text-lg gradient-gold-btn text-black shadow-xl shadow-gold-500/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center">
                         <i class="fa-solid fa-rocket ml-3"></i> باغي نبدا ونزيد مبيعاتي
                     </a>
-                    <a href="#demos" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-lg glass-card hover:bg-gray-800/80 text-white border border-gray-700 transition-all flex items-center justify-center">
-                        <i class="fa-solid fa-eye ml-3 text-emerald-400"></i> شوف النماذج الحية
+                    <a href="#demos" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-lg glass-card hover:bg-brand-800/80 text-white border border-brand-500/30 transition-all flex items-center justify-center">
+                        <i class="fa-solid fa-eye ml-3 text-gold-400"></i> شوف النماذج الحية
                     </a>
                 </div>
 
-                <!-- Feature Pills -->
-                <div class="mt-12 pt-8 border-t border-gray-800/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs sm:text-sm font-bold text-gray-300">
-                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-gray-900/50 p-3 rounded-xl border border-gray-800">
-                        <i class="fa-solid fa-gauge-high text-emerald-400 text-base"></i>
+                <div class="mt-12 pt-8 border-t border-brand-600/30 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs sm:text-sm font-bold text-gray-300">
+                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
+                        <i class="fa-solid fa-gauge-high text-gold-400 text-base"></i>
                         <span>تحميل أقل من 0.8 ثانية</span>
                     </div>
-                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-gray-900/50 p-3 rounded-xl border border-gray-800">
-                        <i class="fa-solid fa-mobile-screen-button text-emerald-400 text-base"></i>
+                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
+                        <i class="fa-solid fa-mobile-screen-button text-gold-400 text-base"></i>
                         <span>100% متوافقة مع الهواتف</span>
                     </div>
-                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-gray-900/50 p-3 rounded-xl border border-gray-800">
-                        <i class="fa-solid fa-file-excel text-emerald-400 text-base"></i>
+                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
+                        <i class="fa-solid fa-file-excel text-gold-400 text-base"></i>
                         <span>ربط مع Google Sheets / Sheets</span>
                     </div>
-                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-gray-900/50 p-3 rounded-xl border border-gray-800">
-                        <i class="fa-solid fa-bullseye text-emerald-400 text-base"></i>
+                    <div class="flex items-center justify-center space-x-2 space-x-reverse bg-brand-dark/80 p-3 rounded-xl border border-brand-600/30">
+                        <i class="fa-solid fa-bullseye text-gold-400 text-base"></i>
                         <span>ربط الـ Pixels بـ دقة 100%</span>
                     </div>
-                </div>
-            </div>
-
-            <div class="mt-16 max-w-5xl mx-auto rounded-3xl glass-card p-4 sm:p-6 border border-gray-700/60 glow-effect relative overflow-hidden">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-800 text-xs sm:text-sm text-gray-400">
-                    <div class="flex items-center space-x-2 space-x-reverse">
-                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                        <span class="mr-3 font-mono text-gray-300 hidden sm:inline">https://yourproduct.store/landing-page-cod</span>
-                    </div>
-                    <div class="flex items-center space-x-3 space-x-reverse font-bold text-emerald-400">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>PageSpeed Score: 99/100</span>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-7 space-y-4">
-                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-lg inline-block">معاينة استمارة الطلب التفاعلية السريعة</span>
-                        <h3 class="text-xl font-bold text-white">استمارة شحن نقرة واحدة (One-Click COD Checkout)</h3>
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            العميل مايمشيش للسلّة ويضيع وقت. العرض، الفيديو الإعلاني، والاستمارة كلها فصفحة واحدة بدون تعقيدات لضمان أقصى عدد من الطلبات (Highest Orders Rate).
-                        </p>
-                        
-                        <!-- Form Preview Simulated -->
-                        <div class="bg-gray-900/90 rounded-2xl p-4 border border-gray-800 space-y-3">
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="bg-gray-800/60 border border-gray-700/50 rounded-xl p-2.5 text-xs text-gray-300">الاسم الكامل</div>
-                                <div class="bg-gray-800/60 border border-gray-700/50 rounded-xl p-2.5 text-xs text-gray-300">رقم الهاتف (واتساب)</div>
-                            </div>
-                            <div class="bg-gray-800/60 border border-gray-700/50 rounded-xl p-2.5 text-xs text-gray-300">المدينة والعنوان بالكامل</div>
-                            <div class="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-between">
-                                <span class="text-xs font-bold text-emerald-400">عروض التخفيض تلقائية (Upsell/Offers)</span>
-                                <span class="text-xs font-bold bg-emerald-500 text-black px-2 py-0.5 rounded">اشتري 2 واحصل على 1 مجاناً</span>
-                            </div>
-                            <button class="w-full py-3 bg-emerald-500 text-black font-extrabold text-sm rounded-xl shadow-lg hover:bg-emerald-400 transition">
-                                تأكيد الطلب الآن (الدفع عند الاستلام) 🛒
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Speed & Conversion Comparison Graphic -->
-                    <div class="md:col-span-5 bg-gradient-to-b from-gray-900 to-black p-5 rounded-2xl border border-gray-800 text-center space-y-6">
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold block mb-1">المتجر العادي التقليدي</span>
-                            <div class="w-full bg-gray-800 h-3 rounded-full overflow-hidden">
-                                <div class="bg-red-500 h-full w-[25%]"></div>
-                            </div>
-                            <span class="text-xs text-red-400 font-bold mt-1 block">نسبة التحويل: 1.2% (ضياع الزوار)</span>
-                        </div>
-
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold block mb-1">صفحة الهبوط المخصصة (COD Landing Page)</span>
-                            <div class="w-full bg-gray-800 h-3 rounded-full overflow-hidden">
-                                <div class="bg-emerald-400 h-full w-[85%]"></div>
-                            </div>
-                            <span class="text-xs text-emerald-400 font-bold mt-1 block">نسبة التحويل: 4.8% إلى 7.5% 🚀</span>
-                        </div>
-
-                        <div class="pt-2 border-t border-gray-800 text-xs text-gray-400">
-                            💡 الفرق: أرباح أكثر بنفس ميزانية الإعلانات!
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 bg-gray-900/60 border-y border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-3xl sm:text-4xl font-black text-emerald-400 font-tajawal mb-1">+450</div>
-                    <div class="text-xs sm:text-sm text-gray-400 font-semibold">صفحة هبوط تم إنجازها</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-4xl font-black text-indigo-400 font-tajawal mb-1">3.2x</div>
-                    <div class="text-xs sm:text-sm text-gray-400 font-semibold">مضاعفة متوسط المبيعات</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-4xl font-black text-amber-400 font-tajawal mb-1">&lt; 0.8s</div>
-                    <div class="text-xs sm:text-sm text-gray-400 font-semibold">سرعة التحميل القياسية</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-4xl font-black text-emerald-400 font-tajawal mb-1">99%</div>
-                    <div class="text-xs sm:text-sm text-gray-400 font-semibold">رضى التّجار والمسوقين</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">علاش المتجر العادي كايحرق ليك الإعلانات؟</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">مقارنة بين المتجر التقليدي وصفحة الهبوط الذكية</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Bad Way (Traditional Store) -->
-                <div class="glass-card rounded-3xl p-8 border-red-500/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 left-0 h-1.5 bg-red-500"></div>
-                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
-                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl font-bold">
-                            ❌
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">المتاجر التقليدية (Shopify/YouCan عادية)</h3>
-                            <span class="text-xs text-red-400 font-semibold">سبب ضياع رأس المال والإعلانات</span>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-xmark text-red-400 text-lg mt-0.5"></i>
-                            <span><strong>بطء فـ التحميل:</strong> كياخد 4 حتى لـ 6 ثواني، والزائر كيمشي قبل ما يشوف المنتج.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-xmark text-red-400 text-lg mt-0.5"></i>
-                            <span><strong>تشتيت الانتباه:</strong> المنيو، الأقسام، والروابط الكثيرة كتخلي الزائر يخرج بدون شراء.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-xmark text-red-400 text-lg mt-0.5"></i>
-                            <span><strong>استمارة معقدة:</strong> العميل خاصو يدوز من السلة (Cart) ثم Checkout ثم ملء خانات كثيرة.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-xmark text-red-400 text-lg mt-0.5"></i>
-                            <span><strong>مواصفات غير مقنعة:</strong> نصوص عادية وصور غير متناسقة لا تحفز الشراء العاطفي المباشر.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Good Way (COD Landing Page) -->
-                <div class="glass-card rounded-3xl p-8 border-emerald-500/30 glow-green relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-900 to-emerald-950/20">
-                    <div class="absolute top-0 right-0 left-0 h-1.5 bg-emerald-400"></div>
-                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl font-bold">
-                            ✅
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">صفحة الهبوط المخصصة لـ COD</h3>
-                            <span class="text-xs text-emerald-400 font-semibold">المحرك الحقيقي لرفع المبيعات</span>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
-                            <span><strong>سرعة فائقة (0.8s):</strong> كتحل فـ رمشة عين ومكتضيع حتا زائر من إعلانات TikTok أو Facebook.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
-                            <span><strong>تركيز 100% على منتج واحد:</strong> كتابة إعلانية مقنعة (Copywriting) مع فيديوهات وصور توضيحية.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
-                            <span><strong>طلب بنقرة واحدة:</strong> استمارة سريعة للطلب المباشر مع عروض التخفيض على التعدد (Quantity Offers).</span>
-                        </li>
-                        <li class="flex items-start space-x-3 space-x-reverse">
-                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5"></i>
-                            <span><strong>تتبع دقيق للغاية:</strong> الـ Pixel كيسجل طلب الشراء (Purchase Event) بدون أخطاء.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-900/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">كل ما تحتاجه للنجاح</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">شنو كنسلموك فكل صفحة هبوط؟</h2>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl mb-6">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">كتابة إعلانية تسويقية (Copywriting)</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        نصوص موجهة لخدمة المنتج، إبراز المشكلة، إظهار الحل، وتجهيز العميل للضغط على زر الشراء فوراً.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-indigo-400 text-2xl mb-6">
-                        <i class="fa-solid fa-photo-film"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">تصاميم ومتحركات عالية الجودة</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        تعديل وإعداد صور ومقاطع GIF توضيحية للمنتج تظهر خصائصه وتزيد من الثقة والجاهزية للشراء.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-400 text-2xl mb-6">
-                        <i class="fa-solid fa-table-cells"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">ربط مع Google Sheets / WhatsApp</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        الطلبات كتوصلك مباشرة لجدول Google Sheets أو لحساب الواتساب الخاص بك أو لفريق التأكيد فـ الحين.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 text-2xl mb-6">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">إعداد الـ Pixels بـ الاحترافية</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        ربط Facebook Pixel، TikTok Pixel، و Snapchat Pixel باش تعمل Optimization دقيقة للإعلانات ديالك.
-                    </p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-rose-500/10 rounded-2xl flex items-center justify-center text-rose-400 text-2xl mb-6">
-                        <i class="fa-solid fa-stopwatch"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">عدادات تنازلية وحث على العجلة</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        تقنيات الـ Scarcity و Urgency (عرض محدود، المخزون على وشك النفاذ) لرفع نسبة اتخاذ القرار السريع.
-                    </p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition duration-300">
-                    <div class="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 text-2xl mb-6">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">تعديلات وسرعة تسليم قياسية</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        تسليم الصفحة جاهزة فـ ظرف 24 إلى 48 ساعة مع إمكانية التعديل حتى تكون جربتي الصفحة وعجباتك 100%.
-                    </p>
                 </div>
             </div>
         </div>
@@ -409,14 +207,14 @@
     <section id="demos" class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">معرض الأعمال والأنماط</span>
+                <span class="text-gold-400 font-bold text-sm tracking-wider uppercase">معرض الأعمال والأنماط</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">نماذج حية لصفحات هبوط تحقق أعلى المبيعات</h2>
                 <p class="text-gray-400 text-sm mt-3">اختر المجال ديالك وشوف كيفاش كيخرج شكل الصفحة فـ الهواتف الذكية</p>
             </div>
 
             <!-- Demo Tabs Filters -->
             <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
-                <button onclick="filterDemos('all')" class="demo-tab-btn active px-5 py-2.5 rounded-xl font-bold text-sm bg-emerald-500 text-black transition">الكل</button>
+                <button onclick="filterDemos('all')" class="demo-tab-btn active px-5 py-2.5 rounded-xl font-bold text-sm gradient-gold-btn text-black transition">الكل</button>
                 <button onclick="filterDemos('beauty')" class="demo-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm glass-card text-gray-300 hover:text-white transition">التجميل والعناية</button>
                 <button onclick="filterDemos('gadgets')" class="demo-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm glass-card text-gray-300 hover:text-white transition">الأدوات والإلكترونيات</button>
                 <button onclick="filterDemos('home')" class="demo-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm glass-card text-gray-300 hover:text-white transition">مستلزمات البيت</button>
@@ -425,88 +223,88 @@
             <!-- Demos Grid -->
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Demo Card 1 -->
-                <div class="demo-card beauty glass-card rounded-3xl overflow-hidden border border-gray-800 hover:border-emerald-500/50 transition group">
-                    <div class="relative h-64 bg-gradient-to-br from-pink-900/40 to-purple-900/40 flex items-center justify-center p-6 overflow-hidden">
-                        <div class="w-full max-w-[200px] bg-gray-900 border-4 border-gray-800 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
+                <div class="demo-card beauty glass-card rounded-3xl overflow-hidden border border-brand-600/40 hover:border-gold-500/60 transition group">
+                    <div class="relative h-64 bg-gradient-to-br from-brand-800 to-brand-dark flex items-center justify-center p-6 overflow-hidden">
+                        <div class="w-full max-w-[200px] bg-brand-dark border-4 border-brand-600 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
                             <div class="w-full h-36 bg-pink-500/20 rounded-2xl flex flex-col items-center justify-center text-center p-2">
                                 <span class="text-2xl mb-1">✨</span>
                                 <span class="text-[10px] font-bold text-pink-300">سيروم النضارة الفائقة</span>
-                                <span class="text-[9px] bg-emerald-500 text-black px-2 py-0.5 rounded mt-2">تخفيض 40%</span>
+                                <span class="text-[9px] bg-gold-500 text-black px-2 py-0.5 rounded font-bold mt-2">تخفيض 40%</span>
                             </div>
                             <div class="mt-2 space-y-1">
-                                <div class="h-2 bg-gray-800 rounded w-3/4"></div>
-                                <div class="h-2 bg-gray-800 rounded w-1/2"></div>
-                                <div class="h-5 bg-emerald-500 rounded-lg mt-2"></div>
+                                <div class="h-2 bg-brand-800 rounded w-3/4"></div>
+                                <div class="h-2 bg-brand-800 rounded w-1/2"></div>
+                                <div class="h-5 bg-gold-500 rounded-lg mt-2"></div>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-pink-400 font-bold">مجال التجميل والأناقة</span>
-                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط لمستحضرات العناية والتجميل</h3>
+                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوطسيروم فيتامين cل</h3>
                         <p class="text-xs text-gray-400 mt-2">تصميم أنيق مع كتابة إعلانية عاطفية، استعراض قبل وبعد، وآراء الزبناء بالصور.</p>
                         <div class="mt-6 flex items-center justify-between gap-2">
-                            <button onclick="openPreviewModal('https://landing1-alpha-six.vercel.app/', 'سيروم النضارة الفائقة')" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition">
+                            <button onclick="openPreviewModal('https://www.spreadad.store/serum-vitamin-c', 'سيروم النضارة الفائقة')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
                                 <i class="fa-solid fa-eye text-xs"></i> معاينة حية للموقع
                             </button>
-                            <a href="#order" class="px-3 py-1.5 bg-gray-800 hover:bg-emerald-500 hover:text-black rounded-lg text-xs font-bold transition">اطلب مثلها</a>
+                            <a href="#order" class="px-3 py-2 bg-brand-800 hover:bg-gold-500 hover:text-black rounded-xl text-xs font-bold transition">اطلب مثلها</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo Card 2 (Earphones Product Page) -->
-                <div class="demo-card gadgets glass-card rounded-3xl overflow-hidden border border-gray-800 hover:border-emerald-500/50 transition group">
-                    <div class="relative h-64 bg-gradient-to-br from-blue-900/40 to-slate-900/40 flex items-center justify-center p-6 overflow-hidden">
-                        <div class="w-full max-w-[200px] bg-gray-900 border-4 border-gray-800 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
+                <!-- Demo Card 2 -->
+                <div class="demo-card gadgets glass-card rounded-3xl overflow-hidden border border-brand-600/40 hover:border-gold-500/60 transition group">
+                    <div class="relative h-64 bg-gradient-to-br from-brand-800 to-brand-dark flex items-center justify-center p-6 overflow-hidden">
+                        <div class="w-full max-w-[200px] bg-brand-dark border-4 border-brand-600 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
                             <div class="w-full h-36 bg-blue-500/20 rounded-2xl flex flex-col items-center justify-center text-center p-2">
                                 <span class="text-2xl mb-1">🎧</span>
                                 <span class="text-[10px] font-bold text-blue-300">سماعات electrozyad Pro</span>
-                                <span class="text-[9px] bg-emerald-500 text-black px-2 py-0.5 rounded mt-2">عازل للصوت 100%</span>
+                                <span class="text-[9px] bg-gold-500 text-black px-2 py-0.5 rounded font-bold mt-2">عازل للصوت 100%</span>
                             </div>
                             <div class="mt-2 space-y-1">
-                                <div class="h-2 bg-gray-800 rounded w-3/4"></div>
-                                <div class="h-2 bg-gray-800 rounded w-1/2"></div>
-                                <div class="h-5 bg-emerald-500 rounded-lg mt-2"></div>
+                                <div class="h-2 bg-brand-800 rounded w-3/4"></div>
+                                <div class="h-2 bg-brand-800 rounded w-1/2"></div>
+                                <div class="h-5 bg-gold-500 rounded-lg mt-2"></div>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs text-blue-400 font-bold">الأدوات والإلكترونيات</span>
-                        <h3 class="text-lg font-bold text-white mt-1">سماعات electrozyad Pro الذكية</h3>
-                        <p class="text-xs text-gray-400 mt-2">صفحة هبوط مخصصة للإلكترونيات: عزل ضوضاء ANC، اختيار الألوان، وباقة التخفيض المزدوجة.</p>
+                        <span class="text-xs text-blue-400 font-bold">مجال التجميل والأناقة</span>
+                        <h3 class="text-lg font-bold text-white mt-1">كريم الريتنول SOFIMAL</h3>
+                        <p class="text-xs text-gray-400 mt-2">صفحة هبوط كريم الريتنول </p>
                         <div class="mt-6 flex items-center justify-between gap-2">
-                            <button onclick="openPreviewModal('https://zyadelectro.vercel.app/', 'سماعات electrozyad Pro')" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition">
+                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-retinol', 'سماعات electrozyad Pro')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
                                 <i class="fa-solid fa-eye text-xs"></i> معاينة حية للموقع
                             </button>
-                            <a href="#order" class="px-3 py-1.5 bg-gray-800 hover:bg-emerald-500 hover:text-black rounded-lg text-xs font-bold transition">اطلب مثلها</a>
+                            <a href="#order" class="px-3 py-2 bg-brand-800 hover:bg-gold-500 hover:text-black rounded-xl text-xs font-bold transition">اطلب مثلها</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Demo Card 3 -->
-                <div class="demo-card home glass-card rounded-3xl overflow-hidden border border-gray-800 hover:border-emerald-500/50 transition group">
-                    <div class="relative h-64 bg-gradient-to-br from-amber-900/40 to-orange-900/40 flex items-center justify-center p-6 overflow-hidden">
-                        <div class="w-full max-w-[200px] bg-gray-900 border-4 border-gray-800 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
+                <div class="demo-card home glass-card rounded-3xl overflow-hidden border border-brand-600/40 hover:border-gold-500/60 transition group">
+                    <div class="relative h-64 bg-gradient-to-br from-brand-800 to-brand-dark flex items-center justify-center p-6 overflow-hidden">
+                        <div class="w-full max-w-[200px] bg-brand-dark border-4 border-brand-600 rounded-[30px] p-3 shadow-2xl transition duration-500 group-hover:scale-105">
                             <div class="w-full h-36 bg-amber-500/20 rounded-2xl flex flex-col items-center justify-center text-center p-2">
                                 <span class="text-2xl mb-1">🍳</span>
                                 <span class="text-[10px] font-bold text-amber-300">قطاعة الخضار العجيبة</span>
-                                <span class="text-[9px] bg-emerald-500 text-black px-2 py-0.5 rounded mt-2">توفير الوقت والجهد</span>
+                                <span class="text-[9px] bg-gold-500 text-black px-2 py-0.5 rounded font-bold mt-2">توفير الوقت والجهد</span>
                             </div>
                             <div class="mt-2 space-y-1">
-                                <div class="h-2 bg-gray-800 rounded w-3/4"></div>
-                                <div class="h-2 bg-gray-800 rounded w-1/2"></div>
-                                <div class="h-5 bg-emerald-500 rounded-lg mt-2"></div>
+                                <div class="h-2 bg-brand-800 rounded w-3/4"></div>
+                                <div class="h-2 bg-brand-800 rounded w-1/2"></div>
+                                <div class="h-5 bg-gold-500 rounded-lg mt-2"></div>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs text-amber-400 font-bold">مستلزمات المنزل والمطبخ</span>
-                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط لأدوات المطبخ والبيت</h3>
+                        <span class="text-xs text-amber-400 font-bold">مجال التجميل والأناقة</span>
+                        <h3 class="text-lg font-bold text-white mt-1">صفحة هبوط كريم حب شباب</h3>
                         <p class="text-xs text-gray-400 mt-2">تصميم عملي بأسلوب "حل المشكلة"، عروض التعدد (2 قطع بسعر يخاطب ربات البيوت).</p>
                         <div class="mt-6 flex items-center justify-between gap-2">
-                            <button onclick="openPreviewModal('https://zyadelectro.vercel.app/', 'قطاعة الخضار العجيبة')" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition">
+                            <button onclick="openPreviewModal('https://www.spreadad.store/crem-acnee', 'قطاعة الخضار العجيبة')" class="text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1.5 transition px-3 py-2 bg-gold-500/10 hover:bg-gold-500/20 rounded-xl border border-gold-500/30">
                                 <i class="fa-solid fa-eye text-xs"></i> معاينة حية للموقع
                             </button>
-                            <a href="#order" class="px-3 py-1.5 bg-gray-800 hover:bg-emerald-500 hover:text-black rounded-lg text-xs font-bold transition">اطلب مثلها</a>
+                            <a href="#order" class="px-3 py-2 bg-brand-800 hover:bg-gold-500 hover:text-black rounded-xl text-xs font-bold transition">اطلب مثلها</a>
                         </div>
                     </div>
                 </div>
@@ -514,276 +312,59 @@
         </div>
     </section>
 
-    <!-- Interactive Calculator Widget -->
-    <section id="calculator" class="py-20 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900 border-y border-gray-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">حاسبة ضياع الأرباح</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">احسب شحال كايضيع ليك ديال الفلوس بسبب المتجر العادي!</h2>
-                <p class="text-gray-400 text-sm mt-2">حرك الخانات وشوف الفارق اللي تقدر تحققه بنفس ميزانية الإعلان مع صفحة هبوط COD</p>
-            </div>
-
-            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-gray-700/60">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-6">
-                        <!-- Visitor Slider -->
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span class="text-gray-300">عدد الزوار اليومي من الإعلانات:</span>
-                                <span id="visitorsVal" class="text-emerald-400 font-extrabold text-base">500 زائر</span>
-                            </div>
-                            <input type="range" id="visitorsSlider" oninput="calculateProfit()" min="100" max="5000" step="100" value="500" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
-                        </div>
-
-                        <!-- Product Price Slider -->
-                        <div>
-                            <div class="flex justify-between text-sm font-bold mb-2">
-                                <span class="text-gray-300">متوسط ثمن البيع (بالدرهم):</span>
-                                <span id="priceVal" class="text-emerald-400 font-extrabold text-base">250 درهم</span>
-                            </div>
-                            <input type="range" id="priceSlider" oninput="calculateProfit()" min="100" max="1000" step="50" value="250" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
-                        </div>
-
-                        <div class="p-4 bg-gray-900/80 rounded-xl border border-gray-800 text-xs text-gray-400 space-y-1">
-                            <p>• المتجر العادي: نسبة تحويل ضئيلة (~1.2%)</p>
-                            <p>• صفحة هبوط COD المخصصة: نسبة تحويل عالية (~4.5%)</p>
-                        </div>
-                    </div>
-
-                    <!-- Output Results Card -->
-                    <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-2xl border border-emerald-500/30 text-center space-y-6">
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold block mb-1">عدد الطلبات اليومية المتوقعة مع صفحة الهبوط:</span>
-                            <span id="calculatedOrders" class="text-4xl font-black text-emerald-400 font-tajawal">22 طلب/يوم</span>
-                        </div>
-
-                        <div class="pt-4 border-t border-gray-800">
-                            <span class="text-xs text-gray-400 font-bold block mb-1">الفرق فـ المبيعات الشهرية الإضافية:</span>
-                            <span id="calculatedRevenue" class="text-3xl font-black text-amber-400 font-tajawal">+123,750 درهم</span>
-                        </div>
-
-                        <a href="#order" class="block w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm rounded-xl transition">
-                            احصل على صفحتك وبدا ضوبل أرباحك 🚀
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof & Testimonials -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">شهادات التجار المسوقين</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">شنو كايقولوا علينا الناس اللي جربوا الصفحات؟</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="glass-card p-6 rounded-3xl relative">
-                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-lg">
-                            س.ع
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">سفيان العبدلاوي</h4>
-                            <span class="text-xs text-gray-400">تاجر إلكتروني - الدار البيضاء</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        "الصراحة الفارق كان كبير بزاف! كنت كنطلق الإعلانات فـ TikTok للمتجر فـ YouCan والمبيعات ضعيفة، ملي استعملت صفحة الهبوط الخاصة بي المبيعات ضوبلات والـ Purchase event بقى كيتسجل 100%."
-                    </p>
-                    <div class="text-amber-400 text-xs">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
+    <!-- Mobile Phone Live Preview Modal -->
+    <div id="livePreviewModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-[100] hidden flex items-center justify-center p-3 sm:p-6 transition-all duration-300 opacity-0 scale-95" onclick="if(event.target === this) closePreviewModal()">
+        
+        <!-- Smartphone Container -->
+        <div class="relative w-full max-w-[390px] h-[820px] max-h-[92vh] bg-[#0d1522] rounded-[44px] border-[8px] sm:border-[10px] border-slate-800 shadow-[0_0_60px_rgba(245,179,39,0.15)] flex flex-col overflow-hidden ring-1 ring-gold-500/30">
+            
+            <!-- Phone Speaker & Notch Bar -->
+            <div class="bg-[#0a121e] px-4 pt-3 pb-2.5 flex flex-col items-center border-b border-brand-600/30 shrink-0 relative">
+                <!-- Phone Camera Notch -->
+                <div class="w-24 h-4 bg-slate-900 rounded-full mb-2 flex items-center justify-center gap-2 border border-slate-700/60 shadow-inner">
+                    <div class="w-2.5 h-2.5 rounded-full bg-slate-800 border border-slate-700"></div>
+                    <div class="w-2 h-2 rounded-full bg-blue-900/60"></div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="glass-card p-6 rounded-3xl relative">
-                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="w-12 h-12 rounded-full bg-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center text-lg">
-                            م.ب
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">مريم بناني</h4>
-                            <span class="text-xs text-gray-400">نيش مستحضرات التجميل - مراكش</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        "السرعة ديال التحميل عجيبة والتصميم احترافي بزاف. الزبناء كيدخلوا كيلقاو الصور والفيديو واضحين والاستمارة سهلة. شكراً لكم على الاحترافية والتسليم السريع."
-                    </p>
-                    <div class="text-amber-400 text-xs">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div>
+                <!-- Top Header Bar with Return Button -->
+                <div class="w-full flex items-center justify-between pt-1">
+                    <!-- Return Button -->
+                    <button onclick="closePreviewModal()" class="px-3.5 py-1.5 rounded-xl gradient-gold-btn text-black font-black text-xs flex items-center gap-2 transition-transform active:scale-95 shadow-md shadow-gold-500/20">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                        <span>الرجوع للموقع</span>
+                    </button>
 
-                <!-- Testimonial 3 -->
-                <div class="glass-card p-6 rounded-3xl relative">
-                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-lg">
-                            أ.ت
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">أميناتو التازي</h4>
-                            <span class="text-xs text-gray-400">Media Buyer & E-com - طنجة</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        "خدمت معاهم فـ أكثر من 8 ديال المنتجات. الربط مع Google Sheets كان خدام بدون مشاكل وتأكيد الطلبات مع مركز الاتصال جاني أسهل بزاف من قبل."
-                    </p>
-                    <div class="text-amber-400 text-xs">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-gray-900/60 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">عروض استثنائية</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">اختر الباقة المناسبة لتجارتك</h2>
-                <p class="text-gray-400 text-sm mt-2">استثمار بسيط يعود عليك بضعف المبيعات من اليوم الأول</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Package 1: Basic -->
-                <div class="glass-card rounded-3xl p-8 border border-gray-800 flex flex-col justify-between hover:border-gray-700 transition">
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-xl font-bold text-white">باقة الصفحة الواحدة</h3>
-                            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded-lg">البداية السريعة</span>
-                        </div>
-                        <div class="mb-6">
-                            <span class="text-4xl font-black text-white font-tajawal">299</span>
-                            <span class="text-gray-400 font-bold text-sm">درهم / فقط</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-6 pb-6 border-b border-gray-800">مثالية لتجربة منتج جديد باحترافية وتكلفة مناسبة.</p>
-
-                        <ul class="space-y-4 text-xs text-gray-300 mb-8">
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>صفحة هبوط مخصصة لمنتج واحد</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>كتابة النصوص التسويقية المقنعة</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>استمارة طلب COD + ربط Google Sheets</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>ربط الـ Pixels الإعلانية</span>
-                            </li>
-                        </ul>
+                    <!-- Page Info -->
+                    <div class="text-center overflow-hidden px-2">
+                        <span id="previewModalTitle" class="text-white font-bold text-xs truncate block max-w-[130px]">معاينة الهاتف</span>
+                        <span id="previewModalUrl" class="text-[10px] text-gray-400 font-mono truncate block max-w-[130px]">https://...</span>
                     </div>
 
-                    <a href="#order" onclick="selectPackage('باقة الصفحة الواحدة - 299 درهم')" class="block w-full py-3.5 text-center font-bold text-sm bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition">
-                        اختر هذه الباقة
-                    </a>
-                </div>
-
-                <!-- Package 2: Pro (Best Value) -->
-                <div class="glass-card rounded-3xl p-8 border-2 border-emerald-500/80 bg-gradient-to-b from-gray-900 via-gray-900 to-emerald-950/30 flex flex-col justify-between shadow-2xl relative glow-green">
-                    <span class="absolute -top-3.5 right-1/2 translate-x-1/2 bg-gradient-to-r from-emerald-400 to-teal-500 text-black text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider">
-                        الأكثر طلباً 🔥
-                    </span>
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-xl font-bold text-white">باقة الاحتراف والتوفير</h3>
-                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-lg">3 صفحات</span>
-                        </div>
-                        <div class="mb-6">
-                            <span class="text-4xl font-black text-white font-tajawal">699</span>
-                            <span class="text-gray-400 font-bold text-sm">درهم / للكل</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-6 pb-6 border-b border-gray-800">العرض المثالي للمسوقين والتجار المتنوعين.</p>
-
-                        <ul class="space-y-4 text-xs text-gray-300 mb-8">
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>3 صفحات هبوط متكاملة لـ 3 منتجات</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>تصاميم GIF وصور معالجة باحترافية</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>ربط تلقائي مع Google Sheets + WhatsApp</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>تتبع كامل للـ Pixels وتفعيل الأرباح</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a href="#order" onclick="selectPackage('باقة الاحتراف - 699 درهم')" class="block w-full py-3.5 text-center font-black text-sm bg-emerald-500 hover:bg-emerald-400 text-black rounded-xl transition shadow-lg">
-                        اختر العرض الأكثر طلباً 🚀
-                    </a>
-                </div>
-
-                <!-- Package 3: Custom -->
-                <div class="glass-card rounded-3xl p-8 border border-gray-800 flex flex-col justify-between hover:border-gray-700 transition">
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-xl font-bold text-white">الباقة المفتوحة</h3>
-                            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs font-bold rounded-lg">الشركات والوكالات</span>
-                        </div>
-                        <div class="mb-6">
-                            <span class="text-4xl font-black text-white font-tajawal">1,299</span>
-                            <span class="text-gray-400 font-bold text-sm">درهم / شهرياً</span>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-6 pb-6 border-b border-gray-800">تغطية شاملة وإطلاق مستمر للمنتجات بدون حدود.</p>
-
-                        <ul class="space-y-4 text-xs text-gray-300 mb-8">
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>صفحات هبوط غير محدودة شهرياً</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>دعم فني خاص واستجابة فورية VIP</span>
-                            </li>
-                            <li class="flex items-center space-x-3 space-x-reverse">
-                                <i class="fa-solid fa-check text-emerald-400"></i>
-                                <span>A/B Split Testing وتعديلات سريعة</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a href="#order" onclick="selectPackage('الباقة المفتوحة - 1,299 درهم')" class="block w-full py-3.5 text-center font-bold text-sm bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition">
-                        تواصل معنا للباقة المفتوحة
+                    <!-- External Link Icon -->
+                    <a id="previewExternalBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-xl bg-brand-800 hover:bg-brand-700 text-gold-400 border border-brand-600/40 flex items-center justify-center text-xs transition" title="فتح في نافذة مستقلة">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
+
+            <!-- Mobile Phone Screen Iframe -->
+            <div class="flex-1 bg-white relative w-full h-full overflow-hidden">
+                <iframe id="previewIframe" src="" class="w-full h-full border-0" title="معاينة نموذج صفحة الهبوط على الهاتف"></iframe>
+            </div>
+
+            <!-- Phone Bottom Home Bar -->
+            <div class="bg-[#0a121e] py-2 flex items-center justify-center shrink-0 border-t border-brand-600/30">
+                <div class="w-28 h-1 bg-slate-600 rounded-full"></div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Order Section -->
     <section id="order" class="py-24 relative">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-500/40 shadow-2xl relative glow-green">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-gold-500/50 shadow-2xl relative glow-gold">
                 <div class="text-center mb-8">
-                    <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full border border-emerald-500/30">
+                    <span class="px-3 py-1 bg-gold-500/20 text-gold-400 text-xs font-bold rounded-full border border-gold-500/30">
                         ⚡ اطلب صفحتك الآن وسنبدأ العمل فوراً
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-black text-white mt-3">استمارة طلب صفحة هبوط مخصصة</h2>
@@ -793,17 +374,17 @@
                 <form onsubmit="handleOrderSubmit(event)" class="space-y-5">
                     <div>
                         <label class="block text-xs font-bold text-gray-300 mb-1">اسمك الكامل *</label>
-                        <input type="text" id="orderName" required placeholder="مثال: كريم العلمي" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white text-sm focus:border-emerald-400 outline-none transition">
+                        <input type="text" id="orderName" required placeholder="مثال: كريم العلمي" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none transition">
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold text-gray-300 mb-1">رقم الواتساب للتواصل *</label>
-                            <input type="tel" id="orderPhone" required placeholder="06XXXXXXXX" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white text-sm focus:border-emerald-400 outline-none text-left transition">
+                            <input type="tel" id="orderPhone" required placeholder="06XXXXXXXX" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none text-left transition">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-300 mb-1">الباقة المختارة *</label>
-                            <select id="orderPackageSelect" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white text-sm focus:border-emerald-400 outline-none transition">
+                            <select id="orderPackageSelect" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none transition">
                                 <option value="باقة الصفحة الواحدة - 299 درهم">باقة الصفحة الواحدة (299 د.م)</option>
                                 <option value="باقة الاحتراف - 699 درهم" selected>باقة الاحتراف والتوفير (699 د.م)</option>
                                 <option value="الباقة المفتوحة - 1,299 درهم">الباقة المفتوحة للشركات (1299 د.م)</option>
@@ -813,10 +394,10 @@
 
                     <div>
                         <label class="block text-xs font-bold text-gray-300 mb-1">رابط المنتج أو فكرة الصفحة (اختياري)</label>
-                        <textarea id="orderNotes" rows="3" placeholder="ضع هنا رابط المنتج من علي إكسبريس أو وصف مختصر للمنتج..." class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white text-sm focus:border-emerald-400 outline-none transition"></textarea>
+                        <textarea id="orderNotes" rows="3" placeholder="ضع هنا رابط المنتج من علي إكسبريس أو وصف مختصر للمنتج..." class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-600/50 text-white text-sm focus:border-gold-400 outline-none transition"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black font-black text-lg rounded-2xl shadow-xl transition active:scale-98 flex items-center justify-center gap-2">
+                    <button type="submit" class="w-full py-4 gradient-gold-btn text-black font-black text-lg rounded-2xl shadow-xl transition active:scale-98 flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span>تأكيد الطلب وبدا تجهيز الصفحة 🚀</span>
                     </button>
@@ -825,101 +406,27 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-gray-900/40">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">الأسئلة الشائعة</span>
-                <h2 class="text-3xl font-black text-white mt-2">إليك إجابات لأهم الاستفسارات</h2>
-            </div>
-
-            <div class="space-y-4">
-                <details class="glass-card rounded-2xl p-4 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm flex justify-between items-center">
-                        <span>شحال ديال الوقت كتاخد الصفحة باش تكون جاهزة؟</span>
-                        <span class="text-emerald-400 font-bold group-open:rotate-180 transition">▼</span>
-                    </summary>
-                    <p class="text-xs text-gray-400 mt-3 leading-relaxed border-t border-gray-800 pt-3">
-                        عادةً ما يتم تسليم الصفحة كاملة ومربوطة فـ ظرف 24 إلى 48 ساعة كأقصى تقدير من لحظة إرسال معلومات المنتج.
-                    </p>
-                </details>
-
-                <details class="glass-card rounded-2xl p-4 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm flex justify-between items-center">
-                        <span>هل يمكنني إضافة الدومين الخاص بي (Custom Domain)؟</span>
-                        <span class="text-emerald-400 font-bold group-open:rotate-180 transition">▼</span>
-                    </summary>
-                    <p class="text-xs text-gray-400 mt-3 leading-relaxed border-t border-gray-800 pt-3">
-                        نعم بالتأكيد! نقوم بربط الدومين الخاص بمتجرك مباشرة مع شهادة حماية SSL مجانية وبدون أي تكاليف إضافية.
-                    </p>
-                </details>
-
-                <details class="glass-card rounded-2xl p-4 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm flex justify-between items-center">
-                        <span>كيف أضمن أن الـ Pixel يسجل الشراء بشكل صحيح؟</span>
-                        <span class="text-emerald-400 font-bold group-open:rotate-180 transition">▼</span>
-                    </summary>
-                    <p class="text-xs text-gray-400 mt-3 leading-relaxed border-t border-gray-800 pt-3">
-                        نحن نستخدم تقنية ربط مخصصة تضمن تفعيل حدث الشراء (Purchase Event) بمجرد ضغط العميل على زر الشراء، مع صفحة شكر (Thank You Page) سريعة ومربوطة بالكامل.
-                    </p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Demo Preview Popup Modal -->
-    <div id="livePreviewModal" class="fixed inset-0 bg-black/95 backdrop-blur-md z-[100] hidden flex flex-col transition-all duration-300">
-        <!-- Modal Top Bar -->
-        <div class="h-16 bg-gray-900 border-b border-gray-800 px-4 sm:px-6 flex items-center justify-between shrink-0">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <button onclick="closePreviewModal()" class="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 hover:text-black text-emerald-400 font-bold text-sm flex items-center gap-2 transition border border-emerald-500/30 active:scale-95">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <span>الرجوع للموقع الرئيسي</span>
-                </button>
-                <div class="hidden sm:block text-right">
-                    <span id="previewModalTitle" class="text-white font-bold text-sm block">معاينة النموذج</span>
-                    <span id="previewModalUrl" class="text-xs text-gray-400 font-mono">https://...</span>
-                </div>
-            </div>
-
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <a id="previewExternalBtn" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 border border-gray-700 text-xs font-bold hover:text-white transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span class="hidden sm:inline">فتح في نافذة مستقلة</span>
-                </a>
-                <button onclick="closePreviewModal()" class="w-9 h-9 rounded-xl bg-gray-800 hover:bg-red-500/20 hover:text-red-400 text-gray-400 flex items-center justify-center transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Live Preview Frame Container -->
-        <div class="flex-1 bg-gray-950 relative w-full h-full overflow-hidden">
-            <iframe id="previewIframe" src="" class="w-full h-full border-0" title="معاينة نموذج صفحة الهبوط"></iframe>
-        </div>
-    </div>
-
     <!-- Success Modal -->
     <div id="orderSuccessModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="glass-card rounded-3xl p-8 max-w-sm w-full text-center border border-emerald-500/40 shadow-2xl">
-            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+        <div class="glass-card rounded-3xl p-8 max-w-sm w-full text-center border border-gold-500/50 shadow-2xl">
+            <div class="w-16 h-16 bg-gold-500/20 text-gold-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 border border-gold-500/30">
                 ✓
             </div>
             <h3 class="text-xl font-black text-white mb-2">تم استلام طلبك بنجاح!</h3>
             <p class="text-xs text-gray-300 mb-6 leading-relaxed">
                 شكراً لثقتك. سيتواصل معك أحد متخصصي صفحات الهبوط عبر الواتساب فوراً للبدء فـ تجهيز صفحتك.
             </p>
-            <button onclick="closeModal()" class="w-full py-3 bg-emerald-500 text-black font-extrabold rounded-xl hover:bg-emerald-400 transition">
+            <button onclick="closeModal()" class="w-full py-3 gradient-gold-btn text-black font-extrabold rounded-xl transition">
                 ممتاز، أفتهمنا
             </button>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800 py-10 bg-[#070a11] text-center text-xs text-gray-500">
+    <footer class="border-t border-brand-600/30 py-10 bg-[#070d16] text-center text-xs text-gray-500">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
-            <p class="font-bold text-gray-400">CODPAGES Store © 2026 - جميع الحقوق محفوظة</p>
-            <p class="text-[11px] text-gray-600">منصة المتخصصين في تطوير صفحات الهبوط عالية التحويل لحملات الدفع عند الاستلام.</p>
+            <p class="font-bold text-gray-400">SPREADAD Store © 2026 - جميع الحقوق محفوظة</p>
+            <p class="text-[11px] text-gray-500">منصة المتخصصين في تطوير صفحات الهبوط عالية التحويل لحملات الدفع عند الاستلام.</p>
         </div>
     </footer>
 
@@ -934,12 +441,12 @@
             const btns = document.querySelectorAll('.demo-tab-btn');
 
             btns.forEach(btn => {
-                btn.classList.remove('bg-emerald-500', 'text-black');
+                btn.classList.remove('gradient-gold-btn', 'text-black');
                 btn.classList.add('glass-card', 'text-gray-300');
             });
 
             event.target.classList.remove('glass-card', 'text-gray-300');
-            event.target.classList.add('bg-emerald-500', 'text-black');
+            event.target.classList.add('gradient-gold-btn', 'text-black');
 
             cards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
@@ -948,30 +455,6 @@
                     card.style.display = 'none';
                 }
             });
-        }
-
-        function calculateProfit() {
-            const visitors = parseInt(document.getElementById('visitorsSlider').value);
-            const price = parseInt(document.getElementById('priceSlider').value);
-
-            document.getElementById('visitorsVal').innerText = visitors + " زائر";
-            document.getElementById('priceVal').innerText = price + " درهم";
-
-            // Normal store conversion = ~1.2%
-            // COD Landing page conversion = ~4.5%
-            const codOrders = Math.round(visitors * 0.045);
-            const diffOrdersDaily = codOrders - Math.round(visitors * 0.012);
-            const monthlyRevenueGain = diffOrdersDaily * price * 30;
-
-            document.getElementById('calculatedOrders').innerText = codOrders + " طلب/يوم";
-            document.getElementById('calculatedRevenue').innerText = "+" + monthlyRevenueGain.toLocaleString('ar-MA') + " درهم";
-        }
-
-        function selectPackage(packageName) {
-            const select = document.getElementById('orderPackageSelect');
-            if (select) {
-                select.value = packageName;
-            }
         }
 
         function handleOrderSubmit(e) {
@@ -994,10 +477,15 @@
 
             if (modal && iframe) {
                 iframe.src = url;
-                if (titleEl) titleEl.innerText = title || 'معاينة النموذج';
+                if (titleEl) titleEl.innerText = title || 'معاينة الهاتف';
                 if (urlEl) urlEl.innerText = url;
                 if (extBtn) extBtn.href = url;
+                
                 modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0', 'scale-95');
+                    modal.classList.add('opacity-100', 'scale-100');
+                }, 10);
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -1006,9 +494,13 @@
             const modal = document.getElementById('livePreviewModal');
             const iframe = document.getElementById('previewIframe');
             if (modal && iframe) {
-                modal.classList.add('hidden');
-                iframe.src = '';
-                document.body.style.overflow = '';
+                modal.classList.remove('opacity-100', 'scale-100');
+                modal.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    iframe.src = '';
+                    document.body.style.overflow = '';
+                }, 200);
             }
         }
     </script>
